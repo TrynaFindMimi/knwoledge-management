@@ -85,5 +85,3 @@
 | Seguridad y cifrado extremo (datos de víctimas en riesgo) | Alta | "Si me la roban, caen direcciones donde están escondidas" |
 | Rapidez absoluta para casos urgentes | Alta | "No hay tiempo para ordenar" |
 | Interfaz que entienda escritura con errores bajo presión | Alta | "Aunque yo escriba mal, apurada" |
-
----

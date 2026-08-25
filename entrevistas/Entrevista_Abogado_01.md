@@ -76,5 +76,3 @@
 | Seguridad real para datos sensibles de menores/familia | Alta | "Si alguien se la roba, tiene todo" |
 | Control de versiones simple (saber cuál es la buena) | Media | "Fotos duplicadas y no sé cuál es la buena" |
 | Compartir documentos de forma segura con clientes | Media | — |
-
----

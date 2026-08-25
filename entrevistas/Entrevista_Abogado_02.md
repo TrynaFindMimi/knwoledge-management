@@ -85,5 +85,3 @@
 | Seguridad extrema para informes de menores | Alta | "Arruinas a una familia si se filtra" |
 | Interfaz ultra simple para personal no técnico | Alta | "Que no tengamos que hacer curso de tres días" |
 | Impresión directa para juzgados | Media | — |
-
----

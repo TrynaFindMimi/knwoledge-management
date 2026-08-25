@@ -23,12 +23,12 @@ Esta matriz establece de forma **objetiva, ponderada y trazable** cómo se evalu
 
 | Código | Criterio de Evaluación | Coef. (Ci) | Peso % | Subcriterios (desglose) | Puntaje Pi (0-100) | Puntaje Ponderado (Ci×Pi) |
 |--------|------------------------|------------|--------|--------------------------|--------------------|---------------------------|
-| **C1** | **Experiencia del equipo y portafolio** | **0.30** | 30% | C1.1 Portafolio de sistemas web/KM/RAG previos (40%)<br>C1.2 Experiencia comprobable del Ing. RAG/IA (30%)<br>C1.3 Referencias de clientes verificables (15%)<br>C1.4 Experiencia en sector legal/documental (15%) | 0-100 | — |
-| **C2** | **Propuesta técnica y stack tecnológico** | **0.25** | 25% | C2.1 Arquitectura RAG completa (ingesta→OCR→chunking→embeddings→Vector DB→retriever→LLM) (35%)<br>C2.2 Stack propuesto (React, Node/Python, PostgreSQL+pgvector/Qdrant, LangChain) y justificación (20%)<br>C2.3 Estrategia anti-alucinación y citación con trazabilidad (20%)<br>C2.4 Seguridad, cifrado y escalabilidad 10k+ docs (15%)<br>C2.5 Plan de evaluación Precision@5 >85% (10%) | 0-100 | — |
-| **C3** | **Propuesta económica** | **0.25** | 25% | C3.1 Relación costo-beneficio (50%)<br>C3.2 Desglose por hitos y coherencia con cronograma (30%)<br>C3.3 Costos de licencias/modelos incluidos vs. por cuenta del buffet (20%)<br>*Fórmula C3: Pi = (Precio menor ofertado / Precio ofertado) × 100* | 0-100 | — |
-| **C4** | **Cronograma y metodología** | **0.15** | 15% | C4.1 Plan de 10 semanas con sprints Scrum y entregables E1-E11 (40%)<br>C4.2 Validación RAG con 50 preguntas reales Sprint 6 (30%)<br>C4.3 Gestión de riesgos y plan de mitigación (15%)<br>C4.4 Comunicación (Trello/Jira, WhatsApp, dailies) (15%) | 0-100 | — |
-| **C5** | **Experiencia con sistemas legales/documentales** | **0.05** | 5% | C5.1 Proyectos previos en estudios jurídicos / sector justicia (60%)<br>C5.2 Conocimiento de normativa boliviana de protección de datos (40%) | 0-100 | — |
-| | **TOTAL** | **1.00** | **100%** | | | **PF = Σ(Ci×Pi)** |
+| **C1** | **Experiencia del equipo y portafolio** | **0.30** | 30% | C1.1 Portafolio de sistemas web/KM/RAG previos (40%)<br>C1.2 Experiencia comprobable del Ing. RAG/IA (30%)<br>C1.3 Referencias de clientes verificables (15%)<br>C1.4 Experiencia en sector legal/documental (15%) | 85 | 25.50 |
+| **C2** | **Propuesta técnica y stack tecnológico** | **0.25** | 25% | C2.1 Arquitectura RAG completa (ingesta→OCR→chunking→embeddings→Vector DB→retriever→LLM) (35%)<br>C2.2 Stack propuesto (React, Node/Python, PostgreSQL+pgvector/Qdrant, LangChain) y justificación (20%)<br>C2.3 Estrategia anti-alucinación y citación con trazabilidad (20%)<br>C2.4 Seguridad, cifrado y escalabilidad 10k+ docs (15%)<br>C2.5 Plan de evaluación Precision@5 >85% (10%) | 90 | 22.50 |
+| **C3** | **Propuesta económica** | **0.25** | 25% | C3.1 Relación costo-beneficio (50%)<br>C3.2 Desglose por hitos y coherencia con cronograma (30%)<br>C3.3 Costos de licencias/modelos incluidos vs. por cuenta del buffet (20%)<br>*Fórmula C3: Pi = (Precio menor ofertado / Precio ofertado) × 100* | 75 | 18.75 |
+| **C4** | **Cronograma y metodología** | **0.15** | 15% | C4.1 Plan de 10 semanas con sprints Scrum y entregables E1-E11 (40%)<br>C4.2 Validación RAG con 50 preguntas reales Sprint 6 (30%)<br>C4.3 Gestión de riesgos y plan de mitigación (15%)<br>C4.4 Comunicación (Trello/Jira, WhatsApp, dailies) (15%) | 80 | 12.00 |
+| **C5** | **Experiencia con sistemas legales/documentales** | **0.05** | 5% | C5.1 Proyectos previos en estudios jurídicos / sector justicia (60%)<br>C5.2 Conocimiento de normativa boliviana de protección de datos (40%) | 60 | 3.00 |
+| | **TOTAL** | **1.00** | **100%** | | **PF = 81.75** | **81.75** |
 
 ---
 
@@ -56,8 +56,6 @@ Esta matriz establece de forma **objetiva, ponderada y trazable** cómo se evalu
 | C4 (15%) | 0.15 | 80 | 12.00 | 65 | 9.75 |
 | C5 (5%)  | 0.05 | 60 | 3.00 | 90 | 4.50 |
 | **PF** | 1.00 | | **81.75** | | **79.00** |
-
-> **Resultado:** Gana Proponente A (81.75 > 79.00) aunque B es más barato, porque pondera mejor experiencia y técnica RAG. En caso de empate (diferencia < 1.00 punto), se prioriza mayor puntaje en C2 (criterio técnico RAG).
 
 ---
 
@@ -89,8 +87,6 @@ Permite priorizar el backlog y decidir qué entra en cada sprint. Coeficiente de
 | F15 | Comentarios colaborativos | Baja | 2 | 2 | 1.00 | 10 |
 | F16 | Exportación de reportes | Baja | 2 | 2 | 1.00 | 10 |
 
-> **Lectura:** CV=5 es crítico para ordenar inteligentemente (core RAG). CE=5 es mayor esfuerzo. Se prioriza mayor ratio y mayor CV.
-
 ---
 
 ### 6. MATRIZ DE COEFICIENTES DE RIESGO (Probabilidad × Impacto)
@@ -107,8 +103,6 @@ Para priorizar mitigación. Coeficiente de Riesgo (CR) = P × I.
 | R6 | Filtración de datos sensibles | 2 | 5 | **10** | Alto | Cifrado en reposo/tránsito, control a nivel de chunk |
 | R7 | Retraso en cronograma 10 semanas | 3 | 3 | **9** | Medio | Scrum 2 semanas, demos, backlog priorizado por CV |
 
-**Escala CR:** 1-6 Bajo (verde), 8-12 Medio (amarillo), 15-25 Alto (rojo). Requiere plan de mitigación si CR ≥10.
-
 ---
 
 ### 7. REFERENCIAS CRUZADAS
@@ -117,7 +111,3 @@ Para priorizar mitigación. Coeficiente de Riesgo (CR) = P × I.
 - **Contrato:** Cláusula Décima Quinta / Criterios de calidad — la matriz rige la adjudicación.
 - **Ishikawa:** Los coeficientes C2 y C1 ponderan la causa raíz TECNOLOGÍA (Sin RAG) como crítica.
 - **Evaluación RAG:** RNF11 (Precision@5 >85%) se evalúa dentro de C2.2 y C2.5.
-
----
-
-*Documento generado como Anexo A del TDR_Sistema_Documental.md — Versión 1.0 — Agosto 2026*
