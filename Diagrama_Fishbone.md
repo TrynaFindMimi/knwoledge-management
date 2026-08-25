@@ -29,124 +29,68 @@ La pregunta central constituye el problema central del diagrama. La ineficiencia
 
 ---
 
-```
-    PERSONAL                    PROCESOS                    TECNOLOGÍA
-        │                         │                            │
-        │                         │                            │
-        ▼                         ▼                            ▼
-┌───────────────┐        ┌───────────────┐           ┌───────────────┐
-│ Falta de      │        │ Procesos de   │           │ Ausencia de   │
-│ capacitación  │        │ archivo       │           │ sistema de    │
-│ en manejo     │        │ desordenados  │           │ gestión       │
-│ digital       │        │ y manuales    │           │ documental    │
-└───────────────┘        └───────────────┘           └───────────────┘
-        │                         │                            │
-        │                         │                            │
-        ▼                         ▼                            ▼
-┌───────────────┐        ┌───────────────┐           ┌───────────────┐
-│ Resistencia   │        │ Falta de      │           │ SIN RAG / SIN │
-│ al cambio     │        │ estandariza-  │           │ IA: Búsqueda  │
-│ hacia         │        │ ción y        │           │ solo por      │
-│ tecnología    │        │ etiquetado    │           │ nombre exacto │
-│               │        │ manual        │           │ No entiende   │
-└───────────────┘        └───────────────┘           │ lenguaje      │
-        │                         │                   │ natural       │
-        │                         │                   └───────────────┘
-        │                         │                            │
-        │                         │                   ┌───────────────┐
-        │                         │                   │ Archivos mal  │
-        │                         │                   │ nombrados     │
-        │                         │                   │ (scan001.jpg) │
-        │                         │                   │ sin OCR ni    │
-        │                         │                   │ embeddings    │
-        │                         │                   └───────────────┘
-        └─────────────────────────┼────────────────────────────┘
-                                  │
-                                  ▼
-                    ┌─────────────────────────┐
-                    │                         │
-                    │  PREGUNTA CENTRAL:       │
-                    │  ¿CÓMO ORDENAR           │
-                    │  INTELIGENTEMENTE LOS    │
-                    │  ARCHIVOS LEGALES?       │
-                    │  → INEFICIENCIA EN LA    │
-                    │  GESTIÓN DOCUMENTAL      │
-                    │                         │
-                    └─────────────────────────┘
-                                  │
-                                  │
-        ┌─────────────────────────┼────────────────────────────┐
-        │                         │                            │
-        ▼                         ▼                            ▼
-┌───────────────┐        ┌───────────────┐           ┌───────────────┐
-│ Pérdida de    │        │ Búsqueda de   │           │ Falta de      │
-│ documentos    │        │ documentos    │           │ confidencia-  │
-│ físicos y     │        │ lenta e       │           │ lidad y       │
-│ digitales     │        │ ineficiente   │           │ trazabilidad  │
-│ "¿dónde está  │        │ 3-6h/semana   │           │ en accesos    │
-│ el convenio?" │        │ "scan001.jpg" │           │               │
-└───────────────┘        └───────────────┘           └───────────────┘
-        │                         │                            │
-        │                         │                            │
-        ▼                         ▼                            ▼
-┌───────────────┐        ┌───────────────┐           ┌───────────────┐
-│ Retraso en    │        │ Errores de    │           │ Riesgo de     │
-│ presentación  │        │ versión y     │           │ filtración de │
-│ de pruebas    │        │ no se sabe    │           │ datos         │
-│ en audiencias │        │ cuál es la    │           │ sensibles de  │
-│               │        │ correcta      │           │ menores/víct. │
-└───────────────┘        └───────────────┘           └───────────────┘
-        │                         │                            │
-        │                         │                            │
-        └─────────────────────────┼────────────────────────────┘
-                                  │
-                                  ▼
-                    ┌─────────────────────────┐
-                    │                         │
-                    │  CONSECUENCIA:           │
-                    │  PERJUICIO AL CLIENTE    │
-                    │  Y PÉRDIDA DE            │
-                    │  CREDIBILIDAD PROFESIONAL│
-                    │  + INCAPACIDAD DE        │
-                    │  ORDENAR INTELIGENTEMENTE│
-                    │                         │
-                    └─────────────────────────┘
+### DIAGRAMA ISHIKAWA — Renderizado con `Mermaid.js`
 
+> **Librería utilizada:** [Mermaid.js](https://mermaid.js.org/) (`flowchart LR`). Renderizado nativo en GitHub/GitLab/Markdown. Colores por categoría 6M + ponderación Ishikawa. La espina central converge en la pregunta/problema y se expande hacia los efectos.
 
-    MATERIALES                    MÉTODOS                   MEDIO AMBIENTE
-        │                         │                            │
-        │                         │                            │
-        ▼                         ▼                            ▼
-┌───────────────┐        ┌───────────────┐           ┌───────────────┐
-│ Carpetas      │        │ Falta de      │           │ Espacio       │
-│ físicas       │        │ protocolos    │           │ físico        │
-│ saturadas y   │        │ de archivado  │           │ limitado para │
-│ desorganiza-  │        │ uniformes     │           │ archivadores  │
-│ das           │        │ (todo manual) │           │               │
-└───────────────┘        └───────────────┘           └───────────────┘
-        │                         │                            │
-        │                         │                            │
-        ▼                         ▼                            ▼
-┌───────────────┐        ┌───────────────┐           ┌───────────────┐
-│ Acumulación   │        │ Ausencia de   │           │ Condiciones    │
-│ de papeles    │        │ respaldos y   │           │ inadecuadas   │
-│ innecesarios  │        │ de pipeline   │           │ de conserva-  │
-│ y duplicados  │        │ inteligente   │           │ ción y acceso │
-│               │        │ (sin chunking)│           │ no controlado │
-└───────────────┘        └───────────────┘           └───────────────┘
-        │                         │                            │
-        │                         │                            │
-        └─────────────────────────┼────────────────────────────┘
-                                  │
-                                  ▼
-                    ┌─────────────────────────┐
-                    │                         │
-                    │  PREGUNTA CENTRAL:       │
-                    │  ¿CÓMO ORDENAR           │
-                    │  INTELIGENTEMENTE?       │
-                    │                         │
-                    └─────────────────────────┘
+```mermaid
+flowchart LR
+    classDef personal fill:#FFCCCC,stroke:#C0392B,stroke-width:2px,color:#000
+    classDef procesos fill:#CCE5FF,stroke:#2471A3,stroke-width:2px,color:#000
+    classDef tecnologia fill:#FFE0B2,stroke:#CA6F1E,stroke-width:3px,color:#000
+    classDef materiales fill:#D5F5E3,stroke:#1E8449,stroke-width:2px,color:#000
+    classDef metodos fill:#E8DAEF,stroke:#7D3C98,stroke-width:2px,color:#000
+    classDef ambiente fill:#FCF3CF,stroke:#B7950B,stroke-width:2px,color:#000
+    classDef problema fill:#2C3E50,stroke:#000,stroke-width:3px,color:#fff
+    classDef efecto fill:#FADBD8,stroke:#922B21,stroke-width:2px,color:#000
+
+    P1["PERSONAL — 15%<br/>• Falta capacitación digital<br/>• Resistencia al cambio<br/>• Dependencia de Mariela<br/>• Escritura apurada con errores"]:::personal
+    P2["PROCESOS — 25% CRÍTICO<br/>• Archivo manual desordenado<br/>• Sin estandarización<br/>• Etiquetado manual que nadie cumple<br/>• Sin protocolos de respaldo"]:::procesos
+    P3["TECNOLOGÍA — 30% ★ CRÍTICO<br/>• SIN RAG / SIN IA<br/>• Búsqueda solo por nombre exacto<br/>• scan001.jpg sin OCR ni embeddings<br/>• Sin búsqueda semántica"]:::tecnologia
+    P4["MATERIALES — 10%<br/>• Carpetas físicas saturadas<br/>• Acumulación papeles/duplicados<br/>• Espacio físico limitado"]:::materiales
+    P5["MÉTODOS — 15%<br/>• Sin protocolos uniformes<br/>• Sin control de versiones<br/>• Sin pipeline inteligente<br/>• Método manual sin trazabilidad"]:::metodos
+    P6["MEDIO AMBIENTE — 5%<br/>• Espacio físico inadecuado<br/>• Conservación deficiente<br/>• Acceso no controlado"]:::ambiente
+
+    PROB{{"PREGUNTA CENTRAL<br/><b>¿Cómo ordenar inteligentemente<br/>los archivos legales?</b><br/>→ Ineficiencia en gestión documental"}}:::problema
+
+    E1["Pérdida de documentos<br/>'¿dónde está el convenio?'"]:::efecto
+    E2["Búsqueda lenta<br/>3-6 h/semana perdidas"]:::efecto
+    E3["Falta confidencialidad<br/>y trazabilidad"]:::efecto
+    E4["Retraso en audiencias<br/>'lo presento en 24h'"]:::efecto
+    E5["Errores de versión<br/>'¿cuál es la correcta?'"]:::efecto
+    E6["Riesgo filtración<br/>datos menores / víctimas"]:::efecto
+
+    CONS{{"CONSECUENCIA<br/><b>Perjuicio al cliente<br/>Pérdida de credibilidad profesional<br/>Incapacidad de ordenar</b>"}}:::problema
+
+    P1 --> PROB
+    P2 --> PROB
+    P3 --> PROB
+    P4 --> PROB
+    P5 --> PROB
+    P6 --> PROB
+
+    PROB --> E1
+    PROB --> E2
+    PROB --> E3
+    PROB --> E4
+    PROB --> E5
+    PROB --> E6
+
+    E1 --> CONS
+    E2 --> CONS
+    E3 --> CONS
+    E4 --> CONS
+    E5 --> CONS
+    E6 --> CONS
 ```
+
+**Lectura del diagrama:**
+- **Espina superior (causas con mayor peso):** `TECNOLOGÍA (0.30)` + `PROCESOS (0.25)` = 55% del problema. Son las causas priorizadas por la Matriz de Coeficientes.
+- **Espina inferior:** `MATERIALES`, `MÉTODOS` y `MEDIO AMBIENTE` completan las 6M.
+- **Cabeza del pescado (derecha):** la pregunta/problema central.
+- **Cola (efectos):** 6 efectos que confluyen en la consecuencia final: perjuicio al cliente y pérdida de credibilidad.
+
+> Si tu visor MD no renderiza Mermaid, el diagrama es igualmente interpretable como grafo dirigido: 6 categorías → Problema → 6 efectos → Consecuencia.
 
 ---
 
@@ -191,31 +135,41 @@ Los tres abogados especializados en asistencia familiar enfrentan el mismo probl
 
 Respuesta a la pregunta central: implementación de un Sistema de Gestión de Conocimiento (KM) basado en RAG para filtrar y organizar los datos de forma automática.
 
-#### Arquitectura KM-RAG propuesta:
+#### Arquitectura KM-RAG propuesta (Mermaid)
 
-```
-[CAPA DE INGESTA INTELIGENTE]
-   PDF / DOCX / JPG escaneado
-        ↓ OCR (Tesseract / Textract)
-        ↓ Limpieza + Chunking 500-800 tokens (overlap 100)
-        ↓ Clasificación automática LLM (tipo: demanda, orden, informe...)
-        ↓ Embeddings (multilingual-e5 / text-embedding-3-large para español legal)
-        ↓ Vector DB (pgvector / Qdrant) + Metadatos (caso, cliente, fecha, tipo, vencimiento)
+```mermaid
+flowchart TD
+    classDef capa fill:#EBF5FB,stroke:#2E86C1,stroke-width:2px,color:#000
+    classDef proceso fill:#FEF9E7,stroke:#B7950B,stroke-width:2px,color:#000
+    classDef vector fill:#FADBD8,stroke:#922B21,stroke-width:2px,color:#000
+    classDef chat fill:#D5F5E3,stroke:#1E8449,stroke-width:2px,color:#000
 
-[CAPA DE CONOCIMIENTO]
-   Base vectorial filtrable + Base relacional (PostgreSQL)
-   Filtros automáticos: por caso, por tipo, por fecha, por vencimiento extraído del texto
+    subgraph INGESTA["CAPA DE INGESTA INTELIGENTE"]
+        direction TB
+        A["PDF / DOCX / JPG escaneado"]:::capa --> B["OCR<br/>Tesseract / AWS Textract"]:::proceso
+        B --> C["Limpieza + Chunking<br/>500-800 tokens, overlap 100"]:::proceso
+        C --> D["Clasificación automática LLM<br/>tipo: demanda, orden, informe..."]:::proceso
+        D --> E["Embeddings<br/>multilingual-e5 / text-embedding-3-large<br/>optimizado español legal"]:::proceso
+        E --> F["Vector DB + Metadatos<br/>pgvector / Qdrant<br/>caso, cliente, fecha, tipo, vencimiento"]:::vector
+    end
 
-[CAPA DE CONSULTA INTELIGENTE]
-   Usuario pregunta en lenguaje natural:
-   "¿Qué documentos faltan para la audiencia de García mañana?"
-   "Muéstrame todas las órdenes de restricción por vencer esta semana"
-   "Resume los 3 informes psicológicos del caso Quispe"
-        ↓ Embedding de la pregunta
-        ↓ Retriever (top-k 5, threshold 0.75, filtrado por permisos)
-        ↓ Prompt con contexto + instrucciones anti-alucinación
-        ↓ LLM (GPT-4o-mini / Llama 3 local)
-        ↓ Respuesta con citas: [Archivo, pág. 2, score 0.89, fragmento resaltado]
+    subgraph CONOCIMIENTO["CAPA DE CONOCIMIENTO"]
+        direction TB
+        G["Base vectorial filtrable<br/>+ Base relacional PostgreSQL"]:::vector
+        H["Filtros automáticos<br/>por caso / tipo / fecha / vencimiento<br/>extraído del texto"]:::capa
+        F --> G --> H
+    end
+
+    subgraph CONSULTA["CAPA DE CONSULTA INTELIGENTE"]
+        direction TB
+        I["Usuario pregunta en lenguaje natural<br/>'¿Qué documentos faltan para la audiencia de García mañana?'<br/>'Muéstrame órdenes por vencer esta semana'<br/>'Resume los 3 informes del caso Quispe'"]:::chat
+        I --> J["Embedding de la pregunta"]:::proceso
+        J --> K["Retriever<br/>top-k 5, threshold 0.75<br/>filtrado por permisos"]:::proceso
+        K --> L["Prompt con contexto<br/>+ instrucciones anti-alucinación"]:::proceso
+        L --> M["LLM<br/>GPT-4o-mini / Llama 3 local"]:::proceso
+        M --> N["Respuesta con citas<br/>[Archivo, pág. 2, score 0.89, fragmento resaltado]<br/>o 'no hay información suficiente'"]:::chat
+        H -.-> K
+    end
 ```
 
 #### Funcionalidades KM-RAG que ordenan inteligentemente:
