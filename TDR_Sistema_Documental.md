@@ -8,10 +8,10 @@
 
 | # | Nombre |
 |---|--------|
-| 1 | [Nombre del Integrante 1] |
-| 2 | [Nombre del Integrante 2] |
-| 3 | [Nombre del Integrante 3] |
-| 4 | [Nombre del Integrante 4] |
+| 1 | Mariana del Arroyo |
+| 2 | Jorge Saenz |
+| 3 | Santiago Acha |
+| 4 | Nahomi Humerez |
 
 ---
 
