@@ -14,10 +14,10 @@ Entre el **Buffet de Abogados de Asistencia Familiar**, Despacho Legal especiali
 
 | # | Desarrollador(a) | C.I. N.° |
 |---|-------------------|----------|
-| 1 | [Nombre del Integrante 1] | ________ |
-| 2 | [Nombre del Integrante 2] | ________ |
-| 3 | [Nombre del Integrante 3] | ________ |
-| 4 | [Nombre del Integrante 4] | ________ |
+| 1 | Nahomi Humerez | ________ |
+| 2 | Mariana del Arroyo | ________ |
+| 3 | Santiago Acha | ________ |
+| 4 | Jorge Saenz | ________ |
 
 Todos mayores de edad, hábiles por derecho, en conjunto denominados **"EL EQUIPO DESARROLLADOR"** o **"LOS PRESTADORES"**, quienes actúan de manera solidaria y mancomunada.
 
@@ -45,18 +45,20 @@ El buffet ha identificado la necesidad de contar con un sistema de gestión docu
 
 #### 2.2. Objeto
 
-**EL EQUIPO DESARROLLADOR** se compromete a diseñar, desarrollar e implementar un **Sistema de Gestión de Documentos** web especializado para el Buffet de Abogados de Asistencia Familiar, conforme a los Términos de Referencia (TDR_Sistema_Documental.md) anexos al presente contrato y que forman parte integrante del mismo. El proyecto incluye:
+**EL EQUIPO DESARROLLADOR** se compromete a diseñar, desarrollar e implementar un **Sistema de Gestión de Conocimiento (KM) web basado en RAG (Retrieval-Augmented Generation)** para el Buffet de Abogados de Asistencia Familiar, conforme a los Términos de Referencia (TDR_Sistema_Documental.md) anexos al presente contrato y que forman parte integrante del mismo. El proyecto incluye:
 
 1. Plataforma web segura y responsive para gestión de documentos legales
-2. Sistema de organización de documentos por caso con subcategorías legales
-3. Motor de búsqueda avanzada por múltiples criterios
-4. Control de versiones automático para documentos modificados
-5. Sistema de seguridad con cifrado de datos y control de acceso por roles
-6. Alertas automáticas de vencimiento de documentos y plazos legales
-7. Módulo de generación de documentos estándar desde plantillas
-8. Sistema de compartir documentos de forma segura con clientes y terceros
-9. Panel de administración para gestión de usuarios, casos y documentos
-10. Documentación y capacitación al personal del buffet
+2. Sistema de organización de documentos por caso con subcategorías legales predefinidas
+3. Motor de búsqueda avanzada por múltiples criterios y búsqueda semántica con RAG en lenguaje natural
+4. Pipeline RAG completo: ingesta, OCR, chunking, embeddings y almacenamiento en Vector DB (pgvector/Qdrant)
+5. Clasificación automática del tipo documental y chat de conocimiento (KM Chat) con respuestas con cita de fuente verificable
+6. Control de versiones automático para documentos modificados
+7. Sistema de seguridad con cifrado de datos, control de acceso por roles y trazabilidad de accesos RAG a nivel de chunk
+8. Alertas proactivas e inteligentes generadas a partir del análisis del contenido y notificaciones por correo
+9. Módulo de generación de documentos estándar desde plantillas asistido por RAG
+10. Sistema de compartir documentos de forma segura con clientes y terceros mediante enlaces con expiración
+11. Panel de administración para gestión de usuarios, casos, documentos y base vectorial, con dashboard de precisión RAG
+12. Documentación (manual de usuario y manual técnico de arquitectura RAG) y capacitación al personal del buffet
 
 ---
 
@@ -66,17 +68,19 @@ El buffet ha identificado la necesidad de contar con un sistema de gestión docu
 
 | Módulo | Descripción |
 |--------|-------------|
-| Autenticación y seguridad | Login seguro, recuperación de contraseña, sesiones seguras, cifrado de datos sensibles |
+| Autenticación y seguridad | Login seguro, recuperación de contraseña, sesiones seguras, cifrado de datos sensibles, auditoría de accesos |
 | Gestión de casos | CRUD de casos con datos del cliente, tipo de caso, estado, fechas límite, abogado asignado |
-| Gestión de documentos | Subida de archivos (PDF, Word, imágenes), organización por caso y categoría, metadatos |
-| Búsqueda avanzada | Búsqueda por nombre, tipo, fecha, caso, cliente, estado, palabras clave |
+| Gestión de documentos | Subida de archivos (PDF, Word, imágenes), organización por caso y categoría, metadatos personalizados, OCR automático |
+| Búsqueda avanzada y RAG | Búsqueda por filtros y búsqueda semántica en lenguaje natural con ranking por similitud vectorial |
+| Sistema KM con RAG (CORE) | Pipeline completo: Ingesta → OCR → Chunking (500-1000 tokens) → Embeddings → Vector DB → Retriever → LLM → Respuesta con cita (documento/página/fragmento) |
+| Clasificación inteligente | Auto-etiquetado de tipo documental y caso sugerido por el LLM al subir archivo |
 | Control de versiones | Historial de versiones, comparación, restauración de versiones anteriores |
-| Alertas y notificaciones | Alertas de vencimiento, recordatorios de audiencias, notificaciones por correo |
-| Generación de documentos | Plantillas para demandas, contestaciones, peticiones, acuerdos |
-| Compartir documentos | Enlaces seguros con tiempo de expiración, control de acceso |
-| Panel de administración | Gestión de usuarios, roles, permisos, estadísticas, respaldos |
-| Documentación | Manual de usuario, manual técnico |
-| Capacitación | 3 sesiones de capacitación al personal del buffet |
+| Alertas y notificaciones inteligentes | Alertas de vencimiento de plazos extraídas automáticamente del contenido, recordatorios de audiencias, notificaciones por correo |
+| Generación de documentos asistida | Plantillas para demandas, contestaciones, peticiones, acuerdos con datos pre-cargados y asistencia RAG |
+| Compartir documentos | Enlaces seguros con tiempo de expiración, control de acceso por cliente o terceros |
+| Panel de administración | Gestión de usuarios, roles y permisos, estadísticas de uso, gestión de base vectorial, respaldos automáticos, dashboard de precisión RAG |
+| Documentación | Manual de usuario (consulta al chat KM) y manual técnico (arquitectura RAG) |
+| Capacitación | 3 sesiones de capacitación al personal del buffet, incluye taller práctico de consultas en lenguaje natural |
 
 #### 3.2. Alcance excluido (LIMITACIONES)
 
@@ -184,12 +188,17 @@ EL EQUIPO DESARROLLADOR se compromete a cumplir con los siguientes requerimiento
 
 | Requerimiento | Descripción | Criterio de aceptación |
 |---------------|-------------|------------------------|
-| Rendimiento | Carga de página principal | < 3 segundos en conexión 4G |
-| Disponibilidad | Uptime del sistema | ≥ 99% |
-| Seguridad | HTTPS, passwords encriptados, protección OWASP Top 10, cifrado de datos | Auditoría sin vulnerabilidades críticas |
-| Responsividad | Mobile-first, compatible con navegadores modernos | Pruebas en Chrome, Firefox, Safari, Edge |
-| Usabilidad | Interfaz intuitiva para personal no técnico | Pruebas de usabilidad con usuario real |
-| Confidencialidad | Protección de datos sensibles de clientes y casos | Cumplimiento de normativa de protección de datos |
+| Rendimiento | Carga de página principal < 3 segundos en 4G; respuesta del chat RAG < 4 segundos para top-k=5 | Pruebas de carga y latencia |
+| Disponibilidad | Uptime del sistema ≥ 99% | Monitoreo de disponibilidad |
+| Seguridad | HTTPS obligatorio, passwords encriptados, protección OWASP Top 10, cifrado en reposo y tránsito | Auditoría sin vulnerabilidades críticas |
+| Responsividad | Compatible con navegadores modernos, diseño responsive para acceso desde celular en juzgados | Pruebas en Chrome, Firefox, Safari, Edge |
+| Usabilidad | Interfaz intuitiva para personal sin conocimientos técnicos; chat en español natural tipo WhatsApp | Pruebas de usabilidad con usuario real |
+| Mantenibilidad | Código documentado, estructura modular, pipeline RAG versionado | Revisión de código y documentación |
+| Idioma | Español integral en interfaz, prompts y respuestas del LLM | Verificación lingüística |
+| Confidencialidad | Protección de datos sensibles de clientes y casos; embeddings con mismo nivel de cifrado que documentos originales | Cumplimiento de normativa de protección de datos |
+| Escalabilidad | Soporte para 10.000+ documentos sin degradación; Vector DB escalable | Pruebas de escalabilidad |
+| Precisión RAG | Precision@5 > 85% y alucinación < 5%, toda respuesta con cita verificable o mensaje controlado | Evaluación con set de 50 preguntas reales |
+| Trazabilidad | Cada respuesta RAG con fuente: archivo, página, score y fragmento resaltado | Auditoría de trazabilidad RAG |
 
 ---
 
@@ -247,20 +256,20 @@ En señal de conformidad con todas y cada una de las cláusulas precedentes, LAS
 |------------|------------------------------|
 | **Buffet de Abogados de Asistencia Familiar** | |
 | | |
-| ________________________ | **[Nombre del Integrante 1]** |
+| ________________________ | **Nahomi Humerez** |
 | Nombre: ________________ | C.I.: ________________ |
 | C.I.: ________________ | Firma: ________________ |
 | Cargo: Representante Legal | |
 | | |
-| | **[Nombre del Integrante 2]** |
+| | **Mariana del Arroyo** |
 | | C.I.: ________________ |
 | | Firma: ________________ |
 | | |
-| | **[Nombre del Integrante 3]** |
+| | **Santiago Acha** |
 | | C.I.: ________________ |
 | | Firma: ________________ |
 | | |
-| | **[Nombre del Integrante 4]** |
+| | **Jorge Saenz** |
 | | C.I.: ________________ |
 | | Firma: ________________ |
 

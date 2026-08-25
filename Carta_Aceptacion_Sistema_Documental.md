@@ -1,6 +1,6 @@
 # CARTA DE ACEPTACIÓN DE TÉRMINOS DE REFERENCIA
 
-## PROYECTO: SISTEMA DE GESTIÓN DE DOCUMENTOS — BUFFET DE ABOGADOS DE ASISTENCIA FAMILIAR
+## PROYECTO: SISTEMA DE GESTIÓN DE CONOCIMIENTO (KM) CON RAG — BUFFET DE ABOGADOS DE ASISTENCIA FAMILIAR
 
 ---
 
@@ -25,10 +25,10 @@ Correo: [correo@buffet-abogados.com]
 
 | # | Nombre | C.I. N.° | Rol en el proyecto |
 |---|--------|----------|---------------------|
-| 1 | [Nombre del Integrante 1] | ________ | ________ |
-| 2 | [Nombre del Integrante 2] | ________ | ________ |
-| 3 | [Nombre del Integrante 3] | ________ | ________ |
-| 4 | [Nombre del Integrante 4] | ________ | ________ |
+| 1 | Nahomi Humerez | ________ | Coordinación General |
+| 2 | Mariana del Arroyo | ________ | Análisis y Documentación |
+| 3 | Santiago Acha | ________ | Desarrollo RAG / Backend |
+| 4 | Jorge Saenz | ________ | Desarrollo Frontend / QA |
 
 ---
 
@@ -38,7 +38,7 @@ Correo: [correo@buffet-abogados.com]
 
 Estimados miembros del Buffet de Abogados de Asistencia Familiar:
 
-Por medio de la presente, quienes suscribimos, en nuestra calidad de **Equipo de Desarrollo**, manifestamos nuestra **aceptación formal e incondicional** de los Términos de Referencia (TDR) correspondientes al proyecto **"Desarrollo de Sistema de Gestión de Documentos para el Buffet de Abogados de Asistencia Familiar"**, documento de referencia **"TDR_Sistema_Documental.md"** en su versión vigente, así como del **Contrato de Prestación de Servicios de Desarrollo de Software** anexo a esta carta.
+Por medio de la presente, quienes suscribimos, en nuestra calidad de Equipo de Desarrollo, manifestamos nuestra aceptación formal e incondicional de los Términos de Referencia (TDR) correspondientes al proyecto "Desarrollo de Sistema de Gestión de Conocimiento (KM) con RAG para el Buffet de Abogados de Asistencia Familiar", documento de referencia TDR_Sistema_Documental.md en su versión vigente, así como del Contrato de Prestación de Servicios de Desarrollo de Software anexo a esta carta.
 
 ---
 
@@ -46,26 +46,31 @@ Por medio de la presente, quienes suscribimos, en nuestra calidad de **Equipo de
 
 Mediante la presente carta, declaramos que:
 
-1. **Conocemos y comprendemos** en su totalidad los alcances, límites, requerimientos funcionales y no funcionales, entregables, cronograma, condiciones técnicas y económicas establecidos en los TDR y en el Contrato.
+1. Conocemos y comprendemos en su totalidad los alcances, límites, requerimientos funcionales y no funcionales, entregables, cronograma, condiciones técnicas y económicas establecidos en los TDR y en el Contrato.
 
-2. **Aceptamos todos los términos y condiciones** establecidos en dichos documentos, incluyendo de manera expresa la **Cláusula Primera del Contrato** sobre el régimen legal aplicable y la no suspensión de pago.
+2. Aceptamos todos los términos y condiciones establecidos en dichos documentos, incluyendo de manera expresa la Cláusula Primera del Contrato sobre el régimen legal aplicable y la no suspensión de pago.
 
-3. **Contamos con la capacidad técnica, los recursos humanos y las herramientas necesarias** para ejecutar el proyecto en los plazos y con los estándares de calidad exigidos, conforme al siguiente stack tecnológico propuesto:
+3. Contamos con la capacidad técnica, los recursos humanos y las herramientas necesarias para ejecutar el proyecto en los plazos y con los estándares de calidad exigidos, conforme al siguiente stack tecnológico propuesto:
 
 | Componente | Tecnología propuesta |
 |------------|---------------------|
 | Plataforma | Aplicación web SPA |
 | Frontend | React con TypeScript |
-| Backend | Node.js con Express |
-| Base de datos | PostgreSQL |
+| Backend | Node.js con Express (Python FastAPI para módulo RAG) |
+| Base de datos relacional | PostgreSQL con extensión pgvector |
+| Vector DB (RAG) | pgvector / Qdrant |
+| Embeddings | OpenAI text-embedding-3-large / Cohere embed-multilingual-v3.0 / BGE-M3 |
+| LLM | GPT-4o-mini / Claude 3.5 Sonnet / Llama 3.1 70B local |
+| Framework RAG | LangChain / LlamaIndex |
+| OCR | Tesseract.js + AWS Textract |
 | Autenticación | JWT con roles y permisos |
 | Almacenamiento | S3-compatible (MinIO o AWS S3) |
-| Búsqueda | Elasticsearch o MeiliSearch |
+| Búsqueda tradicional | MeiliSearch |
 | Hosting | VPS (DigitalOcean, Linode) |
 | Control de versiones | Git (GitHub) |
 | CI/CD | GitHub Actions |
 
-4. **Nos comprometemos a cumplir** con la totalidad de los entregables, plazos, hitos de pago, obligaciones de confidencialidad, garantía, soporte post-lanzamiento y cesión de propiedad intelectual estipulados en el Contrato y los TDR.
+4. Nos comprometemos a cumplir con la totalidad de los entregables, plazos, hitos de pago, obligaciones de confidencialidad, garantía, soporte post-lanzamiento y cesión de propiedad intelectual estipulados en el Contrato y los TDR.
 
 ---
 
@@ -77,17 +82,19 @@ Reconocemos y aceptamos que el proyecto incluye los siguientes módulos y funcio
 
 | Módulo | Confirmación |
 |--------|-------------|
-| Autenticación y seguridad (login, roles, cifrado) | Sí |
+| Autenticación y seguridad (login, roles, cifrado, auditoría) | Sí |
 | Gestión de casos (CRUD con datos del cliente y tipo de caso) | Sí |
-| Gestión de documentos (subida, organización, metadatos) | Sí |
-| Búsqueda avanzada (múltiples criterios) | Sí |
+| Gestión de documentos (subida, organización, metadatos, OCR) | Sí |
+| Búsqueda avanzada y búsqueda semántica con RAG | Sí |
+| Pipeline RAG: ingesta, chunking, embeddings, Vector DB | Sí |
+| Clasificación automática y Chat KM con citas verificables | Sí |
 | Control de versiones (historial, comparación, restauración) | Sí |
-| Alertas y notificaciones (vencimientos, audiencias) | Sí |
-| Generación de documentos estándar (plantillas) | Sí |
+| Alertas inteligentes y notificaciones (vencimientos extraídos del contenido) | Sí |
+| Generación de documentos estándar asistida por RAG | Sí |
 | Compartir documentos (enlaces seguros con expiración) | Sí |
-| Panel de administración (usuarios, roles, estadísticas) | Sí |
-| Documentación (manual de usuario, manual técnico) | Sí |
-| Capacitación al personal del buffet (3 sesiones) | Sí |
+| Panel de administración (usuarios, roles, estadísticas, base vectorial, dashboard RAG) | Sí |
+| Documentación (manual de usuario y manual técnico RAG) | Sí |
+| Capacitación al personal del buffet (3 sesiones, taller de consultas en lenguaje natural) | Sí |
 | Garantía post-despliegue (3 meses) | Sí |
 
 ---
@@ -151,8 +158,8 @@ Aceptamos la siguiente propuesta de pago en **cuatro (4) cuotas**, por un precio
 #### 3.4. Propiedad intelectual y confidencialidad
 
 Aceptamos que:
-- Todo el código fuente, documentación y materiales producidos serán propiedad exclusiva del Buffet de Abogados de Asistencia Familiar al completarse el pago total.
-- Mantendremos confidencialidad sobre toda la información del buffet, datos de clientes y casos legales por un mínimo de **3 años** posteriores al contrato.
+- Todo el código fuente, documentación, diseños, prompts, índices vectoriales y materiales producidos serán propiedad exclusiva del Buffet de Abogados de Asistencia Familiar al completarse el pago total.
+- Mantendremos confidencialidad sobre toda la información del buffet, datos de clientes y casos legales, incluyendo embeddings y base vectorial, por un mínimo de 3 años posteriores al contrato.
 
 #### 3.5. Fin de la relación contractual y nuevas implementaciones
 
@@ -187,9 +194,9 @@ De manera expresa y en cumplimiento del régimen legal boliviano vigente al año
 
 ### 7. CIERRE
 
-Reiteramos nuestro compromiso y entusiasmo por contribuir a la mejora operativa del Buffet de Abogados de Asistencia Familiar mediante el desarrollo de un sistema de gestión documental que optimice sus procesos, proteja la información de sus clientes y eleve la calidad de su servicio legal.
+Reiteramos nuestro compromiso por contribuir a la mejora operativa del Buffet de Abogados de Asistencia Familiar mediante el desarrollo de un Sistema de Gestión de Conocimiento que optimice sus procesos, proteja la información de sus clientes y eleve la calidad de su servicio legal.
 
-Manifestamos nuestra plena **aceptación** de los Términos de Referencia, del Contrato de Prestación de Servicios y de todas las condiciones, alcances, límites y obligaciones en ellos contenidos, y quedamos a disposición para coordinar la firma del contrato e iniciar formalmente las actividades del proyecto en la fecha que se acuerde.
+Manifestamos nuestra plena aceptación de los Términos de Referencia, del Contrato de Prestación de Servicios y de todas las condiciones, alcances, límites y obligaciones en ellos contenidos, y quedamos a disposición para coordinar la firma del contrato e iniciar formalmente las actividades del proyecto en la fecha que se acuerde.
 
 ---
 
@@ -199,12 +206,12 @@ Atentamente,
 
 | | |
 |---|---|
-| **[Nombre del Integrante 1]** | **[Nombre del Integrante 2]** |
+| **Nahomi Humerez** | **Mariana del Arroyo** |
 | C.I.: ________________ | C.I.: ________________ |
 | Firma: ________________ | Firma: ________________ |
 | | |
 | | |
-| **[Nombre del Integrante 3]** | **[Nombre del Integrante 4]** |
+| **Santiago Acha** | **Jorge Saenz** |
 | C.I.: ________________ | C.I.: ________________ |
 | Firma: ________________ | Firma: ________________ |
 

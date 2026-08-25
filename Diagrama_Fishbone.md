@@ -1,23 +1,31 @@
 # DIAGRAMA DE ISHIKAWA (ESPINA DE PESCADO)
 
-## SISTEMA DE GESTIÓN DE DOCUMENTOS — BUFFET DE ASISTENCIA FAMILIAR
+## SISTEMA DE GESTIÓN DE CONOCIMIENTO (KM) CON RAG — BUFFET DE ASISTENCIA FAMILIAR
+
+### EQUIPO DE TRABAJO
+
+| # | Nombre |
+|---|--------|
+| 1 | Nahomi Humerez |
+| 2 | Mariana del Arroyo |
+| 3 | Santiago Acha |
+| 4 | Jorge Saenz |
 
 ---
 
-### PREGUNTA CENTRAL DEL PROYECTO (enfoque KM):
+### PREGUNTA CENTRAL DEL PROYECTO
 
-# **¿CÓMO ORDENAR LOS ARCHIVOS Y DOCUMENTOS LEGALES OFICIALES DE MANERA INTELIGENTE PARA ABOGADOS DE LEY FAMILIAR?**
+**¿Cómo ordenar los archivos y documentos legales oficiales de manera inteligente para abogados de ley familiar?**
 
-> **RESPUESTA / SOLUCIÓN PROPUESTA:**
-> **Creando un Sistema de Gestión de Conocimiento (KM) a base de RAG (Retrieval-Augmented Generation) para filtrar, clasificar y organizar los datos de forma automática, permitiendo búsquedas en lenguaje natural y respuestas con cita de fuente.**
+**Solución propuesta:** Sistema de Gestión de Conocimiento (KM) basado en RAG (Retrieval-Augmented Generation) para filtrar, clasificar y organizar los datos de forma automática, permitiendo búsquedas en lenguaje natural y respuestas con cita de fuente verificable.
 
-Esta pregunta es el **problema central** del Ishikawa. La ineficiencia actual impide ordenar inteligentemente; el sistema KM con RAG es la respuesta que ataca directamente las causas raíz.
+La pregunta central constituye el problema central del diagrama. La ineficiencia actual impide el ordenamiento inteligente; el sistema KM con RAG es la respuesta que ataca directamente las causas raíz identificadas.
 
 ---
 
-### PROBLEMA CENTRAL IDENTIFICADO (desglosado):
+### PROBLEMA CENTRAL IDENTIFICADO
 
-# **INEFICIENCIA EN LA GESTIÓN DOCUMENTAL QUE IMPIDE ORDENAR INTELIGENTEMENTE LOS ARCHIVOS LEGALES Y AFECTA LA CALIDAD DEL SERVICIO LEGAL EN ASISTENCIA FAMILIAR**
+**Ineficiencia en la gestión documental que impide ordenar inteligentemente los archivos legales y afecta la calidad del servicio legal en asistencia familiar**
 
 ---
 
@@ -155,9 +163,9 @@ Esta pregunta es el **problema central** del Ishikawa. La ineficiencia actual im
 
 ---
 
-### PROBLEMA COMÚN IDENTIFICADO EN LOS 3 ENTREVISTADOS:
+### PROBLEMA COMÚN IDENTIFICADO EN LOS TRES ENTREVISTADOS
 
-> **Los tres abogados especializados en asistencia familiar enfrentan el mismo problema central: no saben cómo ordenar los archivos y documentos legales oficiales de manera inteligente. Buscan "convenio García" y no aparece porque el archivo se llama `DOC_FINAL2.pdf`. Pierden entre 3 y 6 horas semanales buscando, sufren retrasos en audiencias, pérdida de credibilidad y riesgo de filtración. La causa raíz común es la falta de un sistema KM que filtre y organice automáticamente el contenido — no solo el nombre del archivo.**
+Los tres abogados especializados en asistencia familiar enfrentan el mismo problema central: no logran ordenar los archivos y documentos legales oficiales de manera inteligente. La búsqueda de "convenio García" no arroja resultados porque el archivo se denomina `DOC_FINAL2.pdf`. Pierden entre 3 y 6 horas semanales en búsquedas, sufren retrasos en audiencias, pérdida de credibilidad y riesgo de filtración. La causa raíz común es la ausencia de un sistema KM que filtre y organice automáticamente el contenido, no solo el nombre del archivo.
 
 **Evidencia textual:**
 - Abogado 01 (12 años): *"Que me entienda aunque escriba mal... Que yo escriba 'Mamani alimentos' y me aparezca TODO"*
@@ -179,9 +187,9 @@ Esta pregunta es el **problema central** del Ishikawa. La ineficiencia actual im
 
 ---
 
-### PROPUESTA DE SOLUCIÓN: SISTEMA KM A BASE DE RAG
+### PROPUESTA DE SOLUCIÓN: SISTEMA KM BASADO EN RAG
 
-**Respuesta a la pregunta "¿Cómo ordenar inteligentemente?": Crear un Sistema de Gestión de Conocimiento (KM) a base de RAG para filtrar y organizar los datos.**
+Respuesta a la pregunta central: implementación de un Sistema de Gestión de Conocimiento (KM) basado en RAG para filtrar y organizar los datos de forma automática.
 
 #### Arquitectura KM-RAG propuesta:
 
@@ -246,14 +254,14 @@ Cuantifica el peso de cada categoría causal sobre la ineficiencia central. Coef
 | **MEDIO AMBIENTE** | **0.05** | 5% | Espacio limitado, conservación deficiente, acceso no controlado | Infraestructura física |
 | **TOTAL** | **1.00** | **100%** | | |
 
-> **Lectura:** TECNOLOGÍA (0.30) + PROCESOS (0.25) = 55% del problema. Por eso la solución KM-RAG ataca directamente esas dos categorías con el mayor coeficiente. Ver `Matriz_Coeficientes.md` Sección 6 para matriz de riesgos asociada (CR = P×I).
+Interpretación: Tecnología (0.30) + Procesos (0.25) = 55% del problema. Por ello, la solución KM-RAG prioriza la intervención sobre esas dos categorías con mayor ponderación. La matriz de riesgos asociada (CR = P×I) se desarrolla en Matriz_Coeficientes.md, Sección 6.
 
 ---
 
 ### VALIDACIÓN DE LA SOLUCIÓN CON LAS ENTREVISTAS
 
-La solución KM-RAG fue validada contra las 3 entrevistas: los 3 abogados piden explícitamente "que me entienda aunque escriba mal", "como si fuera una persona", "que lea los documentos por mí". Esto **no lo resuelve una búsqueda tradicional por palabras clave**, solo RAG.
+La solución KM-RAG fue validada contra las tres entrevistas: los abogados solicitan explícitamente que el sistema "entienda aunque se escriba con errores", "responda como si fuera una persona" y "lea los documentos por ellos". Este requerimiento no es resoluble mediante búsqueda tradicional por palabras clave, sino únicamente mediante RAG.
 
-**Criterio de éxito RAG definido en TDR:** Precision@5 >85%, alucinación <5%, respuesta siempre con cita verificable, validado con 50 preguntas reales del buffet en Sprint 6.
+Criterio de éxito RAG definido en el TDR: Precision@5 >85%, alucinación <5%, respuesta siempre con cita verificable, validado con 50 preguntas reales del buffet en Sprint 6.
 
 ---

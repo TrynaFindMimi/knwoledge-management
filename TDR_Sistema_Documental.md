@@ -8,10 +8,10 @@
 
 | # | Nombre |
 |---|--------|
-| 1 | Mariana del Arroyo |
-| 2 | Jorge Saenz |
+| 1 | Nahomi Humerez |
+| 2 | Mariana del Arroyo |
 | 3 | Santiago Acha |
-| 4 | Nahomi Humerez |
+| 4 | Jorge Saenz |
 
 ---
 
@@ -25,9 +25,8 @@
 | **Tipo de organización** | Despacho de abogados especializado en derecho de familia (alimentos, patria potestad, violencia doméstica, adopción) |
 | **Moneda de referencia** | Bolivianos (Bs.) |
 | **Duración estimada** | 10 semanas |
-
-> **Pregunta central que origina el proyecto:** *¿Cómo ordenar los archivos y documentos legales oficiales de manera inteligente para abogados de ley familiar?*
-> **Respuesta / Solución propuesta:** *Creando un Sistema de Gestión de Conocimiento (KM) a base de RAG para filtrar, clasificar y organizar los datos de forma automática, con búsqueda semántica y respuestas con cita de fuente.*
+| **Pregunta central** | ¿Cómo ordenar los archivos y documentos legales oficiales de manera inteligente para abogados de ley familiar? |
+| **Solución propuesta** | Sistema de Gestión de Conocimiento (KM) basado en RAG para filtrar, clasificar y organizar los datos de forma automática, con búsqueda semántica y respuestas con cita de fuente verificable |
 
 ---
 
@@ -168,12 +167,11 @@ Desarrollar e implementar un **Sistema de Gestión de Conocimiento (KM) web basa
 | Control de versiones | **Git** (GitHub/GitLab) | — |
 | CI/CD | **GitHub Actions** | GitLab CI |
 
-**Flujo RAG propuesto:**
-```
-[PDF/JPG/DOCX] → OCR → Limpieza → Chunking → Embeddings → pgvector/Qdrant
-                                                              ↓
-Usuario pregunta ("¿qué falta para audiencia García?") → Embedding pregunta → Retriever (top-k 5, threshold 0.75) → Prompt + Contexto → LLM → Respuesta con citas [Doc, pág, score]
-```
+**Flujo RAG propuesto (Figura 1):**
+
+Ingesta: [PDF/JPG/DOCX] → OCR → Limpieza → Chunking (500–800 tokens, overlap 100) → Embeddings → pgvector/Qdrant
+
+Consulta: Pregunta en lenguaje natural → Embedding de la pregunta → Retriever (top-k 5, threshold 0.75) → Prompt con contexto → LLM → Respuesta con citas [Documento, página, score]
 
 ---
 
@@ -252,7 +250,7 @@ El equipo desarrollador se compromete a mantener estricta confidencialidad sobre
 
 ### 15. CRITERIOS DE EVALUACIÓN DE PROPUESTAS — MATRIZ DE COEFICIENTES
 
-> **Ver documento completo:** [`Matriz_Coeficientes.md`](./Matriz_Coeficientes.md) — Anexo A del presente TDR. Esta sección resume la matriz ponderada.
+La presente sección resume la matriz ponderada. El detalle completo se presenta en el Anexo A: Matriz_Coeficientes.md.
 
 #### 15.1. Matriz de Coeficientes Ponderados
 
@@ -289,7 +287,7 @@ Descalificación automática: si C1 < 40 o C2 < 40 (criterios críticos)
 - **Priorización de Requerimientos (F01-F21):** Coeficiente de Valor (CV 1-5) y Esfuerzo (CE 1-5), ratio Valor/Esfuerzo para ordenar backlog por sprint. Ej. F17/F18 (Pipeline RAG y Chat KM) CV=5/CE=5 → Sprint 5-7 prioritarios.
 - **Coeficientes de Riesgo:** CR = Probabilidad (1-5) × Impacto (1-5). Ej. R1 Alucinación CR=15 (Alto), R2 OCR manuscritos CR=16 (Alto) → requieren mitigación obligatoria.
 
-> Detalle completo de ambas matrices en [`Matriz_Coeficientes.md`](./Matriz_Coeficientes.md) Secciones 5 y 6.
+El detalle completo de ambas matrices se desarrolla en Matriz_Coeficientes.md, Secciones 5 y 6.
 
 ---
 

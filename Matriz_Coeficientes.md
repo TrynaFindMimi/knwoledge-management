@@ -2,20 +2,22 @@
 
 ## SISTEMA DE GESTIÓN DE CONOCIMIENTO (KM) CON RAG — BUFFET DE ASISTENCIA FAMILIAR
 
+### EQUIPO DE TRABAJO
+
+| # | Nombre |
+|---|--------|
+| 1 | Nahomi Humerez |
+| 2 | Mariana del Arroyo |
+| 3 | Santiago Acha |
+| 4 | Jorge Saenz |
+
 ---
 
 ### 1. OBJETO DE LA MATRIZ
 
-Esta matriz establece de forma **objetiva, ponderada y trazable** cómo se evaluarán y calificarán las propuestas técnicas y económicas presentadas para el proyecto. Permite obtener un **puntaje final ponderado (0-100)** por proponente, garantizando transparencia y comparabilidad.
+Esta matriz establece de forma objetiva, ponderada y trazable cómo se evaluarán y calificarán las propuestas técnicas y económicas presentadas para el proyecto. Permite obtener un puntaje final ponderado (0–100) por proponente, garantizando transparencia y comparabilidad.
 
-> **Fórmula general:**
-> ```
-> Puntaje Final (PF) = Σ (Ci × Pi)
-> Donde: Ci = Coeficiente de ponderación del criterio i (0.00 - 1.00)
->        Pi = Puntaje obtenido en el criterio i (0 - 100)
->        ΣCi = 1.00 (100%)
-> ```
-> **Puntaje mínimo de habilitación:** 70/100. Propuestas por debajo se descalifican.
+Fórmula general: Puntaje Final (PF) = Σ (Ci × Pi), donde Ci = coeficiente de ponderación del criterio i (0,00–1,00), Pi = puntaje obtenido en el criterio i (0–100), ΣCi = 1,00 (100%). Puntaje mínimo de habilitación: 70/100. Las propuestas por debajo de este umbral se descalifican.
 
 ---
 
@@ -61,7 +63,7 @@ Esta matriz establece de forma **objetiva, ponderada y trazable** cómo se evalu
 
 ### 5. MATRIZ SECUNDARIA — COEFICIENTES DE PRIORIZACIÓN DE REQUERIMIENTOS FUNCIONALES
 
-Permite priorizar el backlog y decidir qué entra en cada sprint. Coeficiente de valor (CV) de 1 a 5.
+Permite priorizar el backlog y definir el contenido de cada sprint. Coeficiente de Valor (CV) de 1 a 5 y Coeficiente de Esfuerzo (CE) de 1 a 5. Ratio Valor/Esfuerzo = CV/CE.
 
 | Req. | Funcionalidad | Prioridad TDR | Coef. Valor (CV) | Coef. Esfuerzo (CE) | Ratio Valor/Esfuerzo | Sprint sugerido |
 |------|---------------|---------------|-----------------|---------------------|----------------------|-----------------|
