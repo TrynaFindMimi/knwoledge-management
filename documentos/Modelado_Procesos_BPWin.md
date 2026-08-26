@@ -28,19 +28,12 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 ### 2.1. Diagrama de Contexto (Nivel 0)
 
-```
-                    ┌─────────────────┐
-                    │    ABOGADO      │
-                    │ (Usuario primario)│
-                    └────────┬────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              ▼              ▼              ▼
-     ┌────────────┐  ┌────────────┐  ┌────────────┐
-     │  ASISTENTE │  │  SISTEMA   │  │  TERCEROS  │
-     │  (Admin)   │  │  KM con RAG│  │ (SLIM, Def.│
-     └────────────┘  └────────────┘  │  Ministerio)│
-                                     └────────────┘
+```mermaid
+graph TD
+    A["ABOGADO\n(Usuario primario)"]
+    A --> B["ASISTENTE\n(Admin)"]
+    A --> C["SISTEMA\nKM con RAG"]
+    A --> D["TERCEROS\n(SLIM, Defensoría,\nMinisterio)"]
 ```
 
 ### 2.2. Procesos de Negocio Identificados
@@ -56,16 +49,19 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Abogado ingresa datos del cliente
-2. Sistema crea caso con ID único
-3. Sistema clasifica tipo de caso automáticamente
-   ├── Asistencia Familiar
-   ├── Patria Potestad
-   ├── Violencia Doméstica
-   └── Otros
-4. Sistema genera estructura de carpetas virtuales
-5. Sistema notifica creación exitosa
+```mermaid
+flowchart TD
+    A["Abogado ingresa datos del cliente"] --> B["Sistema crea caso con ID único"]
+    B --> C{"Sistema clasifica tipo de caso"}
+    C --> D["Asistencia Familiar"]
+    C --> E["Patria Potestad"]
+    C --> F["Violencia Doméstica"]
+    C --> G["Otros"]
+    D --> H["Sistema genera estructura de carpetas virtuales"]
+    E --> H
+    F --> H
+    G --> H
+    H --> I["Sistema notifica creación exitosa"]
 ```
 
 **Reglas de Negocio:**
@@ -86,24 +82,30 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Abogado selecciona caso destino
-2. Abogado carga documento (arrastrar/click)
-3. Sistema detecta tipo de archivo
-4. Sistema extrae texto (OCR si es imagen)
-5. Sistema genera chunks semánticos
-6. Sistema clasifica documento por contenido
-   ├── Demanda
-   ├── Contestación
-   ├── Informe psicológico
-   ├── Certificado médico
-   ├── Orden de protección
-   ├── Comprobante de pago
-   └── Otro
-7. Sistema genera embeddings vectoriales
-8. Sistema almacena en base vectorial y relacional
-9. Sistema crea nueva versión (v1 si es primero)
-10. Sistema notifica indexación exitosa
+```mermaid
+flowchart TD
+    A["Abogado selecciona caso destino"] --> B["Abogado carga documento"]
+    B --> C["Sistema detecta tipo de archivo"]
+    C --> D["Sistema extrae texto\n(OCR si es imagen)"]
+    D --> E["Sistema genera chunks semánticos"]
+    E --> F{"Sistema clasifica documento"}
+    F --> G["Demanda"]
+    F --> H["Contestación"]
+    F --> I["Informe psicológico"]
+    F --> J["Certificado médico"]
+    F --> K["Orden de protección"]
+    F --> L["Comprobante de pago"]
+    F --> M["Otro"]
+    G --> N["Sistema genera embeddings vectoriales"]
+    H --> N
+    I --> N
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+    N --> O["Sistema almacena en base vectorial y relacional"]
+    O --> P["Sistema crea nueva versión"]
+    P --> Q["Sistema notifica indexación exitosa"]
 ```
 
 **Reglas de Negocio:**
@@ -125,23 +127,23 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Abogado escribe consulta en lenguaje natural
-   ├── Ej: "informe psicológico Quispe niña"
-   ├── Ej: "¿qué documentos faltan para mañana?"
-   └── Ej: "certificado forense señora Flores agosto"
-2. Sistema procesa consulta (tolerancia a errores)
-3. Sistema genera embedding de la consulta
-4. Sistema busca en base vectorial (similitud semántica)
-5. Sistema recupera chunks más relevantes
-6. Sistema recupera documentos fuente
-7. Sistema genera respuesta en lenguaje natural
-8. Sistema incluye citas de fuentes
-   ├── Nombre del documento
-   ├── Fecha de carga
-   ├── Caso asociado
-   └── Enlace directo al documento
-9. Sistema presenta resultados al abogado
+```mermaid
+flowchart TD
+    A["Abogado escribe consulta\nen lenguaje natural"] --> B["Sistema procesa consulta\n(tolerancia a errores)"]
+    B --> C["Sistema genera embedding\nde la consulta"]
+    C --> D["Sistema busca en base vectorial\n(similitud semántica)"]
+    D --> E["Sistema recupera chunks\nmás relevantes"]
+    E --> F["Sistema recupera\ndocumentos fuente"]
+    F --> G["Sistema genera respuesta\nen lenguaje natural"]
+    G --> H["Sistema incluye citas de fuentes"]
+    H --> H1["Nombre del documento"]
+    H --> H2["Fecha de carga"]
+    H --> H3["Caso asociado"]
+    H --> H4["Enlace directo al documento"]
+    H1 --> I["Sistema presenta resultados al abogado"]
+    H2 --> I
+    H3 --> I
+    H4 --> I
 ```
 
 **Reglas de Negocio:**
@@ -163,19 +165,22 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Abogado registra audiencia en el sistema
-2. Sistema vincula audiencia al caso
-3. Sistema identifica documentos requeridos para el tipo de audiencia
-4. Sistema verifica qué documentos faltan
-5. Sistema genera checklist de documentos
-6. Sistema programa alertas:
-   ├── 48 horas antes (preparación)
-   ├── 24 horas antes (documentos faltantes)
-   ├── 2 horas antes (repaso final)
-   └── Post-audiencia (seguimiento)
-7. Sistema prepara paquete de documentos descargable
-8. Sistema notifica al abogado
+```mermaid
+flowchart TD
+    A["Abogado registra audiencia\nen el sistema"] --> B["Sistema vincula audiencia al caso"]
+    B --> C["Sistema identifica documentos\nrequeridos para tipo de audiencia"]
+    C --> D["Sistema verifica\ndocumentos faltantes"]
+    D --> E["Sistema genera checklist\nde documentos"]
+    E --> F["Sistema programa alertas"]
+    F --> F1["48 horas antes\n(preparación)"]
+    F --> F2["24 horas antes\n(documentos faltantes)"]
+    F --> F3["2 horas antes\n(repaso final)"]
+    F --> F4["Post-audiencia\n(seguimiento)"]
+    F1 --> G["Sistema prepara paquete\nde documentos descargable"]
+    F2 --> G
+    F3 --> G
+    F4 --> G
+    G --> H["Sistema notifica al abogado"]
 ```
 
 **Reglas de Negocio:**
@@ -196,24 +201,29 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Abogado selecciona documento(s) a compartir
-2. Abogado define destinatario (nombre, institución)
-3. Abogado define duración del enlace (1h, 24h, 72h)
-4. Sistema genera enlace temporal con JWT
-5. Sistema configura permisos:
-   ├── Solo lectura
-   ├── Sin descarga (solo vista)
-   └── Con marca de agua
-6. Sistema envía notificación al destinatario
-7. Tercero accede al enlace
-8. Sistema registra:
-   ├── Hora de acceso
-   ├── IP de acceso
-   ├── Documentos consultados
-   └── Tiempo de permanencia
-9. Al expirar, enlace queda inactivo
-10. Sistema notifica al abogado que el enlace expiró
+```mermaid
+flowchart TD
+    A["Abogado selecciona\ndocumento(s) a compartir"] --> B["Abogado define destinatario\n(nombre, institución)"]
+    B --> C["Abogado define duración\ndel enlace (1h, 24h, 72h)"]
+    C --> D["Sistema genera enlace\ntemporal con JWT"]
+    D --> E{"Sistema configura permisos"}
+    E --> F["Solo lectura"]
+    E --> G["Sin descarga\n(solo vista)"]
+    E --> H["Con marca de agua"]
+    F --> I["Sistema envía notificación\nal destinatario"]
+    G --> I
+    H --> I
+    I --> J["Tercero accede al enlace"]
+    J --> K["Sistema registra acceso"]
+    K --> K1["Hora de acceso"]
+    K --> K2["IP de acceso"]
+    K --> K3["Documentos consultados"]
+    K --> K4["Tiempo de permanencia"]
+    K1 --> L["Enlace expira"]
+    K2 --> L
+    K3 --> L
+    K4 --> L
+    L --> M["Sistema notifica al abogado\nque el enlace expiró"]
 ```
 
 **Reglas de Negocio:**
@@ -234,17 +244,17 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Abogado carga versión modificada de documento existente
-2. Sistema detecta que es el mismo documento (similitud > 90%)
-3. Sistema pregunta: "¿Es una nueva versión?"
-4. Abogado confirma
-5. Sistema incrementa número de versión (v1 → v2)
-6. Sistema conserva versión anterior completa
-7. Sistema actualiza embedding vectorial
-8. Sistema marca v2 como "actual"
-9. Sistema registra diff entre versiones
-10. Sistema notifica actualización
+```mermaid
+flowchart TD
+    A["Abogado carga versión modificada\nde documento existente"] --> B["Sistema detecta similitud > 90%\ncon documento existente"]
+    B --> C["Sistema pregunta:\n¿Es una nueva versión?"]
+    C --> D["Abogado confirma"]
+    D --> E["Sistema incrementa\nnúmero de versión (v1 → v2)"]
+    E --> F["Sistema conserva\nversión anterior completa"]
+    F --> G["Sistema actualiza\nembedding vectorial"]
+    G --> H["Sistema marca v2 como 'actual'"]
+    H --> I["Sistema registra diff\nentre versiones"]
+    I --> J["Sistema notifica actualización"]
 ```
 
 **Reglas de Negocio:**
@@ -265,25 +275,33 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 **Flujo de Actividades:**
 
-```
-1. Sistema monitorea continuamente:
-   ├── Audiencias programadas
-   ├── Vencimientos de órdenes de protección
-   ├── Plazos legales
-   └── Casos sin actividad prolongada
-2. Sistema detecta evento próximo
-3. Sistema clasifica urgencia:
-   ├── CRÍTICA (< 24 horas)
-   ├── ALTA (< 72 horas)
-   ├── MEDIA (< 1 semana)
-   └── BAJA (recordatorio general)
-4. Sistema genera notificación contextualizada
-5. Sistema envía por canal preferido:
-   ├── Web (in-app notification)
-   ├── Móvil (push notification)
-   └── Email (resumen diario)
-6. Abogado accede a la notificación
-7. Sistema registra si fue leída y atendida
+```mermaid
+flowchart TD
+    A["Sistema monitorea continuamente"] --> A1["Audiencias programadas"]
+    A --> A2["Vencimientos de órdenes\nde protección"]
+    A --> A3["Plazos legales"]
+    A --> A4["Casos sin actividad\nprolongada"]
+    A1 --> B["Sistema detecta\nevento próximo"]
+    A2 --> B
+    A3 --> B
+    A4 --> B
+    B --> C{"Sistema clasifica urgencia"}
+    C --> D["CRÍTICA\n(< 24 horas)"]
+    C --> E["ALTA\n(< 72 horas)"]
+    C --> F["MEDIA\n(< 1 semana)"]
+    C --> G["BAJA\n(recordatorio general)"]
+    D --> H["Sistema genera notificación\ncontextualizada"]
+    E --> H
+    F --> H
+    G --> H
+    H --> I{"Canal preferido"}
+    I --> J["Web\n(in-app notification)"]
+    I --> K["Móvil\n(push notification)"]
+    I --> L["Email\n(resumen diario)"]
+    J --> M["Abogado accede\na la notificación"]
+    K --> M
+    L --> M
+    M --> N["Sistema registra\nsi fue leída y atendida"]
 ```
 
 **Reglas de Negocio:**
@@ -297,19 +315,14 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 ### 3.1. Proceso Principal: Gestión del Ciclo de Vida de un Documento Legal
 
-```
-┌─────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌─────────┐
-│ INICIO  │───>│ Cargar   │───>│ Clasificar│───>│ Indexar  │───>│  Buscar │
-│         │    │ Documento│    │ Automático│    │ Vectorial│    │ Cuando  │
-└─────────┘    └──────────┘    └──────────┘    └──────────┘    │ Necesite│
-                                                                └────┬────┘
-                                                                     │
-                                              ┌──────────────────────┘
-                                              ▼
-                                        ┌──────────┐    ┌──────────┐
-                                        │ Compartir│───>│  ALERTAS │
-                                        │ Seguro   │    │ Proactivas│
-                                        └──────────┘    └──────────┘
+```mermaid
+flowchart LR
+    A["INICIO"] --> B["Cargar\nDocumento"]
+    B --> C["Clasificar\nAutomático"]
+    C --> D["Indexar\nVectorial"]
+    D --> E["Buscar\nCuando Necesite"]
+    E --> F["Compartir\nSeguro"]
+    F --> G["ALERTAS\nProactivas"]
 ```
 
 ### 3.2. Modelo de Datos BPWin
