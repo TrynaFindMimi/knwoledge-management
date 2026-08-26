@@ -97,7 +97,7 @@ El sistema cubrirá las siguientes áreas:
 | # | Límite | Justificación |
 |---|--------|---------------|
 | L1 | No se reemplaza el sistema físico actual | El sistema digital es complementario, no elimina carpetas físicas existentes |
-| L2 | No se integra con sistemas judiciales (PLEXIS, SISJU) | Requiere acuerdos interinstitucionales fuera del alcance |
+| L2 | No se integra con sistemas judiciales (LEXIUS) | Requiere acuerdos interinstitucionales fuera del alcance |
 | L3 | No se genera documentos legales automáticamente | El sistema almacena y busca, no redacta demandas ni escritos |
 | L4 | No se incluye módulo de facturación | El buffet es de asistencia gratuita |
 | L5 | No se proporciona abogado virtual ni asesoría legal automatizada | El sistema gestiona conocimiento, no reemplaza la咨询a legal |
