@@ -53,9 +53,83 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-## 5. REQUERIMIENTOS FUNCIONALES
+## 5. ALCANCES
 
-### 5.1. ÉPICA: AUTENTICACIÓN Y SEGURIDAD
+### 5.1. Alcance del Proyecto
+
+El sistema cubrirá las siguientes áreas:
+
+| # | Alcance | Descripción |
+|---|---------|-------------|
+| A1 | Gestión de casos | Creación, consulta, edición y cierre de casos de derecho familiar |
+| A2 | Ingesta de documentos | Carga, clasificación automática y indexación semántica de documentos legales |
+| A3 | Búsqueda inteligente | Búsqueda semántica con RAG, tolerant a errores y sinónimos legales |
+| A4 | Consulta conversacional | Chat interactivo para preguntas en lenguaje natural sobre los casos |
+| A5 | Alertas proactivas | Notificaciones automáticas de vencimientos, audiencias y plazos legales |
+| A6 | Compartición segura | Enlaces temporales con permisos para compartir documentos con terceros |
+| A7 | Control de versiones | Historial completo de versiones por documento con posibilidad de comparación |
+| A8 | Seguridad y auditoría | Cifrado, control de acceso por roles y registro de auditoría |
+| A9 | Interfaz web responsive | Plataforma accesible desde computadora, tablet y celular |
+
+### 5.2. Alcance por Tipo de Caso
+
+| Tipo de Caso | Cobertura |
+|--------------|-----------|
+| Asistencia Familiar (alimentos) | Completa |
+| Patria Potestad (guarda, custodia) | Completa |
+| Violencia Doméstica y Protección a Víctimas | Completa + nivel de seguridad reforzado |
+| Otros (divorcio, divorcio por mutuo acuerdo, violencia intrafamiliar) | Parcial — registro y búsqueda básica |
+
+### 5.3. Alcance por Usuario
+
+| Usuario | Funciones Disponibles |
+|---------|----------------------|
+| Abogado | CRUD de casos, carga de documentos, búsqueda, alertas, compartición, chat |
+| Asistente | Carga de documentos, búsqueda, consulta de casos asignados |
+| Administrador | Gestión de usuarios, roles, auditoría, configuración del sistema |
+
+---
+
+## 6. LÍMITES DEL PROYECTO
+
+### 6.1. Lo que NO incluye este proyecto
+
+| # | Límite | Justificación |
+|---|--------|---------------|
+| L1 | No se reemplaza el sistema físico actual | El sistema digital es complementario, no elimina carpetas físicas existentes |
+| L2 | No se integra con sistemas judiciales (PLEXIS, SISJU) | Requiere acuerdos interinstitucionales fuera del alcance |
+| L3 | No se genera documentos legales automáticamente | El sistema almacena y busca, no redacta demandas ni escritos |
+| L4 | No se incluye módulo de facturación | El buffet es de asistencia gratuita |
+| L5 | No se proporciona abogado virtual ni asesoría legal automatizada | El sistema gestiona conocimiento, no reemplaza la咨询a legal |
+| L6 | No se soportan idiomas distintos al español | El buffet opera exclusivamente en Bolivia |
+| L7 | No se incluye app móvil nativa | Se desarrolla como web responsive; app nativa sería una fase futura |
+| L8 | No se integra con WhatsApp ni redes sociales | La compartición se hace exclusivamente por enlaces temporales seguros |
+| L9 | No se incluye migración masiva de documentos existentes | Cada abogado migra sus documentos progresivamente al usar el sistema |
+| L10 | No se ofrece soporte 24/7 con personal dedicado | El sistema tiene alta disponibilidad pero sin help desk presencial |
+
+### 6.2. Restricciones Técnicas
+
+| # | Restricción | Descripción |
+|---|-------------|-------------|
+| R1 | Presupuesto limitado | Se utilizarán tecnologías de código abierto y servicios cloud con tier gratuito |
+| R2 | Infraestructura existente | El buffet solo dispone de laptops y conexión a internet básica |
+| R3 | Personal no técnico | La interfaz debe ser usable sin capacitación formal (máximo 1 día) |
+| R4 | Conectividad intermitente | El sistema debe funcionar con conexión lenta y permitir búsqueda offline básica |
+
+### 6.3. Supuestos
+
+| # | Supuesto | Validación |
+|---|----------|------------|
+| S1 | Los abogados contarán con dispositivo con navegador web | Entrevistas: todos tienen laptop o celular con internet |
+| S2 | El buffet proporcionará espacio en cloud para almacenamiento | A confirmar con dirección del buffet |
+| S3 | Los usuarios adoptarán el sistema si es lo suficientemente simple | Validado en entrevistas:意愿 de cambio si ahorra tiempo |
+| S4 | El modelo RAG funcionará con documentos legales en español boliviano | Requiere fine-tuning con vocabulario jurídico local |
+
+---
+
+## 7. REQUERIMIENTOS FUNCIONALES
+
+### 7.1. ÉPICA: AUTENTICACIÓN Y SEGURIDAD
 
 #### RF-01: Inicio de sesión seguro
 | Campo | Descripción |
@@ -121,7 +195,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.2. ÉPICA: GESTIÓN DE CASOS
+### 7.2. ÉPICA: GESTIÓN DE CASOS
 
 #### RF-05: Crear un caso nuevo
 | Campo | Descripción |
@@ -171,7 +245,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.3. ÉPICA: CARGA Y CLASIFICACIÓN DE DOCUMENTOS
+### 7.3. ÉPICA: CARGA Y CLASIFICACIÓN DE DOCUMENTOS
 
 #### RF-08: Subir documento a un caso
 | Campo | Descripción |
@@ -237,7 +311,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.4. ÉPICA: BÚSQUEDA INTELIGENTE
+### 7.4. ÉPICA: BÚSQUEDA INTELIGENTE
 
 #### RF-12: Búsqueda semántica
 | Campo | Descripción |
@@ -289,7 +363,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.5. ÉPICA: ALERTAS PROACTIVAS
+### 7.5. ÉPICA: ALERTAS PROACTIVAS
 
 #### RF-15: Alertas de audiencia próxima
 | Campo | Descripción |
@@ -339,7 +413,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.6. ÉPICA: COMPARTIR SEGURO
+### 7.6. ÉPICA: COMPARTIR SEGURO
 
 #### RF-18: Generar enlace temporal
 | Campo | Descripción |
@@ -389,7 +463,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.7. ÉPICA: GESTIÓN DE AUDIENCIAS
+### 7.7. ÉPICA: GESTIÓN DE AUDIENCIAS
 
 #### RF-21: Registrar audiencia
 | Campo | Descripción |
@@ -439,7 +513,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.8. ÉPICA: INTERFAZ Y USABILIDAD
+### 7.8. ÉPICA: INTERFAZ Y USABILIDAD
 
 #### RF-24: Interfaz web responsive
 | Campo | Descripción |
@@ -473,7 +547,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.9. ÉPICA: NOTIFICACIONES
+### 7.9. ÉPICA: NOTIFICACIONES
 
 #### RF-26: Notificaciones in-app
 | Campo | Descripción |
@@ -507,7 +581,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 5.10. ÉPICA: IMPRESIÓN Y EXPORTACIÓN
+### 7.10. ÉPICA: IMPRESIÓN Y EXPORTACIÓN
 
 #### RF-28: Imprimir documento
 | Campo | Descripción |
@@ -541,9 +615,9 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-## 6. REQUERIMIENTOS NO FUNCIONALES
+## 8. REQUERIMIENTOS NO FUNCIONALES
 
-### 6.1. Seguridad
+### 8.1. Seguridad
 
 #### RNF-01: Cifrado en tránsito
 | Campo | Descripción |
@@ -611,7 +685,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 6.2. Rendimiento
+### 8.2. Rendimiento
 
 #### RNF-07: Tiempo de respuesta en búsquedas
 | Campo | Descripción |
@@ -657,7 +731,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 6.3. Usabilidad
+### 8.3. Usabilidad
 
 #### RNF-11: Facilidad de uso
 | Campo | Descripción |
@@ -692,7 +766,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 6.4. Portabilidad
+### 8.4. Portabilidad
 
 #### RNF-14: Acceso multi-dispositivo
 | Campo | Descripción |
@@ -716,7 +790,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 6.5. Escalabilidad
+### 8.5. Escalabilidad
 
 #### RNF-16: Crecimiento de documentos
 | Campo | Descripción |
@@ -740,7 +814,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-### 6.6. Mantenibilidad
+### 8.6. Mantenibilidad
 
 #### RNF-18: Documentación técnica
 | Campo | Descripción |
@@ -764,9 +838,9 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-## 7. CONSOLIDACIÓN DE REQUERIMIENTOS
+## 9. CONSOLIDACIÓN DE REQUERIMIENTOS
 
-### 7.1. Resumen de Requerimientos Funcionales
+### 9.1. Resumen de Requerimientos Funcionales
 
 | Épica | Cantidad RF | Prioridad Crítica | Prioridad Alta | Prioridad Media | Prioridad Baja |
 |-------|-------------|-------------------|----------------|-----------------|----------------|
@@ -782,7 +856,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 | Impresión y Exportación | 2 | 0 | 0 | 1 | 1 |
 | **TOTAL** | **29** | **5** | **17** | **6** | **1** |
 
-### 7.2. Resumen de Requerimientos No Funcionales
+### 9.2. Resumen de Requerimientos No Funcionales
 
 | Categoría | Cantidad RNF | Prioridad Crítica | Prioridad Alta | Prioridad Media | Prioridad Baja |
 |-----------|--------------|-------------------|----------------|-----------------|----------------|
@@ -796,7 +870,7 @@ Desarrollar un Sistema de Gestión de Conocimiento (KM) web basado en RAG que pe
 
 ---
 
-## 8. FUENTES DE INFORMACIÓN
+## 10. FUENTES DE INFORMACIÓN
 
 | Fuente | Tipo | Fecha |
 |--------|------|-------|
