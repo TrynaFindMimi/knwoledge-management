@@ -154,6 +154,7 @@ Desarrollar e implementar un Sistema de Gestión de Conocimiento (KM) web basado
 
 ### 6. REQUERIMIENTOS FUNCIONALES
 
+> **Nota:** Numeración RF-01 a RF-29 alineada con TDR original (29 RF) + consolidación con User Stories (30 US). Se listan resumidos; detalle completo con criterios de aceptación en Anexo Técnico `TDR.md` v1.0.
 
 | ID | Funcionalidad | Prioridad | Épica |
 |----|---------------|-----------|-------|
@@ -367,6 +368,7 @@ Desarrollar e implementar un Sistema de Gestión de Conocimiento (KM) web basado
 
 ### 11. GESTIÓN DE RIESGOS
 
+> **Resumen ejecutivo — detalle completo con índice en `TDR_Gestion_Riesgos_KM_RAG.md`.**
 
 #### 11.1. Mapa rápido por categoría
 
@@ -454,7 +456,7 @@ Se valorará experiencia con legaltech, manejo de datos sensibles, y ONG/sector 
 
 ### 15. FORMA DE PAGO
 
-**Precio total:** Bs. 57.522 (base) + IVA 13% = **Bs. 65.000** (IVA incluido). *Referencial para 4 meses RAG — ajustable según alcance final.*
+**Precio total:** Bs. 15,000 (base) + IVA 13% = **Bs. 16,950** (IVA incluido). *Referencial para 4 meses RAG — ajustable según alcance final.*
 
 | Hito | % | Monto Bs. (IVA incl.) | Sprint | Entregable validado |
 |------|---|-----------------------|--------|---------------------|
@@ -555,3 +557,4 @@ Comparativa y recomendación detallada en `Carta_Entrega_Proformas_KM_RAG.md` y 
 - `Carta_Aceptacion_KM_RAG.md` — Carta de aceptación
 - `proformas/Carta_Entrega_Proformas_KM_RAG.md` + `INF-001` a `INF-SSL-001` — Paquete proformas con límites
 
+> En caso de discrepancia entre este TDR y el Contrato, prevalece el Contrato.

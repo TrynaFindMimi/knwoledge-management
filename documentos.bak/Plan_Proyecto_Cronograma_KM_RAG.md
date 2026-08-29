@@ -378,6 +378,7 @@ Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4`.
 | Validación cuentas Vercel/Railway + dominio producción | Semana 13 | Retrasa despliegue S8 |
 | Participación usabilidad (3 abogados) + capacitación (2 sesiones) | Semanas 14 y 16 | Retrasa cierre |
 
+> **Bloqueo Kanban:** dependencias Buffet se registran como tareas bloqueadas en tablero; si superan plazo, cronograma se recalcula y se notifica por escrito.
 
 ---
 
@@ -432,6 +433,7 @@ Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4`.
 
 ### GESTIÓN DE RIESGOS — RESUMEN
 
+> **Detalle completo con índice, matriz Prob×Impacto y planes por riesgo en `TDR_Gestion_Riesgos_KM_RAG.md`.**
 
 | Categoría | ID ejemplo | Riesgo | Prob×Impacto → Severidad |
 |-----------|------------|--------|--------------------------|
