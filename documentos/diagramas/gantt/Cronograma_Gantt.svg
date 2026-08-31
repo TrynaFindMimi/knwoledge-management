@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:Inter,Segoe UI,sans-serif">
+<rect x="0" y="0" width="1280" height="720" rx="12" fill="#fff" stroke="#e5e7eb"/>
+<!-- Header -->
+<rect x="0" y="0" width="1280" height="56" rx="12" fill="#1e40af"/>
+<rect x="0" y="44" width="1280" height="12" fill="#1e40af"/>
+<text x="18" y="22" fill="#fff" font-size="12" font-weight="700" letter-spacing="0.8">PLAN — CRONOGRAMA GANTT 8 SPRINTS + GARANTIA</text>
+<text x="18" y="38" fill="#dbeafe" font-size="9">KM-RAG Buffet Asistencia Familiar — La Paz — 16 semanas (4 meses) + 60 dias garantia — 48.15 PM COCOMO II WAE-RAG</text>
+<text x="1262" y="22" text-anchor="end" fill="#fff" font-size="8" opacity="0.9">Hitos H1 20% H2 15% H3 25% H4 15% H5 25% — 60,092 base / 67,904 IVA</text>
+<text x="1262" y="38" text-anchor="end" fill="#dbeafe" font-size="8">Critical path: S1 -> S3 -> S4 -> S5 -> S6 -> S7 -> S8 — Reserva 5 dias</text>
+<!-- Timeline axis -->
+<g font-size="8" fill="#475569" font-weight="600">
+  <text x="220" y="78" text-anchor="middle">S0</text>
+  <text x="340" y="78" text-anchor="middle">S1 (1-2)</text>
+  <text x="460" y="78" text-anchor="middle">S2 (3-4)</text>
+  <text x="580" y="78" text-anchor="middle">S3 (5-6)</text>
+  <text x="700" y="78" text-anchor="middle">S4 (7-8)</text>
+  <text x="820" y="78" text-anchor="middle">S5 (9-10)</text>
+  <text x="940" y="78" text-anchor="middle">S6 (11-12)</text>
+  <text x="1060" y="78" text-anchor="middle">S7 (13-14)</text>
+  <text x="1180" y="78" text-anchor="middle">S8 (15-16) + G24</text>
+</g>
+<line x1="160" y1="86" x2="1240" y2="86" stroke="#e2e8f0" stroke-width="1"/>
+<!-- Grid -->
+<g stroke="#f1f5f9" stroke-width="0.8">
+  <line x1="220" y1="96" x2="220" y2="640"/><line x1="340" y1="96" x2="340" y2="640"/><line x1="460" y1="96" x2="460" y2="640"/><line x1="580" y1="96" x2="580" y2="640"/><line x1="700" y1="96" x2="700" y2="640"/><line x1="820" y1="96" x2="820" y2="640"/><line x1="940" y1="96" x2="940" y2="640"/><line x1="1060" y1="96" x2="1060" y2="640"/><line x1="1180" y1="96" x2="1180" y2="640"/>
+</g>
+<!-- Row labels -->
+<g font-size="8">
+  <text x="12" y="118" fill="#1e293b" font-weight="700">ENTREGABLES</text>
+  <text x="12" y="138" fill="#475569">E1 Plan + Cronograma</text>
+  <text x="12" y="162" fill="#475569">E2 Figma + Arquitectura + BD</text>
+  <text x="12" y="186" fill="#475569">E3 Auth + Casos + Dashboard</text>
+  <text x="12" y="210" fill="#475569">E4 Ingesta 50MB + RAG pipeline</text>
+  <text x="12" y="234" fill="#475569">E5 Busqueda &lt;3s + Chat citas</text>
+  <text x="12" y="258" fill="#475569">E6 Audiencias + Alertas 48h/7d</text>
+  <text x="12" y="282" fill="#475569">E7 Versiones + JWT + Auditoria</text>
+  <text x="12" y="306" fill="#475569">E8 PWA + ZIP + Notifs</text>
+  <text x="12" y="330" fill="#475569">E9 QA staging 29RF</text>
+  <text x="12" y="354" fill="#475569">E10 Prod Vercel+Railway</text>
+  <text x="12" y="378" fill="#475569">E11 Manuales PDF</text>
+  <text x="12" y="402" fill="#475569">E12 Capacitacion + Videos</text>
+  <text x="12" y="430" fill="#334155" font-weight="700">RECURSOS (4)</text>
+  <text x="12" y="450" fill="#64748b">Mariana PM</text>
+  <text x="12" y="470" fill="#64748b">Nahomi UX/UI</text>
+  <text x="12" y="490" fill="#64748b">Santiago Tech Lead</text>
+  <text x="12" y="510" fill="#64748b">Jorge Frontend/QA</text>
+  <text x="12" y="540" fill="#1e293b" font-weight="700">HITOS PAGO</text>
+  <text x="12" y="570" fill="#92400e" font-weight="700">RIESGOS TOP</text>
+  <text x="12" y="600" fill="#64748b">T02 / T08 / O01</text>
+</g>
+<!-- Bars -->
+<g>
+  <!-- E1 -->
+  <rect x="300" y="130" width="80" height="14" rx="4" fill="#3b82f6" stroke="#1e40af"/>
+  <rect x="300" y="130" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-dasharray="4 2" opacity="0.9"/>
+  <!-- E2 -->
+  <rect x="300" y="154" width="80" height="14" rx="4" fill="#2563eb"/>
+  <rect x="300" y="154" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-dasharray="4 2"/>
+  <!-- E3 S2 critical -->
+  <rect x="420" y="178" width="80" height="14" rx="4" fill="#1d4ed8"/>
+  <rect x="420" y="178" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <!-- E4 S3 critical -->
+  <rect x="540" y="202" width="80" height="14" rx="4" fill="#1e40af"/>
+  <rect x="540" y="202" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <!-- E5 S4 critical -->
+  <rect x="660" y="226" width="80" height="14" rx="4" fill="#7c3aed"/>
+  <rect x="660" y="226" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="700" y="236" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">CRITICO</text>
+  <!-- E6 S5 critical -->
+  <rect x="780" y="250" width="80" height="14" rx="4" fill="#7c3aed"/>
+  <rect x="780" y="250" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <!-- E7 S6 critical -->
+  <rect x="900" y="274" width="80" height="14" rx="4" fill="#0f766e"/>
+  <rect x="900" y="274" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <!-- E8 S7 -->
+  <rect x="1020" y="298" width="80" height="14" rx="4" fill="#0f766e"/>
+  <!-- E9 S7 -->
+  <rect x="1020" y="322" width="80" height="14" rx="4" fill="#be123c"/>
+  <!-- E10 S8 -->
+  <rect x="1140" y="346" width="80" height="14" rx="4" fill="#be123c"/>
+  <rect x="1140" y="346" width="80" height="14" rx="4" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+  <!-- E11 S8 -->
+  <rect x="1140" y="370" width="80" height="14" rx="4" fill="#475569"/>
+  <!-- E12 S8 -->
+  <rect x="1140" y="394" width="48" height="14" rx="4" fill="#475569"/>
+  <!-- Garantia -->
+  <rect x="1190" y="394" width="40" height="14" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <text x="1210" y="404" text-anchor="middle" fill="#475569" font-size="6">Garantia 60d</text>
+  <!-- Reserva -->
+  <rect x="1220" y="346" width="18" height="50" rx="3" fill="#fef3c7" stroke="#f59e0b" stroke-dasharray="2 2"/>
+  <text x="1229" y="378" text-anchor="middle" fill="#92400e" font-size="5" transform="rotate(90 1229 378)">Reserva 5d</text>
+</g>
+<!-- Resource histogram bars (utilization %) -->
+<g opacity="0.95">
+  <rect x="300" y="442" width="80" height="8" rx="2" fill="#93c5fd"/><text x="340" y="448" text-anchor="middle" fill="#1e40af" font-size="5">80%</text>
+  <rect x="420" y="442" width="80" height="8" rx="2" fill="#3b82f6"/><text x="460" y="448" text-anchor="middle" fill="#fff" font-size="5">95%</text>
+  <rect x="540" y="442" width="80" height="8" rx="2" fill="#3b82f6"/>
+  <rect x="660" y="442" width="80" height="8" rx="2" fill="#1e40af"/><text x="700" y="448" text-anchor="middle" fill="#fff" font-size="5">100%</text>
+  <rect x="780" y="442" width="80" height="8" rx="2" fill="#1e40af"/>
+  <rect x="900" y="442" width="80" height="8" rx="2" fill="#3b82f6"/>
+  <rect x="1020" y="442" width="80" height="8" rx="2" fill="#60a5fa"/><text x="1060" y="448" text-anchor="middle" fill="#1e40af" font-size="5">70%</text>
+  <rect x="1140" y="442" width="80" height="8" rx="2" fill="#60a5fa"/>
+  <!-- Nahomi -->
+  <rect x="300" y="462" width="80" height="8" rx="2" fill="#f9a8d4"/><text x="340" y="468" text-anchor="middle" fill="#831843" font-size="5">90%</text>
+  <rect x="1020" y="462" width="80" height="8" rx="2" fill="#f9a8d4"/><text x="1060" y="468" text-anchor="middle" fill="#831843" font-size="5">85%</text>
+  <!-- Santiago -->
+  <rect x="300" y="482" width="80" height="8" rx="2" fill="#a7f3d0"/>
+  <rect x="420" y="482" width="80" height="8" rx="2" fill="#6ee7b7"/>
+  <rect x="540" y="482" width="80" height="8" rx="2" fill="#10b981"/><text x="580" y="488" text-anchor="middle" fill="#fff" font-size="5">95%</text>
+  <rect x="660" y="482" width="80" height="8" rx="2" fill="#059669"/><text x="700" y="488" text-anchor="middle" fill="#fff" font-size="5">100%</text>
+  <rect x="780" y="482" width="80" height="8" rx="2" fill="#10b981"/>
+  <rect x="900" y="482" width="80" height="8" rx="2" fill="#10b981"/>
+  <rect x="1020" y="482" width="80" height="8" rx="2" fill="#6ee7b7"/>
+  <rect x="1140" y="482" width="80" height="8" rx="2" fill="#a7f3d0"/>
+</g>
+<!-- Milestones -->
+<g font-size="7" font-weight="700">
+  <polygon points="340,548 348,556 340,564 332,556" fill="#1e40af" stroke="#1e3a8a"/>
+  <text x="340" y="578" text-anchor="middle" fill="#1e40af">H1 20%</text>
+  <text x="340" y="588" text-anchor="middle" fill="#475569" font-size="6">13,581</text>
+  <polygon points="580,548 588,556 580,564 572,556" fill="#0ea5e9" stroke="#0284c7"/>
+  <text x="580" y="578" text-anchor="middle" fill="#0ea5e9">H2 15%</text>
+  <text x="580" y="588" text-anchor="middle" fill="#475569" font-size="6">10,186</text>
+  <polygon points="820,548 828,556 820,564 812,556" fill="#7c3aed" stroke="#6d28d9"/>
+  <text x="820" y="578" text-anchor="middle" fill="#7c3aed">H3 25%</text>
+  <text x="820" y="588" text-anchor="middle" fill="#475569" font-size="6">16,976</text>
+  <polygon points="1060,548 1068,556 1060,564 1052,556" fill="#0f766e" stroke="#115e59"/>
+  <text x="1060" y="578" text-anchor="middle" fill="#0f766e">H4 15%</text>
+  <text x="1060" y="588" text-anchor="middle" fill="#475569" font-size="6">10,186</text>
+  <polygon points="1180,548 1188,556 1180,564 1172,556" fill="#be123c" stroke="#9f1239"/>
+  <text x="1180" y="578" text-anchor="middle" fill="#be123c">H5 25%</text>
+  <text x="1180" y="588" text-anchor="middle" fill="#475569" font-size="6">16,976</text>
+</g>
+<!-- Dependencies arrows -->
+<g stroke="#ef4444" stroke-width="1.2" fill="none" opacity="0.9" marker-end="url(#arrowRed)">
+  <path d="M380 137 L420 185"/><path d="M500 185 L540 209"/><path d="M620 209 L660 233"/><path d="M740 233 L780 257"/><path d="M860 257 L900 281"/><path d="M980 281 L1020 305"/><path d="M1060 329 L1140 353"/>
+</g>
+<defs><marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/></marker></defs>
+<!-- Legend -->
+<g font-size="6.5">
+  <rect x="160" y="610" width="14" height="8" rx="2" fill="#1e40af" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="3 2"/><text x="178" y="616" fill="#334155">Critical path (rojo discontinuo) — 13.04 meses COCOMO -> 4 meses comprimido 3.26x</text>
+  <rect x="160" y="624" width="14" height="8" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-dasharray="2 2"/><text x="178" y="630" fill="#334155">Reserva 5 dias + Bs800 — consumible O01/O04/O06/S01</text>
+  <rect x="460" y="624" width="14" height="8" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-dasharray="3 3"/><text x="478" y="630" fill="#334155">Garantia 60d (sem 17-24) — SLA 48h critica</text>
+  <rect x="160" y="638" width="14" height="8" rx="2" fill="#3b82f6"/><text x="178" y="644" fill="#334155">Recursos: azul PM, rosa UX, verde Tech Lead — histograma utilizacion</text>
+</g>
+<text x="640" y="688" text-anchor="middle" fill="#94a3b8" font-size="6">Fuente: Plan_Proyecto_Cronograma_KM_RAG.md + Cotizacion 60,092 base / 48.15 PM — Generado 30/08/2026 — Ver bitacoras Sprint 00-08</text>
+</svg>
