@@ -72,7 +72,7 @@
 
 ## 2. REQUERIMIENTOS NO FUNCIONALES (19 RNF)
 
-19 RNF medibles con herramienta habilitadora (ver `TDR_KM_RAG.md` Seccion 8-9 y `Manual_Tecnico_KM_RAG.md` Seccion 2.1 para stack/versiones).
+19 RNF medibles con herramienta habilitadora (ver `TDR_KM_RAG.md` Seccion 8-9 y `prototype/manuales/Manual_Tecnico_KM_RAG.md` Seccion 2.1 para stack/versiones).
 
 | ID | Requerimiento | Descripcion | Criterio de medicion | Prioridad | Herramienta habilitadora |
 |----|---------------|-------------|----------------------|-----------|--------------------------|

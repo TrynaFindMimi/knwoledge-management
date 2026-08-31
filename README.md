@@ -28,8 +28,8 @@ knwoledge-management/
 │   ├── Contrato_KM_RAG.md             ← Contrato 16 clausulas + 5 hitos (60,092 base / 67,904 IVA, margen 26.7%)
 │   ├── Carta_Aceptacion_KM_RAG.md     ← Carta aceptacion TDR y contrato
 │   ├── Plan_Proyecto_Cronograma_KM_RAG.md ← Plan 8 sprints (4 meses) + 2 meses garantia
-│   ├── Manual_Tecnico_KM_RAG.md       ← Manual tecnico (arquitectura, APIs REST/WS, wireframes 16 vistas, versiones)
-│   ├── Acta_Entrega_KM_RAG.md         ← Acta entrega E1-E12 + handover + garantia 60d
+│   ├── requerimientos.md              ← 29 RF + 19 RNF + 10 L (documento unico)
+│   └── diagramas/                         ← Diagramas SVG vectorial
 │   ├── cotizacion/
 │   │   └── Cotizacion_KM_RAG.md       ← Cotizacion COCOMO II WAE-RAG (60,092 base / 67,904 IVA, H1-H5)
 │   ├── proformas/
@@ -128,13 +128,13 @@ knwoledge-management/
 | Modelado BPWin | `documentos/Modelado_Procesos_BPWin.md` | 7 procesos IDEF0 con SVG BPWin + reglas RB-01..23 + modelo datos |
 | Contrato | `documentos/Contrato_KM_RAG.md` | 16 clausulas, 5 hitos (60,092 base, 67,904 IVA, margen incl.), propiedad intelectual, garantia 60d |
 | Plan y Cronograma | `documentos/Plan_Proyecto_Cronograma_KM_RAG.md` | 8 sprints x 2 semanas (4 meses) + garantia, E1-E12, riesgos, H1-H5 60k |
-| Manual Tecnico | `documentos/Manual_Tecnico_KM_RAG.md` | Arquitectura, APIs REST/WS, wireframes 16 vistas, versiones v1..vN, RAG, seguridad, despliegue, troubleshooting |
+| Manual Tecnico | `prototype/manuales/Manual_Tecnico_KM_RAG.md` | Arquitectura, APIs REST/WS, wireframes 16 vistas, versiones v1..vN, RAG, seguridad, despliegue, troubleshooting |
 
 ### Entrega, Seguridad y Bitacoras
 
 | Documento | Ubicacion | Contenido |
 |-----------|-----------|-----------|
-| Acta de Entrega | `documentos/Acta_Entrega_KM_RAG.md` | Entrega E1-E12, verificacion, handover repos/boveda, garantia 60d |
+| Acta de Entrega | `prototype/manuales/Acta_Entrega_KM_RAG.md` | Entrega E1-E12, verificacion, handover repos/boveda, garantia 60d |
 | Boveda Contrasenas | `documentos/seguridad/Boveda_Contrasenas_KM_RAG.md` | 20 secretos (JWT/AES/DB/APIs), rotacion 90d, handover H5 |
 | Proformas Deployment | `documentos/proformas/` (12 fichas) | Vercel, Railway, Hostinger, Servidor Local, dominios, SSL, comparativa INF-010 |
 | Bitacoras | `documentos/bitacoras/` (9 md) | Bitacora General + Sprint 00-08 (impedimentos, decisiones, evidencias) |
@@ -225,5 +225,5 @@ Ver `documentos/seguridad/Boveda_Contrasenas_KM_RAG.md` para 20 secretos (JWT, A
 
 ## Entrega
 
-Ver `documentos/Acta_Entrega_KM_RAG.md` para entrega formal E1-E12, verificacion (busqueda <3s, ZAP 0 high, usabilidad 3 abogados), handover repos/Vercel/Railway/Boveda y garantia 60d.
+Ver `prototype/manuales/Acta_Entrega_KM_RAG.md` para entrega formal E1-E12, verificacion (busqueda <3s, ZAP 0 high, usabilidad 3 abogados), handover repos/Vercel/Railway/Boveda y garantia 60d.
 

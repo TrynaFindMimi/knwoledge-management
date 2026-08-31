@@ -1,0 +1,35 @@
+{
+  "name": "km-rag-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "vitest run",
+    "migrate": "prisma migrate dev",
+    "seed": "tsx src/infrastructure/db/seed.ts"
+  },
+  "dependencies": {
+    "fastify": "^4.26.0",
+    "@fastify/cors": "^8.4.0",
+    "@fastify/multipart": "^8.1.0",
+    "@fastify/websocket": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "pg": "^8.11.3",
+    "prisma": "^5.7.0",
+    "@prisma/client": "^5.7.0",
+    "chromadb": "^0.4.18",
+    "langchain": "^0.1.0",
+    "socket.io": "^4.7.4",
+    "bullmq": "^5.1.0",
+    "nodemailer": "^6.9.7",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "tsx": "^4.6.2",
+    "vitest": "^1.0.4"
+  }
+}

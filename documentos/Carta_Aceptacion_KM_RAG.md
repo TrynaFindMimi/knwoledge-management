@@ -74,7 +74,7 @@ Mediante la presente declaramos que:
 | **Testing** | Vitest + Playwright + Pytest/Jest + k6 |
 | **Entorno trabajo** | VS Code, Figma, Trello/Jira/Notion, Google Meet/Zoom, WhatsApp (horario laboral) |
 
-4. **Nos comprometemos a cumplir** con la totalidad de entregables, plazos, hitos de pago, obligaciones de confidencialidad, garantía (60 días), soporte post-lanzamiento y cesión de propiedad intelectual estipulados.
+4. **Nos comprometemos a cumplir** con la totalidad de entregables, plazos, hitos de pago bajo modalidad de "alquiler" del servicio, obligaciones de confidencialidad, garantía (60 días) y **licencia de uso (sin cesión de propiedad intelectual, que permanece en el EQUIPO)** estipulados.
 
 ---
 
@@ -171,29 +171,29 @@ Aceptamos implementar cada vista con sus componentes AntD, botones, validaciones
 - Repo GitHub privado con acceso Buffet, ramas `main`/`develop`/`feature/*`, PR review obligatorio, CI/CD GitHub Actions → Vercel + Railway.
 - Despliegue por ambientes: `develop` → staging (Railway) → `main` → producción.
 
-#### 3.3. Forma de pago aceptada — 5 hitos COCOMO II WAE-RAG mercado (Bs. 67,904 IVA incl. con margen 26.7%)
+#### 3.3. Forma de pago aceptada — 5 hitos COCOMO II WAE-RAG bajo modalidad de "alquiler" del servicio (Bs. 67,904 IVA incl. con margen 26.7%)
 
-Aceptamos **Bs. 67,904.21** total IVA incluido (Bs. 60,092.00 base + Bs. 7,812.21 IVA 13%) — Opcion A WAE-RAG mercado 12.01 KLOC / 48.15 PM x 1,248 (margen 26.7% incluido, ver `documentos/cotizacion/Cotizacion_KM_RAG.md` Seccion 8):
+Aceptamos **Bs. 67,904.21** total IVA incluido (Bs. 60,092.00 base + Bs. 7,812.21 IVA 13%) — Opcion A WAE-RAG mercado 12.01 KLOC / 48.15 PM x 1,248 (margen 26.7% incluido, ver `documentos/cotizacion/Cotizacion_KM_RAG.md` Seccion 8) **en modalidad de "alquiler" del servicio (licencia de uso, no compra de código)**:
 
-| Hito | Plazo | % | Bs. IVA incl. | Entregables validados |
-|------|-------|---|---------------|-----------------------|
-| **H1** | Semana 2 | 20% | 13,580.79 | **E1** Plan/cronograma + **E2** Figma + arquitectura + decision BD |
-| **H2** | Semana 6 | 15% | 10,185.59 | **E3** Auth+Casos + **E4** Ingesta+clasificacion+dedup |
+| Hito | Plazo | % | Bs. IVA incl. | Entregable que habilita periodo de "alquiler" |
+|------|-------|---|---------------|-----------------------------------------------|
+| **H1** | Semana 2 | 20% | 13,580.79 | **E1** Plan/cronograma + **E2** Figma + arquitectura + decisión BD |
+| **H2** | Semana 6 | 15% | 10,185.59 | **E3** Auth+Casos + **E4** Ingesta+clasificación+dedup |
 | **H3** | Semana 10 | 25% | 16,975.90 | **E5** RAG+chat + **E6** Alertas+audiencias+PDF |
-| **H4** | Semana 14 | 15% | 10,185.59 | **E7** Versiones+comparticion+auditoria + **E8** pulido + **E9** QA staging superada |
-| **H5** | Semana 16 (cierre + inicio garantia 2 meses) | 25% | 16,975.90 | **E10** Prod Vercel/Railway + **E11** docs + **E12** capacitacion |
+| **H4** | Semana 14 | 15% | 10,185.59 | **E7** Versiones+compartición+auditoría + **E8** pulido + **E9** QA staging superada |
+| **H5** | Semana 16 (cierre + inicio garantía 2 meses) | 25% | 16,975.90 | **E10** Prod Vercel/Railway + **E11** docs + **E12** capacitación |
 
-Retraso pago >15 días hábiles habilita suspensión de siguiente sprint hasta regularización (Cláusula Primera: pagos ya devengados irrevocables).
+Entendemos que cada hito es una **cuota de habilitación del "alquiler"** (derecho de uso), no una cuota de compra. Retraso pago >15 días hábiles habilita suspensión del siguiente sprint y del acceso hasta regularización (Cláusula Primera: pagos ya devengados irrevocables; Cláusula Séptima: sin transferencia de propiedad).
 
-#### 3.4. Propiedad intelectual y confidencialidad
+#### 3.4. Propiedad intelectual y confidencialidad — "alquiler", no venta
 
 Aceptamos:
 
-- Todo código (React/Vite/AntD, backend, pipelines RAG, prompts, embeddings, infra Vercel/Railway), docs, diseños y materiales son **propiedad exclusiva del Buffet** tras pago total.
+- La **propiedad intelectual** sobre todo código (React/Vite/AntD, backend, pipelines RAG, prompts, embeddings, infra Vercel/Railway), docs, diseños y materiales **permanece en titularidad exclusiva del EQUIPO DESARROLLADOR**; el BUFFET recibe únicamente **licencia de uso bajo "alquiler"** (no exclusiva, intransferible, revocable, temporal) mientras el servicio esté vigente y al día (ver Contrato Cláusula Séptima). No hay cesión ni entrega de código fuente; al finalizar se exportan solo los **datos propios del BUFFET**.
 - Confidencialidad estricta sobre datos víctimas/menores/familias/estrategias legales por **3 años** post-contrato mínimo.
 - No usaremos código/datos para fines ajenos; no entrenaremos LLM externo con datos Buffet sin consentimiento escrito anonimizado.
 - Componentes OSS mantienen licencias MIT/Apache.
-- Citaremos portafolio solo con autorización escrita revocable, sin revelar datos sensibles.
+- Citaremos portafolio solo con autorización escrita revocable, sin revelar datos sensibles ni código fuente.
 
 #### 3.5. Garantía, soporte y fin de relación
 

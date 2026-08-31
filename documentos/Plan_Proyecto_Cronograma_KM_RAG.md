@@ -171,7 +171,7 @@
 | **S7** | Lighthouse, CSS print, JSZip, AntD Badge/Dropdown, Playwright+ZAP+**k6/JMeter**+BrowserStack | <5 clics, impresión legal, ZIP con contraseña, QA report (0 high, JMeter p95 <3s / <2s OK), staging aprobado |
 | **S8** | Vercel+Railway dashboards, Sentry/Uptime, Markdown→PDF, Loom/Meet | Prod SSL A+ + 99.5%, Manuales PDF, 2 sesiones grabadas, handover repos/env, backups |
 
-Versiones exactas bloqueadas: React 18.2.0, Vite 5.0.8, AntD 5.12.8, FastAPI 0.104.1, LangChain 0.0.340, PostgreSQL 15.4, Node 20.11, Python 3.11.7, k6 0.49, ZAP 2.14 (ver TDR §8.2 y Manual §2.1). Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4` y versiones exactas en `TDR_KM_RAG.md §8.2` y `Manual_Tecnico_KM_RAG.md §2.1`. Gantt con critical path en `diagramas/gantt/Cronograma_Gantt.svg`.
+Versiones exactas bloqueadas: React 18.2.0, Vite 5.0.8, AntD 5.12.8, FastAPI 0.104.1, LangChain 0.0.340, PostgreSQL 15.4, Node 20.11, Python 3.11.7, k6 0.49, ZAP 2.14 (ver TDR §8.2 y Manual §2.1). Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4` y versiones exactas en `TDR_KM_RAG.md §8.2` y `prototype/manuales/Manual_Tecnico_KM_RAG.md §2.1`. Gantt con critical path en `diagramas/gantt/Cronograma_Gantt.svg`.
 
 ---
 

@@ -45,7 +45,7 @@ EL BUFFET brinda servicios legales gratuitos a familias vulnerables (asistencia 
 
 #### 2.2. Objeto
 
-EL EQUIPO DESARROLLADOR se compromete a **diseñar, desarrollar, desplegar y documentar** un Sistema KM web con motor **RAG (Retrieval-Augmented Generation)** para EL BUFFET, conforme a los Términos de Referencia `TDR_KM_RAG.md` y `TDR.md` anexos (parte integrante). Incluye:
+EL EQUIPO DESARROLLADOR se compromete a **diseñar, desarrollar, desplegar, documentar y proveer bajo modalidad de "alquiler" del servicio (licencia de uso SaaS, sin transferencia de propiedad)** un Sistema KM web con motor **RAG (Retrieval-Augmented Generation)** para EL BUFFET, conforme a los Términos de Referencia `TDR_KM_RAG.md` y `TDR.md` anexos (parte integrante). El sistema **no se vende ni se cede**; se habilita el uso mientras el "alquiler" permanezca vigente y al día en pagos (ver Cláusulas Sexta y Séptima). Incluye:
 
 1. **Frontend SPA** con **React 18 + Vite + Ant Design (AntD) 5.x**, responsive (desktop/tablet/celular), PWA-ready, con <5 clics a funciones principales.
 2. **Backend API REST + WebSocket** (FastAPI Python o Express Node — decisión según contenido en Sprint 1) con **LangChain/LlamaIndex**, embeddings multilingual ES, LLM, chunking, re-ranking y citación de fuentes.
@@ -249,11 +249,11 @@ Cada sprint (2 semanas) cierra con demo funcional para validación EL BUFFET. Cr
 1. Cumplir entregables, plazos y criterios aceptación TDR/Contrato.
 2. Comunicación fluida: daily stand-up, demo+retro cada sprint, WhatsApp grupo (horario laboral Lun-Vie 9-18 BT), Meet/Zoom formales. Reuniones extra con 24h preaviso, solo horario laboral. No obligación de respuesta fuera de horario.
 3. Desarrollar con React+AntD+Vite, backend RAG (LangChain/LlamaIndex), Vercel/Railway, PostgreSQL/MongoDB + vector DB, cumpliendo estándares calidad (RNF).
-4. Repositorio GitHub privado con acceso Buffet, PR reviews, CI/CD.
-5. Demo funcional cada sprint + handover de credenciales/envs al cierre.
+4. Repositorio GitHub privado **bajo titularidad del EQUIPO**; el BUFFET recibe acceso de uso a la plataforma desplegada, no al repositorio de código fuente (ver Cláusula Séptima). CI/CD y PR reviews a cargo del EQUIPO.
+5. Demo funcional cada sprint + habilitación progresiva del servicio en staging/producción y entrega de credenciales de **uso** (no de código) al cierre.
 6. Confidencialidad estricta (datos víctima/menor/familia) y cifrado.
-7. Transferir código, docs, env examples, backups y materiales al completar pago total.
-8. Soporte garantía 60 días.
+7. **Mantener la titularidad del código y otorgar licencia de uso** bajo modalidad de "alquiler": no se transfiere propiedad; al completar cada hito se habilita el periodo de uso correspondiente. Al cierre se entrega documentación de uso, manuales y exportación de **datos del BUFFET**, sin entrega de código fuente (ver Cláusula Séptima).
+8. Soporte garantía 60 días incluido en el "alquiler".
 
 #### 5.2. EL BUFFET
 
@@ -315,11 +315,15 @@ Cada hito pagadero en **15 días hábiles** desde vencimiento/aprobación. EQUIP
 
 ---
 
-### CLÁUSULA SÉPTIMA: PROPIEDAD INTELECTUAL
+### CLÁUSULA SÉPTIMA: PROPIEDAD INTELECTUAL — TITULARIDAD RETENIDA POR LOS DESARROLLADORES (MODALIDAD "ALQUILER")
 
-Todo código (React/Vite/AntD, backend, pipelines RAG, prompts, embeddings, infra-as-code Railway/Vercel), documentación, diseños y materiales generados son **propiedad exclusiva de EL BUFFET** tras pago total. EQUIPO entrega repos completos, sin licencias restrictivas, con guías de despliegue y env.example. EQUIPO puede mencionar proyecto en portafolio previa autorización escrita, sin revelar datos sensibles, código secreto ni estrategias legales; autorización revocable.
+**7.1. Titularidad.** Toda propiedad intelectual, patrimonial y moral sobre el código fuente (React/Vite/AntD, backend, pipelines RAG, prompts, embeddings, infra-as-code Railway/Vercel), documentación técnica, diseños, vectores, modelos y materiales generados **permanece en todo momento en titularidad exclusiva del EQUIPO DESARROLLADOR**. No hay cesión, venta ni transferencia de propiedad al BUFFET en ningún hito ni al finalizar el contrato. El servicio se presta bajo modalidad de **"alquiler" del servicio (SaaS / licencia de uso)**.
 
-Componentes OSS (React, AntD, LangChain, Chroma) mantienen sus licencias originales MIT/Apache.
+**7.2. Licencia de uso otorgada.** El EQUIPO otorga al BUFFET una licencia **no exclusiva, intransferible, revocable y temporal** para usar el Sistema KM con RAG desplegado en la infraestructura autorizada (Vercel+Railway), únicamente para los fines propios del Buffet de Asistencia Familiar y mientras el "alquiler" permanezca vigente y al día en pagos (Cláusula Sexta). La licencia incluye: acceso a la plataforma, carga/consulta/gestión de sus propios datos (casos, documentos, audiencias) y exportación de **sus datos** (documentos y metadatos propios) en formatos ZIP/Excel/PDF. **No incluye:** entrega de código fuente, derecho a copiar/modificar/sublicenciar/revender/redistribuir el software, ni a desplegar copias fuera de la infraestructura autorizada, ni acceso al repositorio privado del EQUIPO.
+
+**7.3. Extinción.** Al vencer, resolver o no renovar el "alquiler", la licencia se extingue automáticamente. El EQUIPO podrá suspender el acceso y, durante **15 días calendario** posteriores, facilitará únicamente la **devolución/exportación de los datos del BUFFET** (ZIP por caso + auditoría en Excel), sin entrega de código fuente. Vencido ese plazo sin renovación, los datos podrán ser eliminados conforme a la política de retención y normativa de protección de datos.
+
+**7.4. OSS y portafolio.** Componentes OSS (React, AntD, LangChain, Chroma, etc.) mantienen sus licencias originales MIT/Apache. El EQUIPO podrá mencionar el proyecto en portafolio previa autorización escrita del BUFFET, sin revelar datos sensibles, código fuente ni estrategias legales; autorización revocable. El BUFFET podrá mencionar que usa el servicio bajo "alquiler", sin atribuirse autoría del código.
 
 ---
 
@@ -335,9 +339,9 @@ EQUIPO mantiene confidencialidad estricta sobre datos de víctimas/menores/famil
 
 **60 días calendario** post-producción (E10). Cubre corrección sin costo de bugs/fallos atribuibles al desarrollo. Excluye: modificaciones no autorizadas, fallos infra Vercel/Railway/LLM externos, mal uso contrario a Manual, fuerza mayor, datos de prueba no anonimizados provistos por Buffet.
 
-#### 9.2. Fin de relación
+#### 9.2. Fin de relación y del "alquiler"
 
-Vencida garantía, contrato extinguido, EQUIPO liberado. Requerimientos posteriores (soporte, mantenimiento RAG, re-indexado, afinamiento embeddings, nuevas features) requieren **nuevo contrato**.
+Vencida la garantía, el contrato y el periodo de "alquiler" inicial se extinguen y el EQUIPO queda liberado. El acceso al sistema se suspende salvo **renovación del "alquiler"** mediante nuevo contrato/adenda de continuidad. Requerimientos posteriores (soporte, mantenimiento RAG, re-indexado, afinamiento embeddings, nuevas features, continuidad del servicio) requieren **nuevo contrato de "alquiler"**; no hay obligación del EQUIPO sin nuevo instrumento ni pagos al día.
 
 ---
 
@@ -376,7 +380,7 @@ Por escrito en cualquier momento.
 
 #### 12.2. Unilateral por incumplimiento grave
 
-Notificación escrita 30 días antes + 15 días para subsanar. Si incumple EQUIPO: Buffet recibe código/docs hasta momento resolución, previo pago hitos completados/aprobados (sin suspender pagos devengados, Cláusula Primera). Si incumple BUFFET: EQUIPO cobra hitos completados + 15% saldo restante como lucro cesante; no entrega código hasta pago íntegro.
+Notificación escrita 30 días antes + 15 días para subsanar. Si incumple EQUIPO: el BUFFET mantiene acceso y exportación de sus datos cargados hasta el momento de la resolución, previo pago de hitos completados/aprobados (sin suspender pagos devengados, Cláusula Primera); **no hay entrega de código fuente** por tratarse de "alquiler" (Cláusula Séptima), solo exportación de datos propios y documentación de uso. Si incumple BUFFET: el EQUIPO cobra hitos completados + 15% saldo restante como lucro cesante; el acceso bajo "alquiler" se suspende hasta pago íntegro y no se entrega código fuente.
 
 ---
 

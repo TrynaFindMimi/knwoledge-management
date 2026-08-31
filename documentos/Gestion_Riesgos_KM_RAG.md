@@ -4,7 +4,7 @@
 
 **Fecha:** 30/08/2026
 **Version:** 1.0
-**Referencia:** `TDR_KM_RAG.md` Seccion 11, `Contrato_KM_RAG.md` Clausula Cuarta/Decima/Decima Primera, `Plan_Proyecto_Cronograma_KM_RAG.md` Seccion 17, `Manual_Tecnico_KM_RAG.md` Seccion 8/9/11
+**Referencia:** `TDR_KM_RAG.md` Seccion 11, `Contrato_KM_RAG.md` Clausula Cuarta/Decima/Decima Primera, `Plan_Proyecto_Cronograma_KM_RAG.md` Seccion 17, `prototype/manuales/Manual_Tecnico_KM_RAG.md` Seccion 8/9/11
 **Metodologia:** PMI PMBOK 7, ISO 31000, matriz Probabilidad x Impacto (1-3)
 
 ---
@@ -211,6 +211,6 @@ Plan general: daily 15m detecta riesgo -> PM registra en bitacora -> evalua P/I 
 
 - `TDR_KM_RAG.md` Seccion 11 (resumen)
 - `Plan_Proyecto_Cronograma_KM_RAG.md` Seccion 17 (resumen 5 riesgos)
-- `Manual_Tecnico_KM_RAG.md` Seccion 8 (seguridad) y 11 (troubleshooting)
+- `prototype/manuales/Manual_Tecnico_KM_RAG.md` Seccion 8 (seguridad) y 11 (troubleshooting)
 - `Boveda_Contrasenas_KM_RAG.md` (rotacion 90d)
 - `proformas/INF-003` a `INF-010` + `INF-SSL-001`

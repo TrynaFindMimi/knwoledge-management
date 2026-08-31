@@ -5,7 +5,7 @@
 **Fecha:** 30/08/2026
 **Version:** 1.0
 **Clasificacion:** CONFIDENCIAL — Acceso restringido (RBAC admin + Tech Lead)
-**Referencia:** `TDR_KM_RAG.md` RNF-01/02/03/05, `Contrato_KM_RAG.md` Clausula Octava, `Manual_Tecnico_KM_RAG.md` Seccion Seguridad
+**Referencia:** `TDR_KM_RAG.md` RNF-01/02/03/05, `Contrato_KM_RAG.md` Clausula Octava, `prototype/manuales/Manual_Tecnico_KM_RAG.md` Seccion Seguridad
 
 ---
 
@@ -203,6 +203,6 @@ El equipo borra copias locales tras confirmacion de acceso del Buffet.
 ## 11. Anexos
 
 - `TDR_KM_RAG.md` Seccion 12 (SSL/TLS)
-- `Manual_Tecnico_KM_RAG.md` Seccion 4 (Seguridad)
+- `prototype/manuales/Manual_Tecnico_KM_RAG.md` Seccion 4 (Seguridad)
 - `documentos/proformas/INF-SSL-001` (SSL) y `INF-004` (Railway env)
 - Bitwarden Help: https://bitwarden.com/help/
