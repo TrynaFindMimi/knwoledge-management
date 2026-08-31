@@ -6,66 +6,101 @@
 
 ## 1. FASE DE INVESTIGACIÓN Y ANÁLISIS DE NECESIDADES
 
-### 1.1. Contexto del Problema
+### 1.1. Contexto del Problema y Analisis Causal
 
-El Buffet de Asistencia Familiar enfrenta una crisis crítica en la gestión documental que impacta directamente en la defensa de familias y menores en riesgo. A través de tres entrevistas semiestructuradas con profesionales del derecho familiar, se identificaron los siguientes problemas estructurales:
+El Buffet de Asistencia Familiar enfrenta una crisis critica en la gestion documental que impacta directamente en la defensa de familias y menores en riesgo. La problematica no es puntual sino estructural: combina gestion artesanal, deuda tecnica acumulada y riesgo de seguridad legal, cuantificada en 3 entrevistas semiestructuradas (52, 48 y 35 min) y sistematizada en diagrama Ishikawa de 24 causas (`diagramas/diagrama ishikawa.svg`) y modelado BPWin de 7 procesos (`diagramas/bpwin/BPWin_A0_Contexto.svg`).
 
-| Problema | Impacto | Fuente |
-|----------|---------|--------|
-| Organización caótica de expedientes físicos (50+ clientes activos) | Pérdida de documentos críticos en audiencias | Entrevista 01, 02 |
-| Dependencia de una sola persona (asistente) para ubicar información | Riesgo de paralización total del buffet | Entrevista 02 |
-| Digitalización fallida (200 docs escaneados sin convención de nombres) | Archivos duplicados e inlocalizables | Entrevista 01 |
-| Seguridad deficiente (contraseñas "123456", "abogada2024") | Datos de víctimas y menores expuestos | Entrevista 01, 03 |
-| Envío de documentos sensibles por WhatsApp/correo | Filtración accidental de información confidencial | Entrevista 03 |
-| Pérdida de 4-6 horas semanales buscando documentos | Menor tiempo de atención a clientes | Entrevista 01, 02, 03 |
+#### 1.1.1 Problematica cuantificada (linea base)
+
+| Indicador linea base | Valor actual | Fuente | Impacto en servicio legal |
+|----------------------|--------------|--------|---------------------------|
+| Tiempo busqueda documental | 4-6 horas/semana por abogado (208-312 h/anio) | Entrevista 01:32, 02, 03 | Menor tiempo de atencion a familias vulnerables; horas no facturables |
+| Volumen casos activos | 50+ casos simultaneos, 40-50 docs por caso | Entrevista 02 | Carpetas folder manila sin sub-organizacion; sin indice |
+| Documentos escaneados sin clasificacion | 200 archivos (`scan001.jpg`, `ACUERDO_FINAL2.pdf`) sin convencion de nombres, duplicados | Entrevista 01:40 | Archivos inlocalizables, 90% mal etiquetados, sin busqueda |
+| Perdida en audiencia | Convenio no encontrado en Juzgado 3ro (15/07), prorroga 24h solicitada | Entrevista 01:32 | Percepcion de irresponsabilidad; perjuicio directo a cliente (alimentos) |
+| Versionado fallido | Demanda obsoleta impresa y presentada ante jueza por confusion v1/v2 | Entrevista 02 | Riesgo procesal, retrabajo, nulidad potencial |
+| Seguridad | Contrasenas `123456`/`abogada2024`, direcciones victimas sin cifrar en laptop, envio por WhatsApp sin proteccion | Entrevista 01:44, 03 | Exposicion datos victimas/menores, incumplimiento normativa proteccion datos personales |
+| Dependencia persona clave | Asistente Mariela unica que conoce ubicacion; si falta, paralisis total (bus factor =1) | Entrevista 02 | Riesgo operativo critico, no hay clasificacion automatica |
+| Capacidad digitalizacion | 200 docs en 2 anios sin indice, sin deteccion duplicados | Entrevista 01:40 | Deuda tecnica que impide escalar a 5000 docs proyectados |
+
+Sintesis: gestion artesanal (folder manila + archivador verde + carpeta `Escaneos 2024` + Drive sin criterio) no escala a 5000 docs ni a acceso movil en juzgados (RNF-14). Ver analisis completo en `TDR_KM_RAG.md` Seccion 2.1-2.3 y `Gestion_Riesgos_KM_RAG.md` (I01-I05).
+
+#### 1.1.2 Analisis causal (Ishikawa + 5 Porques)
+
+Ishikawa 24 causas en 6 categorias (Tecnologia, Personas, Procesos, Informacion, Seguridad, Organizacion). Causas raiz priorizadas: ausencia de busqueda semantica tolerante a errores/sinonimos, clasificacion manual por nombre en vez de por contenido, sin control de versiones inmutable, sin RBAC/auditoria, sin alertas proactivas, conocimiento tacito centralizado en una persona.
+
+5 Porques para `Dependencia de Mariela`: 1) Por que solo Mariela ubica? Porque no hay clasificacion auto -> 2) Porque nombres genericos y proceso manual -> 3) Porque no hay pipeline embeddings/LLM que lea contenido -> 4) Porque no hay KM con RAG -> 5) Porque no se ha sistematizado conocimiento documental. Mismo analisis aplica a `Perdida en audiencia` (busqueda exacta sin sinonimos) y `Riesgo seguridad` (sin AES-256/TLS/RBAC).
+
+Arbol de problemas -> Arbol de objetivos: cada causa se convierte en objetivo especifico OE1-OE6 con indicador medible (ver `TDR_KM_RAG.md` 3.2).
+
+#### 1.1.3 Stakeholders
+
+| Stakeholder | Necesidad principal | Criterio de exito |
+|-------------|---------------------|-------------------|
+| Abogado 12 anios (asistencia familiar) | Escribir `Mamani alimentos` y recuperar todo aunque escriba `conbenio` | Busqueda <30s, tolera errores (OE1/RF-12) |
+| Abogada 8 anios (patria potestad) | No volver a imprimir version vieja | Versionado v1..vN con diff (OE5/RF-11) |
+| Abogada 3 anios (violencia) | Crear caso en <1 min y subir docs, datos victima cifrados | Boton URGENTE + AES campo (OE4/RF-25/03) |
+| Asistente Mariela | Dejar de ser cuello de botella | 100% docs clasificables sin su intervencion (OE2/RF-09) |
+| Admin Buffet | Trazabilidad quien/que/cuando/IP | Auditoria inmutable + RBAC (OE4/RF-04) |
+| Victima/menor | Proteccion datos, medida no vencida | Cifrado + alerta 7d/48h (OE3/OE4) |
 
 ### 1.2. Entrevistas Realizadas
 
-| Entrevista | Perfil | Experiencia | Duración | Hallazgos Clave |
-|------------|--------|-------------|----------|-----------------|
-| #01 | Abogado varón, Derecho de Familia (asistencia familiar) | 12 años | 52 min | Carpetas por cliente sin sub-organización; pérdida de convenios en juzgado; escaneos duplicados |
-| #02 | Abogada mujer, Patria Potestad y Menores | 8 años | 48 min | Dependencia total de asistente Mariela; 40-50 docs mezclados por caso; impresión de versión incorrecta de demanda |
-| #03 | Abogada mujer, Violencia Doméstica y Protección a Víctimas | 3 años | 35 min | Casos urgentes sin tiempo para ordenar; certificado forense perdido como "scan001.jpg"; direcciones de víctimas en laptop sin cifrado |
+| Entrevista | Perfil | Experiencia | Duracion | Hallazgos Clave | Problema trazable |
+|------------|--------|-------------|----------|-----------------|-------------------|
+| #01 | Abogado varon, Derecho de Familia (asistencia familiar) | 12 anios | 52 min | Carpetas por cliente sin sub-organizacion; perdida de convenios en juzgado 3ro; escaneos duplicados `scan001.jpg` | P1, P2, P3 |
+| #02 | Abogada mujer, Patria Potestad y Menores | 8 anios | 48 min | Dependencia total de asistente Mariela; 40-50 docs mezclados por caso; impresion de version incorrecta de demanda | P1, P5, P6 |
+| #03 | Abogada mujer, Violencia Domestica y Proteccion a Victimas | 3 anios | 35 min | Casos urgentes sin tiempo para ordenar; certificado forense perdido como `scan001.jpg`; direcciones de victimas en laptop sin cifrar; envio WhatsApp | P2, P7, S/T02 |
 
-### 1.3. Requerimientos Funcionales Consolidados
+Ver transcripciones completas en `entrevistas/Entrevista_Abogado_0X.md` y matriz de trazabilidad Entrevista -> RF en `README.md`.
 
-Extraídos de las tres entrevistas, consolidados por frecuencia y prioridad:
+### 1.3. Requerimientos Funcionales Consolidados (trazables a OE y a entrevistas)
+
+Extraidos de las 3 entrevistas, consolidados por frecuencia y prioridad, con cobertura en TDR 4.1 y validacion en Plan S7:
 
 #### Requerimientos de Alta Prioridad (mencionados por 3/3 entrevistados)
 
-| # | Requerimiento | Justificación | Objetivo Específico |
-|---|---------------|---------------|---------------------|
-| RF-01 | Búsqueda semántica inteligente que tolere errores y sinónimos legales | Todos los abogados buscan documentos con nombres imprecisos o incompletos | OE1 |
-| RF-02 | Clasificación automática de documentos por contenido (sin etiquetado manual) | Ningún usuario tiene tiempo para nombrar archivos correctamente | OE2 |
-| RF-03 | Preguntas en lenguaje natural sobre el estado de los casos | Necesitan respuestas rápidas ante jueces ("¿qué falta para esta audiencia?") | OE1 |
-| RF-04 | Seguridad robusta para datos de menores, víctimas y familias | Contraseñas débiles y compartimiento inseguro son riesgos reales | OE4 |
+| # | Requerimiento | Justificacion | Objetivo Especifico | Criterio de aceptacion |
+|---|---------------|---------------|---------------------|------------------------|
+| RF-01 | Busqueda semantica inteligente que tolere errores y sinonimos legales | Todos buscan con nombres imprecisos (`ACUERDO_FINAL2.pdf`) | OE1 | p95 <3s, precision >=85% |
+| RF-02 | Clasificacion automatica por contenido (sin etiquetado manual) | Nadie tiene tiempo para nombrar correctamente; 200 docs sin clasificar | OE2 | >=90% auto en 20 docs prueba |
+| RF-03 | Preguntas en lenguaje natural sobre el estado de los casos | Respuestas rapidas ante juez (`que falta para audiencia maniana?`) | OE1 | Respuesta con citas <3s |
+| RF-04 | Seguridad robusta para datos de menores, victimas y familias | Contrasenas debiles y compartimiento inseguro son riesgos reales | OE4 | 0 filtraciones, ZAP 0 high |
 
 #### Requerimientos de Alta Prioridad (mencionados por 2/3 entrevistados)
 
-| # | Requerimiento | Justificación | Objetivo Específico |
-|---|---------------|---------------|---------------------|
-| RF-05 | Acceso desde celular en juzgados | Los abogados no trabajan fijos en oficina | OE4 |
-| RF-06 | Control de versiones (evitar presentar documentos obsoletos) | Se han presentado versiones viejas de demandas en audiencia | OE5 |
-| RF-07 | Alertas proactivas de vencimientos y audiencias | Con tantos casos urgentes, se pasan plazos críticos | OE3 |
-| RF-08 | Compartir documentos de forma segura con enlaces temporales | Actualmente envían PDFs sensibles por WhatsApp | OE6 |
-| RF-09 | Interfaz ultra simple para personal no técnico | No pueden dedicar días a capacitación | OE4 |
+| # | Requerimiento | Justificacion | Objetivo Especifico | Criterio de aceptacion |
+|---|---------------|---------------|---------------------|------------------------|
+| RF-05 | Acceso desde celular en juzgados | No trabajan fijos en oficina; necesitan mostrar doc a jueza | OE4 | Responsive, <5 clics, PWA |
+| RF-06 | Control de versiones (evitar presentar documentos obsoletos) | Versiones viejas presentadas en audiencia | OE5 | v1..vN diff lado a lado |
+| RF-07 | Alertas proactivas de vencimientos y audiencias | Con tantos urgentes se pasan plazos criticos | OE3 | Alertas 48h/7d en ventana |
+| RF-08 | Compartir documentos de forma segura con enlaces temporales | Envian PDFs sensibles por WhatsApp | OE6 | JWT 1h/24h/72h single-use |
+| RF-09 | Interfaz ultra simple para personal no tecnico | No pueden dedicar dias a capacitacion | OE4 | 3 abogados <5 min sin ayuda |
 
-#### Requerimiento de Alta Prioridad (mencionado por 1/3 pero con impacto crítico)
+#### Requerimiento de Alta Prioridad (mencionado por 1/3 pero con impacto critico)
 
-| # | Requerimiento | Justificación | Objetivo Específico |
-|---|---------------|---------------|---------------------|
-| RF-10 | Rapidez absoluta para casos de emergencia (violencia) | En crisis no hay tiempo para procesos complejos | OE1, OE2 |
+| # | Requerimiento | Justificacion | Objetivo Especifico | Criterio de aceptacion |
+|---|---------------|---------------|---------------------|------------------------|
+| RF-10 | Rapidez absoluta para casos de emergencia (violencia) | En crisis no hay tiempo para procesos complejos; datos victima en laptop sin cifrar | OE1, OE2, OE4 | Boton URGENTE <30s + AES campo |
 
-### 1.4. Requerimientos No Funcionales
+### 1.4. Requerimientos No Funcionales (alineados a TDR 19 RNF)
 
-| # | Requerimiento | Descripción |
-|---|---------------|-------------|
-| RNF-01 | Disponibilidad | Sistema operativo 24/7 para emergencias |
-| RNF-02 | Tiempo de respuesta | < 2 segundos para búsquedas semánticas |
-| RNF-03 | Cifrado | Datos en reposo y en tránsito con cifrado de extremo a extremo |
-| RNF-04 | Escalabilidad | Soporte para crecimiento de casos activos |
-| RNF-05 | Usabilidad | Interfaz comprensible sin capacitación formal |
-| RNF-06 | Portabilidad | Acceso web responsive desde cualquier dispositivo |
+| ID | Requerimiento | Criterio de medicion | Prioridad | Trazable a |
+|----|---------------|----------------------|-----------|------------|
+| RNF-01 | Cifrado transito TLS 1.3 | SSL Labs A+ | Critica | TDR RNF-01 |
+| RNF-02 | Cifrado reposo AES-256 + campo victima | Auditoria cifrado BD/filesystem | Critica | TDR RNF-02 |
+| RNF-03 | Bloqueo tras 3 intentos | Prueba 4 intentos incorrectos bloquea | Alta | TDR RNF-03 |
+| RNF-04 | Sesion expira 30 min inactividad | Dejar 31 min sin interaccion expira | Alta | TDR RNF-04 |
+| RNF-05 | RBAC roles + chunk-level | Test permisos cruzados 100% pass | Alta | TDR RNF-05 |
+| RNF-06 | Auditoria inmutable | Intento DELETE bloqueado, hash encadenado | Alta | TDR RNF-06 |
+| RNF-07 | Busqueda <3s | 1000 docs, 10 concurrentes, p95 <3s | Alta | TDR RNF-07 |
+| RNF-08 | Operaciones generales <2s | Monitoreo prod p95 <2s | Alta | TDR RNF-08 |
+| RNF-09 | Disponibilidad 99.5% | UptimeRobot <=4.4h downtime/mes | Alta | TDR RNF-09 |
+| RNF-11 | Usabilidad <5 min sin ayuda | 3 abogados no tecnicos completan tareas <5 min | Alta | TDR RNF-11 |
+| RNF-14 | Multi-dispositivo | Chrome/Firefox/Safari desktop+mobile | Alta | TDR RNF-14 |
+| RNF-16 | Escalabilidad docs 100/mes sin degradacion | 5000 docs sin caida p95 | Media | TDR RNF-16 |
+
+RNF completos 19 en `TDR_KM_RAG.md` Seccion 7. Cada RNF tiene herramienta habilitadora (ver TDR 9.4 Matriz Herramienta->RNF).
 
 ---
 
@@ -77,20 +112,20 @@ El sistema se estructura en las siguientes capas:
 
 ```
 ┌─────────────────────────────────────────────────┐
-│           CAPA DE PRESENTACIÓN                  │
-│   Interfaz web responsive + Chat conversacional │
+│ CAPA DE PRESENTACIÓN │
+│ Interfaz web responsive + Chat conversacional │
 ├─────────────────────────────────────────────────┤
-│           CAPA DE LÓGICA DE NEGOCIO            │
-│   Gestión de casos · Alertas · Permisos         │
+│ CAPA DE LÓGICA DE NEGOCIO │
+│ Gestión de casos · Alertas · Permisos │
 ├─────────────────────────────────────────────────┤
-│           CAPA DE INTELIGENCIA (RAG)            │
-│   Embeddings · LLM · Búsqueda semántica         │
+│ CAPA DE INTELIGENCIA (RAG) │
+│ Embeddings · LLM · Búsqueda semántica │
 ├─────────────────────────────────────────────────┤
-│           CAPA DE DATOS                         │
-│   Base vectorial · BD relacional · Almacenamiento│
+│ CAPA DE DATOS │
+│ Base vectorial · BD relacional · Almacenamiento│
 ├─────────────────────────────────────────────────┤
-│           CAPA DE SEGURIDAD                     │
-│   Cifrado · RBAC · Auditoría · Enlaces temporales│
+│ CAPA DE SEGURIDAD │
+│ Cifrado · RBAC · Auditoría · Enlaces temporales│
 └─────────────────────────────────────────────────┘
 ```
 
@@ -119,33 +154,33 @@ Los procesos a modelar incluyen:
 ### 2.3. Modelo de Datos (Entidades Principales)
 
 ```
-┌──────────┐     ┌──────────┐     ┌──────────┐
-│  CASO    │────<│ DOCUMENTO│>────│ CATEGORÍA│
-│──────────│     │──────────│     │──────────│
-│ id       │     │ id       │     │ id       │
-│ cliente  │     │ caso_id  │     │ nombre   │
-│ tipo     │     │ nombre   │     │ auto_gen │
-│ estado   │     │ version  │     └──────────┘
-│ prioridad│     │ chunks[] │
-└──────────┘     │ fecha    │     ┌──────────┐
-     │           │ crypt_key│────<│  ALERTA  │
-     │           └──────────┘     │──────────│
-     │                            │ id       │
-     └───────────────────────────>│ caso_id  │
-                                  │ tipo     │
-┌──────────┐                      │ fecha_lim│
-│  USUARIO │────┐                 │ activa   │
-│──────────│    │                 └──────────┘
-│ id       │    │
-│ nombre   │    │            ┌──────────┐
-│ rol      │    └───────────>│PERMISO   │
-│ crypt_key│                 │──────────│
-└──────────┘                 │ user_id  │
-                             │ doc_id   │
-                             │ nivel    │
-                             │ link_temp│
-                             │ expira   │
-                             └──────────┘
+┌──────────┐ ┌──────────┐ ┌──────────┐
+│ CASO │────<│ DOCUMENTO│>────│ CATEGORÍA│
+│──────────│ │──────────│ │──────────│
+│ id │ │ id │ │ id │
+│ cliente │ │ caso_id │ │ nombre │
+│ tipo │ │ nombre │ │ auto_gen │
+│ estado │ │ version │ └──────────┘
+│ prioridad│ │ chunks[] │
+└──────────┘ │ fecha │ ┌──────────┐
+ │ │ crypt_key│────<│ ALERTA │
+ │ └──────────┘ │──────────│
+ │ │ id │
+ └───────────────────────────>│ caso_id │
+ │ tipo │
+┌──────────┐ │ fecha_lim│
+│ USUARIO │────┐ │ activa │
+│──────────│ │ └──────────┘
+│ id │ │
+│ nombre │ │ ┌──────────┐
+│ rol │ └───────────>│PERMISO │
+│ crypt_key│ │──────────│
+└──────────┘ │ user_id │
+ │ doc_id │
+ │ nivel │
+ │ link_temp│
+ │ expira │
+ └──────────┘
 ```
 
 ---

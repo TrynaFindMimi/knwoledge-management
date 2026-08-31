@@ -12,9 +12,9 @@
 
 ### DESTINATARIO
 
-**Buffet de Asistencia Familiar**  
-Servicio legal gratuito — Derecho de Familia  
-[Dirección, La Paz, Bolivia]  
+**Buffet de Asistencia Familiar** 
+Servicio legal gratuito — Derecho de Familia 
+[Dirección, La Paz, Bolivia] 
 Correo: buffet.asistencia.familiar@gmail.com
 
 **Atención:** ________________________ (Responsable del Proyecto / Product Owner)
@@ -171,17 +171,17 @@ Aceptamos implementar cada vista con sus componentes AntD, botones, validaciones
 - Repo GitHub privado con acceso Buffet, ramas `main`/`develop`/`feature/*`, PR review obligatorio, CI/CD GitHub Actions → Vercel + Railway.
 - Despliegue por ambientes: `develop` → staging (Railway) → `main` → producción.
 
-#### 3.3. Forma de pago aceptada — 5 hitos (Bs. 40.233 IVA incl. — COCOMO WAE-RAG 4+2, abandona Bs. 16,950)
+#### 3.3. Forma de pago aceptada — 5 hitos COCOMO II WAE-RAG mercado (Bs. 67,904 IVA incl. con margen 26.7%)
 
-Aceptamos **Bs. 40.233** total IVA incluido (Bs. 35.604 base + Bs. 4.629 IVA 13%) — Opcion A WAE-RAG 12.01 KLOC (ver `cotizacion/Cotizacion_KM_RAG.md`):
+Aceptamos **Bs. 67,904.21** total IVA incluido (Bs. 60,092.00 base + Bs. 7,812.21 IVA 13%) — Opcion A WAE-RAG mercado 12.01 KLOC / 48.15 PM x 1,248 (margen 26.7% incluido, ver `documentos/cotizacion/Cotizacion_KM_RAG.md` Seccion 8):
 
 | Hito | Plazo | % | Bs. IVA incl. | Entregables validados |
 |------|-------|---|---------------|-----------------------|
-| **H1** | Semana 2 | 20% | 8.047 | **E1** Plan/cronograma + **E2** Figma + arquitectura + decisión BD |
-| **H2** | Semana 6 | 15% | 6.035 | **E3** Auth+Casos + **E4** Ingesta+clasificación+dedup |
-| **H3** | Semana 10 | 25% | 10.058 | **E5** RAG+chat ★ + **E6** Alertas+audiencias+PDF |
-| **H4** | Semana 14 | 15% | 6.035 | **E7** Versiones+compartición+auditoría + **E8** pulido + **E9** QA staging superada |
-| **H5** | Semana 16 (cierre + inicio garantia 2 meses) | 25% | 10.058 | **E10** Prod Vercel/Railway + **E11** docs + **E12** capacitación |
+| **H1** | Semana 2 | 20% | 13,580.79 | **E1** Plan/cronograma + **E2** Figma + arquitectura + decision BD |
+| **H2** | Semana 6 | 15% | 10,185.59 | **E3** Auth+Casos + **E4** Ingesta+clasificacion+dedup |
+| **H3** | Semana 10 | 25% | 16,975.90 | **E5** RAG+chat + **E6** Alertas+audiencias+PDF |
+| **H4** | Semana 14 | 15% | 10,185.59 | **E7** Versiones+comparticion+auditoria + **E8** pulido + **E9** QA staging superada |
+| **H5** | Semana 16 (cierre + inicio garantia 2 meses) | 25% | 16,975.90 | **E10** Prod Vercel/Railway + **E11** docs + **E12** capacitacion |
 
 Retraso pago >15 días hábiles habilita suspensión de siguiente sprint hasta regularización (Cláusula Primera: pagos ya devengados irrevocables).
 
@@ -258,4 +258,3 @@ Atentamente,
 2. TDR.md — TDR v1.0 con 29 RF + 19 RNF + criterios aceptación.
 3. Contrato_KM_RAG.md — Contrato de Prestación de Servicios (16 semanas + 60 días garantía).
 4. Plan_Proyecto_Cronograma_KM_RAG.md — Plan y cronograma 8 sprints.
-
