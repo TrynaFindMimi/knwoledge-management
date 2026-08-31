@@ -56,7 +56,7 @@ EL EQUIPO DESARROLLADOR se compromete a **diseñar, desarrollar, desplegar y doc
 7. **Gestión de audiencias:** registro, checklist automático (tenidos/faltantes en rojo), paquete PDF consolidado con portada.
 8. **Compartición segura:** enlaces JWT temporales (1h/24h/72h), single-use, solo-lectura con watermark, revocación inmediata, auditoría.
 9. **Seguridad:** AES-256 reposo + cifrado campo víctimas, TLS 1.3 tránsito, JWT, RBAC + permisos a nivel de chunk, auditoría inmutable.
-10. **Despliegue:** Frontend en **Vercel**, Backend/RAG/DB/Cron en **Railway**, dominios, SSL, monitoreo 99.5%.
+10. **Despliegue:** Frontend en **Vercel** (principal), Backend/RAG/DB/Cron en **Railway** (principal), alternativas cotizadas **Hostinger VPS** y **Servidor Local on-premise** (ver proformas INF-008/INF-009/INF-010), dominios, SSL, monitoreo 99.5%.
 11. **Documentación y capacitación:** Manual Técnico (arquitectura, API, RAG), Manual Usuario, Manual Despliegue, 2 sesiones presenciales/virtuales + videos.
 
 ---
@@ -101,7 +101,7 @@ EL EQUIPO DESARROLLADOR se compromete a **diseñar, desarrollar, desplegar y doc
 |----------|------|-------------|
 | Sidebar | AntD Layout.Sider colapsable | Logo Buffet + Menu: Dashboard, Casos, Búsqueda, Chat RAG, Audiencias, Compartidos, Auditoría (admin), Usuarios (admin). Icons AntD. Responsive Drawer en mobile. |
 | Header | AntD Layout.Header | Breadcrumb, Search global (Input.Search), **Campana Notificaciones** (Badge contador no leídas, Dropdown agrupadas por tipo, "Marcar todas leídas"), Avatar + Dropdown usuario / Cerrar sesión. |
-| KPI Cards | AntD Card + Statistic | 4 cards: Casos activos (#), Docs del mes (#), Audiencias próximas (#), Alertas activas (#) con Trend  vs mes anterior. |
+| KPI Cards | AntD Card + Statistic | 4 cards: Casos activos (#), Docs del mes (#), Audiencias próximas (#), Alertas activas (#) con Trend vs mes anterior. |
 | Gráfico casos | AntD Charts / Recharts | Barras por tipo de caso (asistencia, patria, violencia). |
 | Próximas audiencias | AntD Table resumida | 5 próximas: fecha, cliente, juzgado, estado; botón **"Ver todas"** → `/audiencias`. |
 | Docs recientes | List | Últimos docs subidos con tag clasificación auto. |
@@ -211,8 +211,9 @@ EL EQUIPO DESARROLLADOR se compromete a **diseñar, desarrollar, desplegar y doc
 
 #### 3.3. Infraestructura y Decisión BD
 
-- **Frontend:** Vercel (Hobby/Pro según Buffet) con dominio propio o `vercel.app`.
-- **Backend:** Railway (Starter/Pro) con Postgres, Volumes, Cron, env vars cifradas.
+- **Frontend:** Vercel (Hobby/Pro segun Buffet) con dominio propio o `vercel.app` (proforma INF-003).
+- **Backend:** Railway (Starter/Pro) con Postgres, Volumes, Cron, env vars cifradas (proforma INF-004).
+- **Alternativas cotizadas:** Hostinger VPS (INF-008) y Servidor Local on-premise (INF-009); comparativa en INF-010. La eleccion no altera precio COCOMO (infra por cuenta Buffet).
 - **Decisión SQL vs Mongo:** Se formaliza en Sprint 1 tras modelado datos. Criterio: **PostgreSQL** si esquema casos/audiencias estable; **MongoDB** si metadatos documentos altamente variables (violencia doméstica requiere campos extra). Híbrido (Postgres transaccional + Mongo docs + Chroma/pgvector) permitido sin costo extra si se justifica.
 
 ---
@@ -266,16 +267,19 @@ Cada sprint (2 semanas) cierra con demo funcional para validación EL BUFFET. Cr
 
 ### CLÁUSULA SEXTA: PRECIO, IMPUESTOS Y FORMA DE PAGO
 
-#### 6.1. Precio total — COCOMO puro 4 meses + 2 meses garantia, RAG enfatizado (abandona Bs. 15.000 / Bs. 13.800)
+#### 6.1. Precio total — COCOMO II WAE-RAG mercado
 
-| Concepto | Opcion A — WAE-RAG ★ (adoptada) | Opcion B — WAE base | Opcion C — Piso académico (ref.) |
-|----------|--------------------------------|---------------------|----------------------------------|
-| **Base de cálculo** | WAE 12,01 KLOC (136,5 WOP) + EM_RAG 1,45, 16 PM dev + 1,2 PM garantía, tarifa solidaria 1.800 Bs/PM + overhead RAG 15% | WAE 12,01 KLOC EM=1,0, 16+1,2 PM × 1.800 | Bottom-Up 960h+160h / PF 191,9×65 (part-time 15h/sem) |
-| **Precio COCOMO II a cobrar (IVA incluido)** | **Bs. 67.054,20** | Bs. 58.308,00 | Bs. 15.184 |
-| Cuota mensual promedio (4 meses) | Bs. 16.763,55 | Bs. 14.577,00 | — |
-| Cotización | `documentos/cotizacion/Cotizacion_KM_RAG.md` Opción A | Opción B (descuento pago al contado) | Opción C valida piso |
+| Concepto | Opcion A — WAE-RAG mercado (adoptada) | Opcion B — Pago al contado (10% dto.) | Referencia informativa |
+|----------|---------------------------------------|---------------------------------------|------------------------|
+| **Base de calculo** | WAE 12,01 KLOC (136,5 WOP) + EM_RAG 1,45, E 48.15 PM, tarifa venta 1,248 Bs/PM (costo empresa 985 + margen 26.7%) | Misma base con 10% descuento | Costo empresa sin margen |
+| **Precio base (sin IVA)** | **Bs. 60,092.00** | Bs. 54,082.80 | Bs. 47,428.00 |
+| **IVA 13%** | 7,811.96 | 7,030.76 | 6,165.64 |
+| **Precio total con IVA** | **Bs. 67,903.96** | **Bs. 61,113.56** | Bs. 53,593.64 |
+| **Margen empresarial incluido** | 12,664.00 (26.7% sobre costo) | 11,397.60 | — |
+| **Cuota mensual promedio (4 meses)** | **15,023.00 base / 16,976.00 IVA** | 13,520.70 / 15,278.39 | — |
+| Cotizacion | `documentos/cotizacion/Cotizacion_KM_RAG.md` Seccion 8 | — | Ver Estimacion Seccion 8 |
 
-**Precio contractual adoptado: Opción A — COCOMO II indica Bs. 67.054,20 a cobrar (IVA incluido).** Se elimina el desglose “precio base”. Se abandona el precio previo Bs. 15.000 (y el mínimo histórico Bs. 13.800). El precio es **COCOMO II puro (WAE)** para periodo fijo **4 meses + 2 meses garantía** con **RAG enfatizado**. Incluye diseño React/AntD/Vite, backend RAG, vector DB, Vercel/Railway config, docs y capacitación. **NO incluye** hosting/dominio/planes LLM más allá de tiers gratuitos (ver Cotización §3.3). Ver `Estimacion_COCOMO_KM_RAG.md` §7 (WAE) y `Cotizacion_KM_RAG.md` §3.
+**Precio contractual adoptado: Opcion A — COCOMO II WAE-RAG mercado Bs. 60,092.00 base (Bs. 67,904.21 IVA incluido) con margen empresarial 26.7% incluido.** Precio calculado por COCOMO II Post-Arquitectura + WAE (48.15 PM x 1,248 Bs/PM) segun `Estimacion_COCOMO_KM_RAG.md` Seccion 8 y detallado en `documentos/cotizacion/Cotizacion_KM_RAG.md` Seccion 8. Incluye diseno React/AntD/Vite, backend RAG (LangChain, embeddings ES, vector HNSW, re-ranking, citas), RBAC chunk-level, AES-256, TLS 1.3, Vercel/Railway config, docs y capacitacion. **NO incluye** hosting/dominio/planes LLM/vector mas alla de tiers gratuitos, que van por cuenta del Buffet segun proformas INF-001 a INF-SSL-001 mas INF-008 Hostinger e INF-009 Servidor Local y comparativa INF-010 (ver Cotizacion Seccion 8.3, proformas/Carta_Entrega_Proformas y TDR Seccion 22).
 
 #### 6.2. Impuestos
 
@@ -291,20 +295,19 @@ EQUIPO emite factura por cuota con desglose. EL BUFFET entrega comprobantes rete
 
 Si EL BUFFET (ONG) califica exención IVA, presentará respaldo antes de firma; de lo contrario aplica IVA.
 
-#### 6.4. Forma de pago — 5 hitos COCOMO II (a cobrar, IVA incluido)
+#### 6.4. Forma de pago — 5 hitos COCOMO II WAE-RAG (IVA incluido)
 
-| Hito | Plazo | % | **Precio COCOMO II a cobrar (Bs., IVA incluido)** | Entregables validados |
-|------|-------|---|---------------------------------------------------|-----------------------|
-| **H1** Firma + Plan/Mockups aprobados | Semana 2 | 20% | **13.410,84** | E1+E2 |
-| **H2** Ingesta inteligente completada | Semana 6 | 15% | **10.058,13** | E3+E4 |
-| **H3** RAG + Audiencias ★ completadas | Semana 10 | 25% | **16.763,55** | E5+E6 |
-| **H4** QA staging superada | Semana 14 | 15% | **10.058,13** | E7+E8+E9 |
-| **H5** Prod + docs + capacitación (inicio garantía 2 meses) | Semana 16 | 25% | **16.763,55** | E10+E11+E12 |
-| **Total Opción A (COCOMO II a cobrar)** | | 100% | **67.054,20** | E1-E12 |
-| Total Opción B (descuento contado) | | 100% | 58.308,00 | — |
-| Total Opción C piso académico | | 100% | 15.184,00 | — |
+| Hito | Plazo | % | Bs. base | IVA 13% | Bs. total | Entregables validados |
+|------|-------|---|----------|---------|-----------|-----------------------|
+| **H1** Firma + Plan/Mockups aprobados | Semana 2 | 20% | 12,018.40 | 1,562.39 | **13,580.79** | E1+E2 (Plan, Figma, arquitectura, decision BD) |
+| **H2** Ingesta inteligente completada | Semana 6 | 15% | 9,013.80 | 1,171.79 | **10,185.59** | E3+E4 (Auth+Casos, Upload+chunk+embed+clasif+dedup) |
+| **H3** RAG + Audiencias completadas | Semana 10 | 25% | 15,022.90 | 1,953.00 | **16,975.90** | E5+E6 (Busqueda<3s+chat con citas, alertas 48h/7d, audiencias+PDF) |
+| **H4** QA staging superada | Semana 14 | 15% | 9,013.80 | 1,171.79 | **10,185.59** | E7+E8+E9 (Versiones+diff, JWT watermark, auditoria, pulido, QA) |
+| **H5** Prod + docs + capacitacion (inicio garantia 2 meses) | Semana 16 | 25% | 15,022.90 | 1,953.00 | **16,975.90** | E10+E11+E12 (Prod Vercel/Railway+SSL, Manuales, 2 sesiones) |
+| **Total Opcion A** | | **100%** | **60,092.00** | **7,812.21** | **67,904.21** | E1-E12 |
+| Total Opcion B contado 10% dto. | | 100% | 54,083.30 | 7,030.73 | 61,113.59 | — |
 
-Precios anteriores abandonados: Bs. 13.800 (15.594 IVA) y Bs. 15.000 (16.950 IVA). Ver `Cotizacion_KM_RAG.md` secc. 4.
+Ver detalle completo en `documentos/cotizacion/Cotizacion_KM_RAG.md` Seccion 8 y `Estimacion_COCOMO_KM_RAG.md` Seccion 8. Descuento pago al contado 10% = Bs. 61,113.59 total (ver Cotizacion Seccion 8.2).
 
 #### 6.5. Plazo de pago y facturación
 
@@ -437,4 +440,3 @@ En señal de conformidad, LAS PARTES firman en La Paz, a los ____ días de _____
 ### ANEXO II: CRONOGRAMA
 
 `Plan_Proyecto_Cronograma_KM_RAG.md` — 8 sprints (16 semanas) + garantía 60 días.
-

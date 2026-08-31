@@ -26,19 +26,19 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 ## 2. PROCESOS A MODELAR
 
-### 2.1. Diagrama de Contexto (Nivel 0)
+### 2.1. Diagrama de Contexto (Nivel A-0)
 
-```mermaid
-graph TD
-    A["ABOGADO\n(Usuario primario)"]
-    A --> B["ASISTENTE\n(Admin)"]
-    A --> C["SISTEMA\nKM con RAG"]
-    A --> D["TERCEROS\n(SLIM, Defensoría,\nMinisterio)"]
-```
+![BPWin A0 Contexto](../diagramas/bpwin/BPWin_A0_Contexto.svg)
+
+*IDEF0 A-0 — Vista de contexto IDEF0 con entradas, controles, salidas y mecanismos. Ver tambien `BPWin_A0_Ciclo_Vida.svg` para flujo global.*
+
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 ### 2.2. Procesos de Negocio Identificados
 
 #### PROCESO 1: Registro de Caso Nuevo (P1)
+
+![BPWin P1](../diagramas/bpwin/BPWin_P1_Registro_Caso.svg)
 
 | Elemento | Descripción |
 |----------|-------------|
@@ -49,20 +49,7 @@ graph TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Abogado ingresa datos del cliente"] --> B["Sistema crea caso con ID único"]
-    B --> C{"Sistema clasifica tipo de caso"}
-    C --> D["Asistencia Familiar"]
-    C --> E["Patria Potestad"]
-    C --> F["Violencia Doméstica"]
-    C --> G["Otros"]
-    D --> H["Sistema genera estructura de carpetas virtuales"]
-    E --> H
-    F --> H
-    G --> H
-    H --> I["Sistema notifica creación exitosa"]
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-01: Todo caso debe tener al menos nombre del cliente y tipo
@@ -73,6 +60,8 @@ flowchart TD
 
 #### PROCESO 2: Ingesta de Documentos (P2)
 
+![BPWin P2](../diagramas/bpwin/BPWin_P2_Ingesta_Documentos.svg)
+
 | Elemento | Descripción |
 |----------|-------------|
 | **Trigger** | Abogado carga o escanea un documento |
@@ -82,31 +71,7 @@ flowchart TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Abogado selecciona caso destino"] --> B["Abogado carga documento"]
-    B --> C["Sistema detecta tipo de archivo"]
-    C --> D["Sistema extrae texto\n(OCR si es imagen)"]
-    D --> E["Sistema genera chunks semánticos"]
-    E --> F{"Sistema clasifica documento"}
-    F --> G["Demanda"]
-    F --> H["Contestación"]
-    F --> I["Informe psicológico"]
-    F --> J["Certificado médico"]
-    F --> K["Orden de protección"]
-    F --> L["Comprobante de pago"]
-    F --> M["Otro"]
-    G --> N["Sistema genera embeddings vectoriales"]
-    H --> N
-    I --> N
-    J --> N
-    K --> N
-    L --> N
-    M --> N
-    N --> O["Sistema almacena en base vectorial y relacional"]
-    O --> P["Sistema crea nueva versión"]
-    P --> Q["Sistema notifica indexación exitosa"]
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-04: No se permiten archivos mayores a 50MB
@@ -118,6 +83,8 @@ flowchart TD
 
 #### PROCESO 3: Búsqueda de Información (P3)
 
+![BPWin P3](../diagramas/bpwin/BPWin_P3_Busqueda_RAG.svg)
+
 | Elemento | Descripción |
 |----------|-------------|
 | **Trigger** | Abogado necesita encontrar un documento |
@@ -127,24 +94,7 @@ flowchart TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Abogado escribe consulta\nen lenguaje natural"] --> B["Sistema procesa consulta\n(tolerancia a errores)"]
-    B --> C["Sistema genera embedding\nde la consulta"]
-    C --> D["Sistema busca en base vectorial\n(similitud semántica)"]
-    D --> E["Sistema recupera chunks\nmás relevantes"]
-    E --> F["Sistema recupera\ndocumentos fuente"]
-    F --> G["Sistema genera respuesta\nen lenguaje natural"]
-    G --> H["Sistema incluye citas de fuentes"]
-    H --> H1["Nombre del documento"]
-    H --> H2["Fecha de carga"]
-    H --> H3["Caso asociado"]
-    H --> H4["Enlace directo al documento"]
-    H1 --> I["Sistema presenta resultados al abogado"]
-    H2 --> I
-    H3 --> I
-    H4 --> I
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-08: Respuesta en menos de 3 segundos
@@ -156,6 +106,8 @@ flowchart TD
 
 #### PROCESO 4: Gestión de Audiencias (P4)
 
+![BPWin P4](../diagramas/bpwin/BPWin_P4_Gestion_Audiencias.svg)
+
 | Elemento | Descripción |
 |----------|-------------|
 | **Trigger** | Abogado agenda o se programa una audiencia |
@@ -165,23 +117,7 @@ flowchart TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Abogado registra audiencia\nen el sistema"] --> B["Sistema vincula audiencia al caso"]
-    B --> C["Sistema identifica documentos\nrequeridos para tipo de audiencia"]
-    C --> D["Sistema verifica\ndocumentos faltantes"]
-    D --> E["Sistema genera checklist\nde documentos"]
-    E --> F["Sistema programa alertas"]
-    F --> F1["48 horas antes\n(preparación)"]
-    F --> F2["24 horas antes\n(documentos faltantes)"]
-    F --> F3["2 horas antes\n(repaso final)"]
-    F --> F4["Post-audiencia\n(seguimiento)"]
-    F1 --> G["Sistema prepara paquete\nde documentos descargable"]
-    F2 --> G
-    F3 --> G
-    F4 --> G
-    G --> H["Sistema notifica al abogado"]
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-12: Alertas según urgencia del caso (violencia = inmediato,normal = 48h)
@@ -192,6 +128,8 @@ flowchart TD
 
 #### PROCESO 5: Compartición Segura (P5)
 
+![BPWin P5](../diagramas/bpwin/BPWin_P5_Comparticion_Segura.svg)
+
 | Elemento | Descripción |
 |----------|-------------|
 | **Trigger** | Abogado necesita compartir documento con tercero |
@@ -201,30 +139,7 @@ flowchart TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Abogado selecciona\ndocumento(s) a compartir"] --> B["Abogado define destinatario\n(nombre, institución)"]
-    B --> C["Abogado define duración\ndel enlace (1h, 24h, 72h)"]
-    C --> D["Sistema genera enlace\ntemporal con JWT"]
-    D --> E{"Sistema configura permisos"}
-    E --> F["Solo lectura"]
-    E --> G["Sin descarga\n(solo vista)"]
-    E --> H["Con marca de agua"]
-    F --> I["Sistema envía notificación\nal destinatario"]
-    G --> I
-    H --> I
-    I --> J["Tercero accede al enlace"]
-    J --> K["Sistema registra acceso"]
-    K --> K1["Hora de acceso"]
-    K --> K2["IP de acceso"]
-    K --> K3["Documentos consultados"]
-    K --> K4["Tiempo de permanencia"]
-    K1 --> L["Enlace expira"]
-    K2 --> L
-    K3 --> L
-    K4 --> L
-    L --> M["Sistema notifica al abogado\nque el enlace expiró"]
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-15: Máximo duración de enlace: 72 horas
@@ -235,6 +150,8 @@ flowchart TD
 
 #### PROCESO 6: Control de Versiones (P6)
 
+![BPWin P6](../diagramas/bpwin/BPWin_P6_Control_Versiones.svg)
+
 | Elemento | Descripción |
 |----------|-------------|
 | **Trigger** | Abogado modifica un documento existente |
@@ -244,18 +161,7 @@ flowchart TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Abogado carga versión modificada\nde documento existente"] --> B["Sistema detecta similitud > 90%\ncon documento existente"]
-    B --> C["Sistema pregunta:\n¿Es una nueva versión?"]
-    C --> D["Abogado confirma"]
-    D --> E["Sistema incrementa\nnúmero de versión (v1 → v2)"]
-    E --> F["Sistema conserva\nversión anterior completa"]
-    F --> G["Sistema actualiza\nembedding vectorial"]
-    G --> H["Sistema marca v2 como 'actual'"]
-    H --> I["Sistema registra diff\nentre versiones"]
-    I --> J["Sistema notifica actualización"]
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-18: Nunca se elimina una versión anterior
@@ -266,6 +172,8 @@ flowchart TD
 
 #### PROCESO 7: Alertas Proactivas (P7)
 
+![BPWin P7](../diagramas/bpwin/BPWin_P7_Alertas_Proactivas.svg)
+
 | Elemento | Descripción |
 |----------|-------------|
 | **Trigger** | Sistema detecta evento que requiere atención |
@@ -275,34 +183,7 @@ flowchart TD
 
 **Flujo de Actividades:**
 
-```mermaid
-flowchart TD
-    A["Sistema monitorea continuamente"] --> A1["Audiencias programadas"]
-    A --> A2["Vencimientos de órdenes\nde protección"]
-    A --> A3["Plazos legales"]
-    A --> A4["Casos sin actividad\nprolongada"]
-    A1 --> B["Sistema detecta\nevento próximo"]
-    A2 --> B
-    A3 --> B
-    A4 --> B
-    B --> C{"Sistema clasifica urgencia"}
-    C --> D["CRÍTICA\n(< 24 horas)"]
-    C --> E["ALTA\n(< 72 horas)"]
-    C --> F["MEDIA\n(< 1 semana)"]
-    C --> G["BAJA\n(recordatorio general)"]
-    D --> H["Sistema genera notificación\ncontextualizada"]
-    E --> H
-    F --> H
-    G --> H
-    H --> I{"Canal preferido"}
-    I --> J["Web\n(in-app notification)"]
-    I --> K["Móvil\n(push notification)"]
-    I --> L["Email\n(resumen diario)"]
-    J --> M["Abogado accede\na la notificación"]
-    K --> M
-    L --> M
-    M --> N["Sistema registra\nsi fue leída y atendida"]
-```
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 **Reglas de Negocio:**
 - RB-21: En casos de violencia doméstica, las alertas son siempre CRÍTICAS
@@ -315,15 +196,9 @@ flowchart TD
 
 ### 3.1. Proceso Principal: Gestión del Ciclo de Vida de un Documento Legal
 
-```mermaid
-flowchart LR
-    A["INICIO"] --> B["Cargar\nDocumento"]
-    B --> C["Clasificar\nAutomático"]
-    C --> D["Indexar\nVectorial"]
-    D --> E["Buscar\nCuando Necesite"]
-    E --> F["Compartir\nSeguro"]
-    F --> G["ALERTAS\nProactivas"]
-```
+![BPWin A0 Ciclo Vida](../diagramas/bpwin/BPWin_A0_Ciclo_Vida.svg)
+
+*Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
 ### 3.2. Modelo de Datos BPWin
 

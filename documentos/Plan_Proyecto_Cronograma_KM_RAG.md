@@ -16,7 +16,7 @@
 
 **A. Problemas/riesgos por sprint (resumen)**
 
-| Sprint | Semanas | Entregables | Riesgos principales (ver `TDR_Gestion_Riesgos_KM_RAG.md`) |
+| Sprint | Semanas | Entregables | Riesgos principales (ver `Gestion_Riesgos_KM_RAG.md`) |
 |--------|---------|-------------|------------------------------------------------------------|
 | **Sprint 0** | -7–0 | Setup | O07, S01 |
 | **Sprint 1** | 1–2 | E1, E2 | T01, I03, O01, O07, S01, F02 |
@@ -33,12 +33,12 @@
 
 1. [Datos del Proyecto](#datos-del-proyecto)
 2. [Herramientas y Tecnologías](#herramientas-y-tecnologías)
-   - 2.1 [Frontend](#frontend)
-   - 2.2 [Backend y RAG](#backend--rag)
-   - 2.3 [Deployment y Seguridad SSL/TLS](#deployment) — Vercel + Railway + SSL (SCCL)
-   - 2.4 [Diseño y Colaboración](#diseño--colaboración)
-   - 2.5 [Testing y Calidad](#testing--calidad)
-   - 2.6 [Uso de Herramientas por Sprint](#uso-de-herramientas-por-sprint)
+ - 2.1 [Frontend](#frontend)
+ - 2.2 [Backend y RAG](#backend--rag)
+ - 2.3 [Deployment y Seguridad SSL/TLS](#deployment) — Vercel + Railway + SSL (SCCL)
+ - 2.4 [Diseño y Colaboración](#diseño--colaboración)
+ - 2.5 [Testing y Calidad](#testing--calidad)
+ - 2.6 [Uso de Herramientas por Sprint](#uso-de-herramientas-por-sprint)
 3. [Sprint 0 — Preparación](#sprint-0--preparación-días--7-a-0-previo-a-sprint-1)
 4. [Sprint 1 — Planificación, Diseño y Arquitectura](#sprint-1--planificación-diseño-y-arquitectura-semanas-12)
 5. [Sprint 2 — Fundamentos: Auth + Gestión Casos](#sprint-2--fundamentos-auth--gestión-casos-semanas-34)
@@ -53,7 +53,7 @@
 14. [Reuniones Programadas](#reuniones-programadas)
 15. [Entregables Resumen](#entregables-resumen-e1e12)
 16. [Metodología Scrum+Kanban](#metodología--scrum--kanban)
-17. [Gestión de Riesgos — Resumen](#gestión-de-riesgos--resumen) → detalle en `TDR_Gestion_Riesgos_KM_RAG.md`
+17. [Gestión de Riesgos — Resumen](#gestión-de-riesgos--resumen) → detalle completo 29 riesgos en `Gestion_Riesgos_KM_RAG.md`
 18. [Herramientas de Seguridad — SSL/TLS (SCCL)](#herramientas-de-seguridad--ssltls-sccl)
 19. [Hitos de Pago Visual](#hitos-de-pago-visual)
 20. [Carta de Proforma y Límites](#carta-de-proforma-y-límites)
@@ -74,7 +74,7 @@
 | **Duración total** | 16 semanas (4 meses) + 60 días garantía = 24 semanas hasta cierre contractual |
 | **Sprints** | 8 sprints × 2 semanas |
 | **Metodología** | Scrum + Kanban |
-| **Precio base** | **Bs. 35.604 base (Bs. 40.233 IVA incl.)** Opcion A WAE-RAG — 5 hitos 4 meses + 2 garantia (abandona Bs. 15.000). Ver `cotizacion/Cotizacion_KM_RAG.md` |
+| **Precio base COCOMO II** | **Bs. 60,092 base (Bs. 67,904 IVA incl. con margen 26.7%)** WAE-RAG 48.15 PM x 1,248 — 5 hitos 4 meses + 2 garantia. Ver `documentos/cotizacion/Cotizacion_KM_RAG.md` |
 
 ---
 
@@ -171,7 +171,7 @@
 | **S7** | Lighthouse, CSS print, JSZip, AntD Badge/Dropdown, Playwright+ZAP+**k6/JMeter**+BrowserStack | <5 clics, impresión legal, ZIP con contraseña, QA report (0 high, JMeter p95 <3s / <2s OK), staging aprobado |
 | **S8** | Vercel+Railway dashboards, Sentry/Uptime, Markdown→PDF, Loom/Meet | Prod SSL A+ + 99.5%, Manuales PDF, 2 sesiones grabadas, handover repos/env, backups |
 
-Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4`.
+Versiones exactas bloqueadas: React 18.2.0, Vite 5.0.8, AntD 5.12.8, FastAPI 0.104.1, LangChain 0.0.340, PostgreSQL 15.4, Node 20.11, Python 3.11.7, k6 0.49, ZAP 2.14 (ver TDR §8.2 y Manual §2.1). Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4` y versiones exactas en `TDR_KM_RAG.md §8.2` y `Manual_Tecnico_KM_RAG.md §2.1`. Gantt con critical path en `diagramas/gantt/Cronograma_Gantt.svg`.
 
 ---
 
@@ -453,7 +453,7 @@ Ver matriz completa herramienta→RF/RNF en `TDR_KM_RAG.md §9.4`.
 | S01 SSL expirado | SSL Labs no A+, browser warning | Vercel/Railway auto-renew 90d, monitor UptimeRobot check SSL | Forzar renew `vercel certs`, `railway certs`, rollback a http→https |
 | O01 Materiales | Semana 1 sin 20 casos | Recordatorio Semana 0/1, mocks sintéticos paralelos | Trabajar con placeholders, adelantar S2, reprogramar S3 +1 semana |
 
-Ver ranking 29 riesgos + reserva 5 días + Bs. 800 en `TDR_Gestion_Riesgos_KM_RAG.md §5–6`.
+Ver ranking 29 riesgos + heatmap y EMV en `Gestion_Riesgos_KM_RAG.md §2.1-§2.2`, RACI y umbral escalamiento en `Gestion_Riesgos_KM_RAG.md §8.1`, y Gantt critical path en `diagramas/gantt/Cronograma_Gantt.svg`.
 
 ---
 
@@ -479,18 +479,18 @@ Ver ranking 29 riesgos + reserva 5 días + Bs. 800 en `TDR_Gestion_Riesgos_KM_RA
 
 ```
 S1(2)────S2(4)────S3(6)────S4(8)────S5(10)────S6(12)────S7(14)────S8(16)──── Garantía(24)
- │ H1 20%      │          H2 15%    │           H3 25%       │   H4 15%       H5 25%
- E1+E2         E3      E3+E4       E5        E5+E6          E7  E7+E8+E9   E10+E11+E12
- Plan+Figma   Auth     Ingesta     RAG      Alertas+       Vers  Pulido   Prod+Docs+Cap.
-                         H2                 Audienc        Compart QA            H5→60d
-                                                       H3                H4
+ │ H1 20% │ H2 15% │ H3 25% │ H4 15% H5 25%
+ E1+E2 E3 E3+E4 E5 E5+E6 E7 E7+E8+E9 E10+E11+E12
+ Plan+Figma Auth Ingesta RAG Alertas+ Vers Pulido Prod+Docs+Cap.
+ H2 Audienc Compart QA H5→60d
+ H3 H4
 ```
 
 ---
 
 ### CARTA DE PROFORMA Y LÍMITES
 
-Paquete en `proformas/` (ver `Carta_Entrega_Proformas_KM_RAG.md`):
+Paquete en `proformas/` (ver `Carta_Entrega_Proformas_KM_RAG.md`) + Gantt `diagramas/gantt/Cronograma_Gantt.svg`:
 
 | Proforma | Concepto | 1.er año aprox. | Límite |
 |----------|----------|-----------------|--------|
@@ -510,11 +510,10 @@ Paquete en `proformas/` (ver `Carta_Entrega_Proformas_KM_RAG.md`):
 ### ANEXOS
 
 - `TDR_KM_RAG.md` — TDR con uso herramientas + riesgos + SSL (índice §1–23)
-- `TDR_Gestion_Riesgos_KM_RAG.md` — Gestión riesgos con índice (técnicos/hackeos, información, SSL, operativos, financieros)
+- `Gestion_Riesgos_KM_RAG.md` — Gestión riesgos con índice (técnicos/hackeos, información, SSL, operativos, financieros)
 - `Contrato_KM_RAG.md` — Contrato 16 cláusulas + SSL
 - `Carta_Aceptacion_KM_RAG.md` — Aceptación
 - `proformas/Carta_Entrega_Proformas_KM_RAG.md` + `INF-001` a `INF-SSL-001` — Proformas con límites
 - `TDR.md` — RF/RNF base
 - `User_Stories.md` — 30 US
 - Figma — Entregado S1
-
