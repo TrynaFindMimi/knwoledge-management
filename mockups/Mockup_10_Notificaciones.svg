@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+<style>:root{--bg:#0a0a0a;--panel:#ffffff;--panel-2:#fdfbf7;--ink:#1a1a1a;--ink-inv:#f5f0e8;--muted:#7a756f;--muted-inv:#9a9580;--border:#e8e0d0;--border-dark:#2a2420;--gold:#c9a86a;--gold-weak:#fdf6e3}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .mono{font-family:ui-monospace,SFMono,Menlo,monospace;font-variant-numeric:tabular-nums}
+</style>
+<rect x="0" y="0" width="1280" height="720" fill="#0a0a0a"/>
+<rect x="0" y="0" width="1280" height="1" fill="#c9a86a" opacity="0.95"/>
+<rect x="0" y="1" width="1280" height="52" fill="#0f0f0f" stroke="#2a2420"/>
+<text x="32" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="600" fill="#f5f0e8" letter-spacing="0.08em">BUFFET</text>
+<text x="102" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="300" fill="#c9a86a" letter-spacing="0.08em">KM</text>
+<text x="140" y="26" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.14em">ASISTENCIA FAMILIAR — LA PAZ</text>
+<text x="1240" y="20" text-anchor="end" font-family="ui-monospace" font-size="9" fill="#7a756f">/notificaciones + Calendario · v1.0</text>
+<text x="1240" y="36" text-anchor="end" font-size="8" fill="#5a554f" letter-spacing="0.08em">BLACK · WHITE · GOLD — PREMIUM</text>
+<text x="640" y="86" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="20" fill="#f5f0e8" letter-spacing="0.04em">10 — Notificaciones</text>
+<line x1="580" y1="96" x2="700" y2="96" stroke="#c9a86a" stroke-width="1" opacity="0.6"/>
+<text x="640" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.1em">/notificaciones + Calendario — AntD 5.x · Contraste AA+</text>
+
+<rect x="32" y="132" width="360" height="460" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="32" y="132" width="360" height="2" fill="#c9a86a"/>
+<text x="48" y="154" class="serif" font-size="12" fill="#1a1a1a">Calendario</text><text x="320" y="154" font-size="10" fill="#8c7348">Agosto 2026</text>
+<g font-size="10" fill="#7a756f"><text x="48" y="176">L</text><text x="92" y="176">M</text><text x="136" y="176">X</text><text x="180" y="176">J</text><text x="224" y="176">V</text><text x="268" y="176">S</text><text x="312" y="176">D</text></g>
+<g font-size="11" fill="#1a1a1a">
+  <rect x="40" y="188" width="32" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><text x="56" y="206" text-anchor="middle">25</text>
+  <rect x="84" y="188" width="32" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><text x="100" y="206" text-anchor="middle">26</text>
+  <rect x="128" y="188" width="32" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><text x="144" y="206" text-anchor="middle">27</text>
+  <rect x="172" y="188" width="32" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><text x="188" y="206" text-anchor="middle">28</text>
+  <rect x="216" y="188" width="32" height="28" rx="8" fill="#fdf6e3" stroke="#c9a86a"/><text x="232" y="206" text-anchor="middle" fill="#8c7348" font-weight="700">29</text><circle cx="240" cy="214" r="3" fill="#c9a86a"/>
+  <rect x="260" y="188" width="32" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><text x="276" y="206" text-anchor="middle">30</text>
+  <rect x="304" y="188" width="32" height="28" rx="8" fill="#c9a86a"/><text x="320" y="206" text-anchor="middle" fill="#ffffff" font-weight="700">31</text><circle cx="328" cy="214" r="3" fill="#ffffff"/>
+  <rect x="40" y="224" width="32" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><text x="56" y="242" text-anchor="middle">01</text>
+  <rect x="84" y="224" width="32" height="28" rx="8" fill="#fdf6e3" stroke="#e8e0d0"/><text x="100" y="242" text-anchor="middle" fill="#8c7348">02</text><circle cx="108" cy="250" r="2" fill="#c9a86a"/>
+</g>
+<text x="48" y="284" font-size="10" fill="#7a756f">● 29 — Audiencia Garcia 48h — Faltan 2</text>
+<text x="48" y="300" font-size="10" fill="#7a756f">● 31 — Hoy — 3 notificaciones — badge 3</text>
+<rect x="48" y="320" width="328" height="28" rx="8" fill="#fdf6e3" stroke="#e8e0d0"/><text x="212" y="338" text-anchor="middle" font-size="10" fill="#8c7348">Ir a 31/08 — Ver audiencias</text>
+<!-- dropdown -->
+<rect x="420" y="132" width="400" height="220" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="420" y="132" width="400" height="2" fill="#c9a86a"/>
+<text x="436" y="154" font-size="11" fill="#1a1a1a" font-weight="600">Notificaciones — 3 nuevas</text><text x="780" y="154" text-anchor="end" font-size="10" fill="#8c7348">Marcar todas leidas</text>
+<g font-size="11">
+  <rect x="436" y="164" width="368" height="32" rx="8" fill="#fdf6e3" stroke="#e8e0d0"/><circle cx="450" cy="180" r="4" fill="#c9a86a"/><text x="462" y="184" fill="#1a1a1a">Audiencia Garcia — 48h — Faltan 2 docs</text>
+  <rect x="436" y="202" width="368" height="28" rx="8" fill="#ffffff" stroke="#f5efe0"/><circle cx="450" cy="216" r="4" fill="#c9a86a"/><text x="462" y="220" fill="#1a1a1a">Vencimiento Perez — 7d urgente</text>
+</g>
+<!-- page -->
+<rect x="840" y="132" width="408" height="460" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<text x="856" y="154" font-size="11" fill="#1a1a1a" font-weight="600">Centro de notificaciones — /notificaciones</text>
+<g font-size="10"><rect x="856" y="164" width="72" height="20" rx="999" fill="#c9a86a"/><text x="892" y="177" text-anchor="middle" fill="#ffffff">Audiencia</text><rect x="936" y="164" width="84" height="20" rx="999" fill="#ffffff" stroke="#e8e0d0"/><text x="978" y="177" text-anchor="middle" fill="#7a756f">Vencimiento</text></g>
+<line x1="840" y1="190" x2="1248" y2="190" stroke="#fdfbf7"/>
+<text x="856" y="210" font-size="11" fill="#1a1a1a">Audiencia Garcia — 48h preparacion — 2026-08-31 09:00</text><text x="856" y="226" font-size="10" fill="#7a756f">No leida · 2026-08-29 08:00 · Campana</text><text x="1180" y="220" font-size="10" fill="#8c7348">Marcar leida</text>
+
+<line x1="480" y1="700" x2="800" y2="700" stroke="#c9a86a" opacity="0.18"/>
+<text x="640" y="714" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6b7280" letter-spacing="0.12em">BLACK #0A0A0A · WHITE #FFFFFF · GOLD #C9A86A · LETRA CLARA · CONTRASTE HERMOSO</text>
+</svg>

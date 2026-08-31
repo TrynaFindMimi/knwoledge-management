@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+<style>:root{--bg:#0a0a0a;--panel:#ffffff;--panel-2:#fdfbf7;--ink:#1a1a1a;--ink-inv:#f5f0e8;--muted:#7a756f;--muted-inv:#9a9580;--border:#e8e0d0;--border-dark:#2a2420;--gold:#c9a86a;--gold-weak:#fdf6e3}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .mono{font-family:ui-monospace,SFMono,Menlo,monospace;font-variant-numeric:tabular-nums}
+</style>
+<rect x="0" y="0" width="1280" height="720" fill="#0a0a0a"/>
+<rect x="0" y="0" width="1280" height="1" fill="#c9a86a" opacity="0.95"/>
+<rect x="0" y="1" width="1280" height="52" fill="#0f0f0f" stroke="#2a2420"/>
+<text x="32" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="600" fill="#f5f0e8" letter-spacing="0.08em">BUFFET</text>
+<text x="102" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="300" fill="#c9a86a" letter-spacing="0.08em">KM</text>
+<text x="140" y="26" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.14em">ASISTENCIA FAMILIAR — LA PAZ</text>
+<text x="1240" y="20" text-anchor="end" font-family="ui-monospace" font-size="9" fill="#7a756f">/busqueda · v1.0</text>
+<text x="1240" y="36" text-anchor="end" font-size="8" fill="#5a554f" letter-spacing="0.08em">BLACK · WHITE · GOLD — PREMIUM</text>
+<text x="640" y="86" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="20" fill="#f5f0e8" letter-spacing="0.04em">06 — Busqueda Semantica</text>
+<line x1="580" y1="96" x2="700" y2="96" stroke="#c9a86a" stroke-width="1" opacity="0.6"/>
+<text x="640" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.1em">/busqueda — AntD 5.x · Contraste AA+</text>
+
+<rect x="32" y="132" width="1216" height="52" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="32" y="132" width="1216" height="2" fill="#c9a86a"/>
+<rect x="48" y="146" width="1040" height="28" rx="8" fill="#fdfbf7" stroke="#e8e0d0"/><text x="60" y="164" font-size="12" fill="#1a1a1a">convenio visitas Mamani 2024</text><text x="1060" y="164" font-size="11" fill="#7a756f">Tolera conbenio</text>
+<rect x="1112" y="146" width="88" height="28" rx="8" fill="#c9a86a"/><text x="1156" y="164" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="600">Buscar</text>
+<rect x="32" y="200" width="760" height="88" rx="12" fill="#ffffff" stroke="#c9a86a" stroke-opacity="0.4"/>
+<rect x="32" y="200" width="760" height="2" fill="#c9a86a"/>
+<text x="48" y="222" font-size="12" font-weight="600" fill="#1a1a1a">Convenio Transaccional — Mamani 2024</text><rect x="360" y="212" width="44" height="16" rx="999" fill="#e6f4ea" stroke="#a3d9b1"/><text x="382" y="223" text-anchor="middle" font-size="10" fill="#14522d">0.91</text>
+<text x="48" y="242" font-size="11" fill="#1a1a1a">... <tspan font-weight="600" fill="#8c7348">convenio</tspan> de visitas acordado el 15/03/2024 — homologado ...</text>
+<text x="48" y="260" font-size="10" fill="#7a756f" font-family="ui-monospace">Fuente: Mamani · 2024-03-15 · Caso 8f3a — p95 842ms</text>
+<rect x="48" y="268" width="64" height="16" rx="999" fill="#fdf6e3" stroke="#e8e0d0"/><text x="80" y="279" text-anchor="middle" font-size="10" fill="#8c7348">Convenio</text>
+<rect x="816" y="200" width="432" height="220" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<text x="832" y="222" font-size="11" fill="#1a1a1a" font-weight="600">Filtros</text>
+<rect x="832" y="234" width="400" height="28" rx="8" fill="#fdfbf7" stroke="#e8e0d0"/><text x="842" y="252" font-size="11" fill="#1a1a1a">Tipo: Todos  ▾</text>
+<rect x="832" y="270" width="400" height="28" rx="8" fill="#fdfbf7" stroke="#e8e0d0"/><text x="842" y="288" font-size="11" fill="#1a1a1a">Caso: Mamani  ▾</text>
+<text x="832" y="320" font-size="10" fill="#7a756f">Precision ≥85% — 100 queries dataset — HNSW M16</text>
+
+<line x1="480" y1="700" x2="800" y2="700" stroke="#c9a86a" opacity="0.18"/>
+<text x="640" y="714" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6b7280" letter-spacing="0.12em">BLACK #0A0A0A · WHITE #FFFFFF · GOLD #C9A86A · LETRA CLARA · CONTRASTE HERMOSO</text>
+</svg>

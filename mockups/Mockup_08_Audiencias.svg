@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+<style>:root{--bg:#0a0a0a;--panel:#ffffff;--panel-2:#fdfbf7;--ink:#1a1a1a;--ink-inv:#f5f0e8;--muted:#7a756f;--muted-inv:#9a9580;--border:#e8e0d0;--border-dark:#2a2420;--gold:#c9a86a;--gold-weak:#fdf6e3}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .mono{font-family:ui-monospace,SFMono,Menlo,monospace;font-variant-numeric:tabular-nums}
+</style>
+<rect x="0" y="0" width="1280" height="720" fill="#0a0a0a"/>
+<rect x="0" y="0" width="1280" height="1" fill="#c9a86a" opacity="0.95"/>
+<rect x="0" y="1" width="1280" height="52" fill="#0f0f0f" stroke="#2a2420"/>
+<text x="32" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="600" fill="#f5f0e8" letter-spacing="0.08em">BUFFET</text>
+<text x="102" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="300" fill="#c9a86a" letter-spacing="0.08em">KM</text>
+<text x="140" y="26" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.14em">ASISTENCIA FAMILIAR — LA PAZ</text>
+<text x="1240" y="20" text-anchor="end" font-family="ui-monospace" font-size="9" fill="#7a756f">/audiencias · v1.0</text>
+<text x="1240" y="36" text-anchor="end" font-size="8" fill="#5a554f" letter-spacing="0.08em">BLACK · WHITE · GOLD — PREMIUM</text>
+<text x="640" y="86" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="20" fill="#f5f0e8" letter-spacing="0.04em">08 — Audiencias</text>
+<line x1="580" y1="96" x2="700" y2="96" stroke="#c9a86a" stroke-width="1" opacity="0.6"/>
+<text x="640" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.1em">/audiencias — AntD 5.x · Contraste AA+</text>
+
+<rect x="32" y="132" width="520" height="260" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<text x="48" y="154" class="serif" font-size="12" fill="#1a1a1a">Calendario — Agosto 2026</text>
+<g font-size="10" fill="#7a756f"><text x="48" y="176">L</text><text x="92" y="176">M</text><text x="136" y="176">X</text><text x="180" y="176">J</text><text x="224" y="176">V</text></g>
+<rect x="48" y="186" width="36" height="28" rx="8" fill="#fdf6e3" stroke="#c9a86a"/><text x="66" y="204" text-anchor="middle" font-size="11" fill="#8c7348" font-weight="700">31</text><text x="66" y="214" text-anchor="middle" font-size="7" fill="#8c7348">Garcia 09:00</text>
+<rect x="92" y="186" width="36" height="28" rx="8" fill="#ffffff" stroke="#e8e0d0"/><text x="110" y="204" text-anchor="middle" font-size="11" fill="#1a1a1a">02</text>
+<rect x="640" y="132" width="608" height="260" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="640" y="132" width="608" height="2" fill="#c9a86a"/>
+<text x="656" y="154" class="serif" font-size="12" fill="#1a1a1a">Detalle — Garcia 2026-08-31 09:00 — Juzgado 3ro</text>
+<text x="656" y="174" font-size="11" fill="#1a7f37" font-weight="600">Tenidos (3)</text><text x="656" y="192" font-size="11" fill="#1a1a1a">• Demanda v2  — homologada</text>
+<text x="656" y="214" font-size="11" fill="#b91c1c" font-weight="600">Faltantes (2) — rojo</text><text x="656" y="232" font-size="11" fill="#b91c1c">• Cert. nacimiento — FALTA</text><text x="656" y="248" font-size="11" fill="#b91c1c">• Informe psicologico — FALTA</text>
+<text x="656" y="270" font-size="11" fill="#8c7348" font-weight="600">En tramite (1)</text><text x="656" y="286" font-size="11" fill="#1a1a1a">• Comprobante pago</text>
+<rect x="656" y="304" width="140" height="24" rx="8" fill="#ffffff" stroke="#e8e0d0"/><text x="726" y="320" text-anchor="middle" font-size="10" fill="#1a1a1a">Agregar requisito</text>
+<rect x="820" y="304" width="160" height="24" rx="8" fill="#c9a86a"/><text x="900" y="320" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="600">Generar paquete PDF</text>
+<text x="820" y="342" font-size="10" fill="#7a756f">Peso preview: 4.2 MB — Portada + orden checklist</text>
+
+<line x1="480" y1="700" x2="800" y2="700" stroke="#c9a86a" opacity="0.18"/>
+<text x="640" y="714" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6b7280" letter-spacing="0.12em">BLACK #0A0A0A · WHITE #FFFFFF · GOLD #C9A86A · LETRA CLARA · CONTRASTE HERMOSO</text>
+</svg>

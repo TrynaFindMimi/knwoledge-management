@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+<style>:root{--bg:#0a0a0a;--panel:#ffffff;--panel-2:#fdfbf7;--ink:#1a1a1a;--ink-inv:#f5f0e8;--muted:#7a756f;--muted-inv:#9a9580;--border:#e8e0d0;--border-dark:#2a2420;--gold:#c9a86a;--gold-weak:#fdf6e3}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .mono{font-family:ui-monospace,SFMono,Menlo,monospace;font-variant-numeric:tabular-nums}
+</style>
+<rect x="0" y="0" width="1280" height="720" fill="#0a0a0a"/>
+<rect x="0" y="0" width="1280" height="1" fill="#c9a86a" opacity="0.95"/>
+<rect x="0" y="1" width="1280" height="52" fill="#0f0f0f" stroke="#2a2420"/>
+<text x="32" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="600" fill="#f5f0e8" letter-spacing="0.08em">BUFFET</text>
+<text x="102" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="300" fill="#c9a86a" letter-spacing="0.08em">KM</text>
+<text x="140" y="26" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.14em">ASISTENCIA FAMILIAR — LA PAZ</text>
+<text x="1240" y="20" text-anchor="end" font-family="ui-monospace" font-size="9" fill="#7a756f">/chat + Drawer · v1.0</text>
+<text x="1240" y="36" text-anchor="end" font-size="8" fill="#5a554f" letter-spacing="0.08em">BLACK · WHITE · GOLD — PREMIUM</text>
+<text x="640" y="86" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="20" fill="#f5f0e8" letter-spacing="0.04em">07 — Chat RAG</text>
+<line x1="580" y1="96" x2="700" y2="96" stroke="#c9a86a" stroke-width="1" opacity="0.6"/>
+<text x="640" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.1em">/chat + Drawer — AntD 5.x · Contraste AA+</text>
+
+<rect x="32" y="132" width="700" height="420" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="32" y="132" width="700" height="36" rx="12" fill="#fdfbf7"/><text x="48" y="154" font-size="11" fill="#8c7348" font-weight="600">Chat — Buffet KM — GPT-4o-mini</text><circle cx="220" cy="150" r="4" fill="#1a7f37"/><text x="228" y="154" font-size="10" fill="#7a756f">En linea</text>
+<rect x="380" y="172" width="280" height="32" rx="12" fill="#c9a86a"/><text x="520" y="192" text-anchor="middle" font-size="11" fill="#ffffff">¿Que falta para audiencia Garcia manana?</text>
+<rect x="48" y="214" width="480" height="64" rx="12" fill="#fdfbf7" stroke="#e8e0d0"/><text x="64" y="232" font-size="11" fill="#1a1a1a">Faltan: certificado nacimiento y informe psicologico.</text>
+<text x="64" y="252" font-size="10" fill="#7a756f">Fuentes:</text><rect x="116" y="244" width="140" height="16" rx="999" fill="#ffffff" stroke="#e8e0d0"/><text x="186" y="255" text-anchor="middle" font-size="9" fill="#8c7348">Informe Garcia 2024-08-28</text>
+<rect x="380" y="290" width="200" height="28" rx="12" fill="#c9a86a"/><text x="480" y="308" text-anchor="middle" font-size="11" fill="#ffffff">¿Y que mas de Mamani?</text>
+<rect x="48" y="328" width="480" height="44" rx="12" fill="#fdfbf7" stroke="#e8e0d0"/><text x="64" y="346" font-size="11" fill="#1a1a1a">Mamani tiene convenio 2024-03-15 homologado.</text>
+<rect x="48" y="384" width="560" height="36" rx="8" fill="#ffffff" stroke="#e8e0d0"/><text x="60" y="406" font-size="11" fill="#7a756f">Pregunta en espanol coloquial...</text><rect x="556" y="388" width="72" height="28" rx="8" fill="#c9a86a"/><text x="592" y="406" text-anchor="middle" font-size="11" fill="#ffffff">Enviar</text>
+<g font-size="10" fill="#7a756f"><rect x="48" y="432" width="160" height="20" rx="999" fill="#fdfbf7" stroke="#e8e0d0"/><text x="128" y="445" text-anchor="middle">¿Que falta para Garcia?</text><rect x="216" y="432" width="180" height="20" rx="999" fill="#fdfbf7" stroke="#e8e0d0"/><text x="306" y="445" text-anchor="middle">Orden Perez vencimiento</text></g>
+<rect x="760" y="132" width="488" height="420" rx="12" fill="#ffffff" stroke="#e8e0d0" stroke-dasharray="6 4" opacity="0.9"/>
+<text x="1004" y="340" text-anchor="middle" font-size="11" fill="#7a756f">/chat pagina completa — mismo chat — Drawer flotante siempre visible</text>
+
+<line x1="480" y1="700" x2="800" y2="700" stroke="#c9a86a" opacity="0.18"/>
+<text x="640" y="714" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6b7280" letter-spacing="0.12em">BLACK #0A0A0A · WHITE #FFFFFF · GOLD #C9A86A · LETRA CLARA · CONTRASTE HERMOSO</text>
+</svg>

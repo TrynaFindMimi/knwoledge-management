@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+<style>:root{--bg:#0a0a0a;--panel:#ffffff;--panel-2:#fdfbf7;--ink:#1a1a1a;--ink-inv:#f5f0e8;--muted:#7a756f;--muted-inv:#9a9580;--border:#e8e0d0;--border-dark:#2a2420;--gold:#c9a86a;--gold-weak:#fdf6e3}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .mono{font-family:ui-monospace,SFMono,Menlo,monospace;font-variant-numeric:tabular-nums}
+</style>
+<rect x="0" y="0" width="1280" height="720" fill="#0a0a0a"/>
+<rect x="0" y="0" width="1280" height="1" fill="#c9a86a" opacity="0.95"/>
+<rect x="0" y="1" width="1280" height="52" fill="#0f0f0f" stroke="#2a2420"/>
+<text x="32" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="600" fill="#f5f0e8" letter-spacing="0.08em">BUFFET</text>
+<text x="102" y="26" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-weight="300" fill="#c9a86a" letter-spacing="0.08em">KM</text>
+<text x="140" y="26" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.14em">ASISTENCIA FAMILIAR — LA PAZ</text>
+<text x="1240" y="20" text-anchor="end" font-family="ui-monospace" font-size="9" fill="#7a756f">/casos · v1.0</text>
+<text x="1240" y="36" text-anchor="end" font-size="8" fill="#5a554f" letter-spacing="0.08em">BLACK · WHITE · GOLD — PREMIUM</text>
+<text x="640" y="86" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="20" fill="#f5f0e8" letter-spacing="0.04em">03 — Listado Casos</text>
+<line x1="580" y1="96" x2="700" y2="96" stroke="#c9a86a" stroke-width="1" opacity="0.6"/>
+<text x="640" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#9a9580" letter-spacing="0.1em">/casos — AntD 5.x · Contraste AA+</text>
+
+<rect x="32" y="132" width="1216" height="64" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="32" y="132" width="1216" height="2" fill="#c9a86a"/>
+<rect x="48" y="148" width="140" height="32" rx="8" fill="#fdfbf7" stroke="#e8e0d0"/><text x="58" y="168" font-family="Inter,sans-serif" font-size="11" fill="#1a1a1a">Tipo: Todos  ▾</text>
+<rect x="200" y="148" width="140" height="32" rx="8" fill="#fdfbf7" stroke="#e8e0d0"/><text x="210" y="168" font-size="11" fill="#1a1a1a">Estado: Activo  ▾</text>
+<rect x="352" y="148" width="260" height="32" rx="8" fill="#ffffff" stroke="#d4c9b0"/><text x="364" y="168" font-size="11" fill="#7a756f">Buscar cliente — Mamani</text>
+<rect x="980" y="148" width="96" height="32" rx="8" fill="#c9a86a"/><text x="1028" y="168" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">Buscar</text>
+<rect x="1088" y="148" width="96" height="32" rx="8" fill="#ffffff" stroke="#e8e0d0"/><text x="1136" y="168" text-anchor="middle" font-size="11" fill="#1a1a1a">Limpiar</text>
+<rect x="32" y="212" width="1216" height="320" rx="12" fill="#ffffff" stroke="#e8e0d0"/>
+<rect x="32" y="212" width="1216" height="36" rx="12" fill="#fdfbf7"/><text x="48" y="234" font-size="10" fill="#7a756f" letter-spacing="0.08em">CLIENTE</text><text x="320" y="234" font-size="10" fill="#7a756f">TIPO</text><text x="500" y="234" font-size="10" fill="#7a756f">ESTADO</text><text x="700" y="234" font-size="10" fill="#7a756f">AUDIENCIA</text>
+<g font-family="ui-monospace" font-size="12" fill="#1a1a1a">
+  <text x="48" y="266" font-weight="600">Mamani Choque</text><rect x="320" y="256" width="80" height="20" rx="999" fill="#fdf6e3" stroke="#e8e0d0"/><text x="360" y="270" text-anchor="middle" font-size="10" fill="#8c7348">Asistencia</text><rect x="500" y="256" width="72" height="20" rx="999" fill="#e6f4ea" stroke="#a3d9b1"/><circle cx="512" cy="266" r="4" fill="#1a7f37"/><text x="540" y="270" font-size="10" fill="#14522d">Activo</text><text x="700" y="266">2026-09-02 14:30</text><text x="1020" y="266" fill="#8c7348" font-weight="600">Ver  ▾</text>
+  <line x1="32" y1="282" x2="1248" y2="282" stroke="#fdfbf7"/>
+  <text x="48" y="310" font-weight="600">Garcia Flores</text><rect x="320" y="300" width="68" height="20" rx="999" fill="#fdf6e3" stroke="#e8e0d0"/><text x="354" y="314" text-anchor="middle" font-size="10" fill="#8c7348">Patria</text><rect x="500" y="300" width="96" height="20" rx="999" fill="#fdf6e3" stroke="#e8e0d0"/><circle cx="512" cy="310" r="4" fill="#c9a86a"/><text x="548" y="314" font-size="10" fill="#7a5a2e">En audiencia</text><text x="700" y="310">2026-08-31 09:00</text>
+</g>
+<rect x="1100" y="470" width="120" height="36" rx="8" fill="#c9a86a"/><text x="1160" y="492" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">+ Nuevo caso</text>
+
+<line x1="480" y1="700" x2="800" y2="700" stroke="#c9a86a" opacity="0.18"/>
+<text x="640" y="714" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#6b7280" letter-spacing="0.12em">BLACK #0A0A0A · WHITE #FFFFFF · GOLD #C9A86A · LETRA CLARA · CONTRASTE HERMOSO</text>
+</svg>
