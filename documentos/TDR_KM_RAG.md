@@ -200,24 +200,9 @@ Cada OE esta cubierto por al menos 1 entregable con criterio de aceptacion medib
 
 ---
 
-### 5. LIMITES DEL PROYECTO (NO INCLUYE) — con impacto y alternativa
+### 5. LIMITES DEL PROYECTO — Ver documento unico
 
-| # | Limite | Justificacion detallada | Impacto si se incluyera | Alternativa / Fase futura |
-|---|--------|------------------------|-------------------------|---------------------------|
-| L1 | No reemplaza archivo fisico (carpetas manila) | Alcance es complemento digital; destruccion de archivo fisico requiere protocolo notarial y custodia legal fuera de 16 semanas | Retraso >4 semanas, riesgo legal por perdida original | Convivencia: cada caso mantiene respaldo fisico + digital; digital es indice buscable |
-| L2 | No integracion con sistema judicial LEXIUS | Requiere convenio interinstitucional con Organo Judicial, VPN certificada y acceso a API no disponible para buffet gratuito | Bloqueo >8 semanas, dependencia externa no controlable | Export manual ZIP + paquete PDF para carga manual en LEXIUS; integracion en fase 2 con convenio |
-| L3 | No redaccion automatica de demandas/escritos | TDR es gestion de conocimiento (almacenar/buscar/compartir), no generacion juridica; redactar implica responsabilidad profesional y validacion colegio abogados | Riesgo de mala praxis, hallucination LLM sin revisor | Se cita fuente pero no se redacta; plantilla vacia opcional en backlog futuro con revisor humano |
-| L4 | No modulo de facturacion | Buffet es servicio gratuito (familias vulnerables), no hay proceso de cobro | Ambito no requerido, anadiria RF innecesarios | Fuera de alcance; si cambia modelo, nuevo RF en adenda |
-| L5 | No abogado virtual / asesoria automatizada | Sistema gestiona conocimiento, no reemplaza consulta legal personalizada ni representa ante juez | Riesgo de consejo erroneo, responsabilidad penal | Chat responde citando documento fuente, no aconseja; derivacion a abogado humano |
-| L6 | Solo espanol (Bolivia) | Sin soporte multi-idioma; embeddings y prompts calibrados para juridico boliviano y espanol coloquial (`y que mas de Mamani?`) | Duplicaria esfuerzo embeddings/LLM, no hay demanda en entrevistas | Fase futura: embeddings multilingues si buffet atiende poblacion quechua/aymara |
-| L7 | No app movil nativa (iOS/Android) | Alcance es web responsive PWA-ready (responsive desktop/tablet/celular, instalable); nativa requeriria 2 codebases + stores | +6 semanas y +40% costo (ver COCOMO) | PWA con acceso desde celular en juzgados cumple RF-24; nativa en roadmap 2027 |
-| L8 | No integracion WhatsApp/redes sociales | Comparticion por WhatsApp es insegura (sin cifrado, sin expiracion); se reemplaza por JWT 1h/24h/72h con watermark | Filtracion datos victimas | Enlaces temporales seguros single-use con log quien/cuando/IP (RF-18/19/20) |
-| L9 | No migracion masiva de 200 docs historicos | Migracion masiva requeriria 2-3 semanas de clasificacion manual y validacion; se migra progresivo por cada abogado al usar sistema (20 casos prueba incluidos) | Retraso Sprint 3, arrastre deuda tecnica | Pre-carga 20 casos variados incluida; resto on-demand con clasificacion auto >=90% |
-| L10 | No soporte 24/7 con personal dedicado | Equipo universitario, horario Lun-Vie 9-18 BT; uptime 99.5% (~4.4h downtime/mes) + garantia 60 dias cubre bugs, no help desk presencial | Costo +Bs 3000/mes por guardia | Monitoreo Sentry/UptimeRobot 24/7 automatico + SLA 48h critica/5d media en garantia |
-
-**Textos legales / Paginas de politicas:** El equipo solo transcribe y publica Reglamento de Proteccion de Datos / Politica de Privacidad que el Buffet proporcione (texto plano validado por Buffet); no redacta contenido legal. El Buffet es unico responsable de la redaccion/aprobacion y de contar con consentimiento para datos de prueba anonimizados. Entregable: pagina estatica con markdown del Buffet, sin interpretacion juridica.
-
-**Limites presupuestarios de infraestructura:** Dominio, hosting, LLM y vector DB mas alla de tiers gratuitos van por cuenta del Buffet segun `proformas/Carta_Entrega_Proformas_KM_RAG.md` (INF-001 a INF-SSL-001, INF-008 Hostinger, INF-009 Local). Ver TDR 22 y Contrato 3.3.
+Limites (10 L) movidos a `documentos/requerimientos.md:60` Seccion 3 (Limites con justificacion, impacto y alternativa). Este TDR mantiene solo requerimientos funcionales (Seccion 6) para evitar duplicacion; ver `requerimientos.md` para RNF (19) y limites (10) completos y trazables.
 
 ---
 
@@ -260,31 +245,9 @@ Cada OE esta cubierto por al menos 1 entregable con criterio de aceptacion medib
 
 ---
 
-### 7. REQUERIMIENTOS NO FUNCIONALES
+### 7. REQUERIMIENTOS NO FUNCIONALES — Ver documento unico
 
-| ID | Requerimiento | Descripción | Criterio de medición | Prioridad |
-|----|---------------|-------------|----------------------|-----------|
-| **RNF-01** | Cifrado tránsito | TLS 1.3 en toda comunicación | SSL Labs calificación A+ | Crítica |
-| **RNF-02** | Cifrado reposo | AES-256 en BD, archivos, backups + columna víctima | Auditoría cifrado BD/filesystem | Crítica |
-| **RNF-03** | Bloqueo intentos | Bloqueo tras 3 intentos fallidos | Prueba 4 intentos incorrectos | Alta |
-| **RNF-04** | Sesión expiración | 30 min inactividad | Dejar 31 min sin interacción | Alta |
-| **RNF-05** | RBAC | RBAC roles + chunk-level (asistente no elimina, abogado solo ve sus casos) | Test permisos cruzados | Alta |
-| **RNF-06** | Auditoría | Logs inmutables no editables/eliminables por ningún usuario | Intento de borrado bloqueado | Alta |
-| **RNF-07** | Tiempo búsqueda | Búsqueda semántica <3s | 1000 docs indexados, 10 concurrentes | Alta |
-| **RNF-08** | Tiempo general | Crear caso/subir/cambiar estado <2s | Monitoreo prod. | Alta |
-| **RNF-09** | Disponibilidad | 99.5% uptime (≤4.4h downtime/mes) | Uptime monitoring | Alta |
-| **RNF-10** | Carga | 10 usuarios concurrentes sin degradación | Stress 15 usuarios mixtos | Media |
-| **RNF-11** | Facilidad uso | Usuario no técnico completa tareas (<5 min) sin ayuda | Prueba 3 usuarios sin experiencia | Alta |
-| **RNF-12** | Español | UI 100% español Bolivia | Revisión visual total | Alta |
-| **RNF-13** | Consistencia | Guía estilos (colores/tipo/espaciado/botones) en 100% pantallas | Checklist guía | Media |
-| **RNF-14** | Multi-dispositivo | Chrome/Firefox/Safari desktop+mobile | Test cross-browser | Alta |
-| **RNF-15** | Sin instalación | Web sin plugins | Acceso solo navegador | Media |
-| **RNF-16** | Escalabilidad docs | 100 docs/mes sin degradación | BD 5000 docs | Media |
-| **RNF-17** | Escalabilidad usuarios | 5→20 usuarios sin cambio arquitectura | Doc. agregar usuarios | Baja |
-| **RNF-18** | Doc. técnica | Arquitectura, API, despliegue, troubleshooting | Revisión aprobada | Media |
-| **RNF-19** | Código doc. | Comentarios funciones complejas + README | Cobertura doc. >70% | Baja |
-
-**Resumen:** Crítica 2 | Alta 10 | Media 5 | Baja 2 = **19 RNF**
+19 RNF movidos a `documentos/requerimientos.md:60` Seccion 2 (tabla con criterio de medicion, prioridad y herramienta habilitadora). Este TDR mantiene solo RF para ligereza; los RNF se gestionan en el documento unico.
 
 ---
 
