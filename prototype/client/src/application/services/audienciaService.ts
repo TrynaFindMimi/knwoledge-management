@@ -1,6 +1,4 @@
-/**
- * CAPA APLICACIÓN — AudienciaService (depende solo de puerto dominio)
- */
+
 import type { AudienciaRepository } from '../../domain/repositories/AudienciaRepository'
 import type { AudienciaEntidad } from '../../domain/entities/audiencia'
 

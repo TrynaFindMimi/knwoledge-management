@@ -1,6 +1,4 @@
-/**
- * @deprecated Usar AuthRepository.
- */
+
 import { authRepository } from '../repositories/AuthRepositoryImpl'
 
 export const AuthApi = {

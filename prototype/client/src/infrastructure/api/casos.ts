@@ -1,7 +1,4 @@
-/**
- * @deprecated Usar domain/repositories/CasoRepository + infrastructure/repositories/CasoRepositoryImpl.
- * Se mantiene temporalmente para compatibilidad hasta migrar todos los consumidores.
- */
+
 import { casoRepository } from '../repositories/CasoRepositoryImpl'
 
 export const CasosApi = {

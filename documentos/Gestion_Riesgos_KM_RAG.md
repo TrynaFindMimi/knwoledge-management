@@ -33,7 +33,7 @@
 
 | Impacto | Valor | Descripcion |
 |---------|-------|-------------|
-| Bajo | 1 | Retraso <3 dias, sin afectar hitos |
+| Bajo | 1 | Retraso < 3 dias, sin afectar hitos |
 | Medio | 2 | Retraso 3-10 dias o costo <5% |
 | Alto | 3 | Retraso >10 dias, brecha seguridad o perdida datos |
 | Critico | 4 | Perdida datos victimas, incumplimiento legal, proyecto detenido |

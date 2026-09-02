@@ -1,9 +1,4 @@
-/**
- * CAPA PRESENTACIÓN — hooks de vista
- * Única capa autorizada a conocer React Query y a cablear servicios
- * via DI container (presentation -> application + infrastructure/di).
- * Application permanece pura (no importa infraestructura).
- */
+
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { services } from '../../composition/container'
 import type { CasoFiltros } from '../../domain/repositories/CasoRepository'

@@ -1,6 +1,4 @@
-/**
- * CAPA APLICACIÓN — AuthService (depende solo de puerto dominio)
- */
+
 import type { AuthRepository } from '../../domain/repositories/AuthRepository'
 
 export function createAuthService(repo: AuthRepository) {

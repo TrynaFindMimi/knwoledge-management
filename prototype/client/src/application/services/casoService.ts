@@ -1,8 +1,4 @@
-/**
- * CAPA APLICACIÓN — CasoService
- * Depende SOLO de puertos del dominio (CasoRepository), nunca de infraestructura concreta.
- * Inversión de dependencias: la implementación se inyecta desde composition root.
- */
+
 import type { CasoRepository, CasoFiltros } from '../../domain/repositories/CasoRepository'
 import type { Caso, CasoEstado } from '../../domain/types'
 import { esTransicionEstadoValida } from '../../domain/entities/caso'

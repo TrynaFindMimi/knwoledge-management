@@ -1,6 +1,4 @@
-/**
- * @deprecated Usar AudienciaRepository.
- */
+
 import { audienciaRepository } from '../repositories/AudienciaRepositoryImpl'
 
 export const AudienciasApi = {

@@ -1,6 +1,4 @@
-/**
- * @deprecated Usar RagRepository. Se mantiene por compatibilidad.
- */
+
 import { ragRepository } from '../repositories/RagRepositoryImpl'
 
 export const RagApi = {

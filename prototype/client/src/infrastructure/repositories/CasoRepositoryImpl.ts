@@ -5,7 +5,6 @@ import { api } from '../api/client'
 export class CasoRepositoryImpl implements CasoRepository {
   async listar(filtros: CasoFiltros): Promise<Caso[]> {
     const { data } = await api.get('/casos', { params: filtros })
-    // Soporta respuesta paginada { data: Caso[] } o directa Caso[]
     return Array.isArray(data) ? data : (data.data ?? data.resultados ?? [])
   }
 

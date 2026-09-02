@@ -1,0 +1,70 @@
+{
+  "documentos": [
+    {
+      "_id": "7a833932-575f-4fad-8861-23aba8f30795",
+      "casoId": "aa9cb586-f51a-4e68-8124-a8c05ccd9cb3",
+      "titulo": "Convenio Transaccional - Mamani 2024-03-15",
+      "tipo": "convenio",
+      "contenido": "Convenio transaccional de asistencia familiar y regimen de visitas homologado el 15 de marzo de 2024 entre Mamani Quispe y contraparte. Monto 800 Bs mensuales. Juzgado Publico Familia 3 La Paz. Homologado.",
+      "tags": [
+        "convenio"
+      ],
+      "createdAt": "2026-09-02T18:58:22.132Z"
+    },
+    {
+      "_id": "faa84cd8-b265-407f-aeb5-da5cf94a00bf",
+      "casoId": "89e6941d-448f-47b3-b2db-d42702565b0d",
+      "titulo": "Informe Psicologico - Garcia 2024-08-28",
+      "tipo": "informe psicologico",
+      "contenido": "Informe psicologico familia Garcia realizado 28 agosto 2024. Evalua vinculo parental. Recomienda terapia. Certificado nacimiento pendiente. Informe favorable.",
+      "tags": [
+        "informe psicologico"
+      ],
+      "createdAt": "2026-09-02T18:58:22.132Z"
+    },
+    {
+      "_id": "3143c61a-da12-4d43-9245-8afa70a7c147",
+      "casoId": "89e6941d-448f-47b3-b2db-d42702565b0d",
+      "titulo": "Demanda Asistencia - Garcia",
+      "tipo": "demanda",
+      "contenido": "Demanda de asistencia familiar caso Garcia Lopez. Solicita 1200 Bs mensuales. Juzgado 2do Familia. Presentada enero 2024.",
+      "tags": [
+        "demanda"
+      ],
+      "createdAt": "2026-09-02T18:58:22.132Z"
+    },
+    {
+      "_id": "bc3a881f-dba5-44fc-bc04-269679913b97",
+      "casoId": "3382888d-94ec-4a4f-95f6-c6df080214cb",
+      "titulo": "Orden Proteccion - Rojas",
+      "tipo": "orden proteccion",
+      "contenido": "Orden de proteccion medida 180 dias caso Rojas vigencia hasta 2024-12-15 proteccion victima domicilio",
+      "tags": [
+        "orden proteccion"
+      ],
+      "createdAt": "2026-09-02T18:58:22.132Z"
+    },
+    {
+      "_id": "78cff506-f212-4b7d-a82c-c8460774a1e8",
+      "casoId": "aa9cb586-f51a-4e68-8124-a8c05ccd9cb3",
+      "titulo": "Comprobante Pago - Mamani Mayo",
+      "tipo": "comprobante pago",
+      "contenido": "Comprobante deposito 800 Bs Mamani mayo 2024 banco union",
+      "tags": [
+        "comprobante pago"
+      ],
+      "createdAt": "2026-09-02T18:58:22.132Z"
+    }
+  ],
+  "chunks": [],
+  "chat_history": [],
+  "audit_log": [],
+  "share_links": [],
+  "configuracion": [
+    {
+      "_id": "app",
+      "tema": "buffet",
+      "idioma": "es-BO"
+    }
+  ]
+}
