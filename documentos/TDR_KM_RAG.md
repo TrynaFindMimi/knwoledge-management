@@ -247,7 +247,7 @@ La consultora deberá asignar un equipo con el siguiente perfil mínimo:
 **Valoraremos especialmente:**
 - Experiencia con legaltech o sistemas de gestión documental jurídica.
 - Manejo de datos sensibles y confidenciales.
-- Experiencia con ONG o sector social.
+- Experiencia con sector social.
 - Precios solidarios por el carácter gratuito de nuestros servicios.
 
 ---
@@ -318,7 +318,7 @@ Evaluaremos las propuestas según los siguientes criterios:
 | Propuesta técnica (arquitectura + RAG + despliegue) | 30% |
 | Propuesta económica (costo-beneficio) | 20% |
 | Cronograma y metodología (8 sprints, demos) | 15% |
-| Experiencia ONG / manejo datos sensibles | 5% |
+| Experiencia en manejo datos sensibles | 5% |
 
 ---
 

@@ -8,7 +8,7 @@
 | Concepto | Costo |
 |----------|-------|
 | Dominio .bo | Bs. 980 /anio |
-| Dominio .org.bo (alternativa ONG) | Bs. 280 /anio |
+| Dominio .org.bo | Bs. 280 /anio |
 | Dominio .com.bo | Bs. 450 /anio |
 
 **Incluido:** DNS, sin hosting. Configurar NS a Vercel (ns1.vercel-dns.com). Propiedad a nombre del Buffet.

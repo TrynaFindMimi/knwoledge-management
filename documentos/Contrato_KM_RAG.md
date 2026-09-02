@@ -293,7 +293,7 @@ EQUIPO emite factura por cuota con desglose. EL BUFFET entrega comprobantes rete
 
 #### 6.3. Exención IVA
 
-Si EL BUFFET (ONG) califica exención IVA, presentará respaldo antes de firma; de lo contrario aplica IVA.
+Si EL BUFFET califica exención IVA, presentará respaldo antes de firma; de lo contrario aplica IVA.
 
 #### 6.4. Forma de pago — 5 hitos COCOMO II WAE-RAG (IVA incluido)
 
