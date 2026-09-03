@@ -1,75 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 1100 660" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:Inter, Segoe UI, sans-serif">
-<rect x="0" y="0" width="1100" height="660" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+<svg viewBox="0 0 1100 800" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:Inter, Segoe UI, sans-serif">
+<rect x="0" y="0" width="1100" height="800" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
 <rect x="0" y="0" width="1100" height="52" rx="10" fill="#1e40af"/>
 <rect x="0" y="42" width="1100" height="10" fill="#1e40af"/>
 <text x="20" y="22" fill="#fff" font-size="11" font-weight="700" letter-spacing="1">MAPA DE PROCESOS — SISTEMA KM CON RAG</text>
-<text x="20" y="38" fill="#dbeafe" font-size="9">Vista global P1→P2→P3→P4→P5 (abogado) + P6/P7 y Motor RAG (sistema)</text>
+<text x="20" y="38" fill="#dbeafe" font-size="9">Vista global P1→P2→P3→P4→P5 (abogado) + P6/P7 y Motor RAG (sistema) + controles IDEF0</text>
 <text x="1080" y="22" text-anchor="end" fill="#fff" font-size="8" opacity="0.8">KM-RAG / Buffet Asistencia Familiar — La Paz</text>
-<text x="1080" y="38" text-anchor="end" fill="#dbeafe" font-size="8">03/09/2026 — v3.1</text>
+<text x="1080" y="38" text-anchor="end" fill="#dbeafe" font-size="8">03/09/2026 — v3.2</text>
 <text x="550" y="78" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="700">MAPA DE PROCESOS P1–P7</text>
-<rect x="20" y="100" width="1060" height="200" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-<text x="36" y="124" fill="#475569" font-size="10" font-weight="700" letter-spacing="1">CARRIL: ABOGADO — FLUJO PRINCIPAL</text>
-<rect x="60" y="140" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="145.0" y="164.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P1 Registro</text>
-<text x="145.0" y="182.0" text-anchor="middle" fill="#334155" font-size="8">Caso ID + clasif. auto</text>
-<text x="145.0" y="196.0" text-anchor="middle" fill="#64748b" font-size="7">RB-01..03</text>
-<rect x="143" y="206" width="18" height="10" rx="2" fill="#1e40af"/><text x="152" y="214" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P1</text>
-<rect x="260" y="140" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="345.0" y="164.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P2 Ingesta</text>
-<text x="345.0" y="182.0" text-anchor="middle" fill="#334155" font-size="8">PDF / JPG / DOCX 50 MB</text>
-<text x="345.0" y="196.0" text-anchor="middle" fill="#64748b" font-size="7">RB-04..07</text>
-<rect x="343" y="206" width="18" height="10" rx="2" fill="#1e40af"/><text x="352" y="214" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P2</text>
-<rect x="460" y="140" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="545.0" y="164.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P3 Busqueda RAG</text>
-<text x="545.0" y="182.0" text-anchor="middle" fill="#334155" font-size="8">Respuesta menos de 3s + citas</text>
-<text x="545.0" y="196.0" text-anchor="middle" fill="#64748b" font-size="7">RB-08..11</text>
-<rect x="543" y="206" width="18" height="10" rx="2" fill="#1e40af"/><text x="552" y="214" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P3</text>
-<rect x="660" y="140" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="745.0" y="164.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P4 Audiencias</text>
-<text x="745.0" y="182.0" text-anchor="middle" fill="#334155" font-size="8">Checklist + paquete PDF</text>
-<text x="745.0" y="196.0" text-anchor="middle" fill="#64748b" font-size="7">RB-12..14</text>
-<rect x="743" y="206" width="18" height="10" rx="2" fill="#1e40af"/><text x="752" y="214" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P4</text>
-<rect x="860" y="140" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="945.0" y="164.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P5 Compartir</text>
-<text x="945.0" y="182.0" text-anchor="middle" fill="#334155" font-size="8">Enlace JWT 72h 1 uso</text>
-<text x="945.0" y="196.0" text-anchor="middle" fill="#64748b" font-size="7">RB-15..17</text>
-<rect x="943" y="206" width="18" height="10" rx="2" fill="#1e40af"/><text x="952" y="214" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P5</text>
-<line x1="230" y1="175" x2="260" y2="175" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="430" y1="175" x2="460" y2="175" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="630" y1="175" x2="660" y2="175" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="830" y1="175" x2="860" y2="175" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="20" y="320" width="1060" height="230" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-<text x="36" y="344" fill="#14532d" font-size="10" font-weight="700" letter-spacing="1">CARRIL: SISTEMA (AUTOMATICO) — SOPORTE</text>
-<rect x="90" y="360" width="220" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
-<text x="200.0" y="388.0" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">P6 Versiones</text>
-<text x="200.0" y="406.0" text-anchor="middle" fill="#334155" font-size="8">v1..vN inmutable + diff</text>
-<text x="200.0" y="420.0" text-anchor="middle" fill="#64748b" font-size="7">RB-18..20</text>
-<rect x="288" y="426" width="18" height="10" rx="2" fill="#16a34a"/><text x="297" y="434" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P6</text>
-<rect x="440" y="360" width="220" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,4"/>
-<text x="550.0" y="384.0" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">Motor RAG</text>
-<text x="550.0" y="402.0" text-anchor="middle" fill="#334155" font-size="8">Chunk 500/100 + ES 768d</text>
-<text x="550.0" y="416.0" text-anchor="middle" fill="#334155" font-size="8">Vector HNSW + rerank + LLM</text>
-<rect x="790" y="360" width="220" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
-<text x="900.0" y="388.0" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">P7 Alertas</text>
-<text x="900.0" y="406.0" text-anchor="middle" fill="#334155" font-size="8">Cron 48h/7d + 48h/24h/2h</text>
-<text x="900.0" y="420.0" text-anchor="middle" fill="#64748b" font-size="7">RB-21..23</text>
-<rect x="988" y="426" width="18" height="10" rx="2" fill="#16a34a"/><text x="997" y="434" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P7</text>
-<line x1="310" y1="360" x2="440" y2="360" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="5,4"/>
-<line x1="660" y1="360" x2="790" y2="360" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="5,4"/>
-<line x1="345" y1="210" x2="230" y2="360" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
-<rect x="130.0" y="266.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="185.0" y="276.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">nueva version</text>
-<line x1="545" y1="210" x2="545" y2="360" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
-<rect x="560.0" y="266.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="615.0" y="276.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">top-k / respuesta</text>
-<line x1="745" y1="210" x2="860" y2="360" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
-<rect x="770.0" y="266.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="825.0" y="276.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">fecha audiencia</text>
-<line x1="900" y1="360" x2="800" y2="210" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
-<rect x="800.0" y="266.0" width="0" height="0" fill="none"/><text x="888" y="300" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">alerta 48h/24h/2h</text>
-<line x1="145" y1="210" x2="830" y2="360" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
-<rect x="420.0" y="266.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="475.0" y="276.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">seguimiento 7 dias</text>
+<rect x="20" y="95" width="1060" height="125" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="36" y="117" fill="#92400e" font-size="10" font-weight="700" letter-spacing="1">CONTROLES — GOBIERNAN LOS PROCESOS (IDEF0: ENTRAN POR ARRIBA)</text>
+<rect x="40" y="128" width="200" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="140.0" y="145.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">Normativa familiar</text>
+<rect x="250" y="128" width="180" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="340.0" y="145.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">TDR KM-RAG v2.0</text>
+<rect x="440" y="128" width="330" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="605.0" y="145.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">Violencia: alerta critica + solo presencial</text>
+<text x="1055" y="145" text-anchor="end" fill="#92400e" font-size="7" font-weight="700">rigen P1–P7</text>
+<rect x="75" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="145.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-01..03 · caso</text>
+<rect x="275" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="345.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-04..07 · 50 MB</text>
+<rect x="475" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="545.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-08..11 · 3 s</text>
+<rect x="675" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="745.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-12..14 · alerta</text>
+<rect x="875" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="945.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-15..17 · 72 h</text>
+<rect x="130" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="200.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-18..20 · vN</text>
+<rect x="830" y="162" width="140" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.2"/><text x="900.0" y="179.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="600">RB-21..23 · 5/dia</text>
+<line x1="145" y1="188" x2="145" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<line x1="345" y1="188" x2="345" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<line x1="545" y1="188" x2="545" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<line x1="745" y1="188" x2="745" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<line x1="945" y1="188" x2="945" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<line x1="200" y1="188" x2="200" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<line x1="900" y1="188" x2="900" y2="214" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowO)"/>
+<rect x="20" y="240" width="1060" height="210" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="36" y="262" fill="#475569" font-size="10" font-weight="700" letter-spacing="1">CARRIL: ABOGADO — FLUJO PRINCIPAL</text>
+<rect x="60" y="300" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="145.0" y="322.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P1 Registro</text>
+<text x="145.0" y="340.0" text-anchor="middle" fill="#334155" font-size="8">Caso ID + clasif. auto</text>
+<text x="145.0" y="354.0" text-anchor="middle" fill="#64748b" font-size="7">RB-01..03</text>
+<rect x="90" y="293" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="145.0" y="303.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-01..03</text>
+<rect x="202" y="356" width="18" height="10" rx="2" fill="#1e40af"/><text x="211" y="364" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P1</text>
+<rect x="260" y="300" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="345.0" y="322.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P2 Ingesta</text>
+<text x="345.0" y="340.0" text-anchor="middle" fill="#334155" font-size="8">PDF / JPG / DOCX 50 MB</text>
+<text x="345.0" y="354.0" text-anchor="middle" fill="#64748b" font-size="7">RB-04..07</text>
+<rect x="290" y="293" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="345.0" y="303.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-04..07</text>
+<rect x="402" y="356" width="18" height="10" rx="2" fill="#1e40af"/><text x="411" y="364" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P2</text>
+<rect x="460" y="300" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="545.0" y="322.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P3 Busqueda RAG</text>
+<text x="545.0" y="340.0" text-anchor="middle" fill="#334155" font-size="8">Respuesta menos de 3s + citas</text>
+<text x="545.0" y="354.0" text-anchor="middle" fill="#64748b" font-size="7">RB-08..11</text>
+<rect x="490" y="293" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="545.0" y="303.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-08..11</text>
+<rect x="602" y="356" width="18" height="10" rx="2" fill="#1e40af"/><text x="611" y="364" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P3</text>
+<rect x="660" y="300" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="745.0" y="322.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P4 Audiencias</text>
+<text x="745.0" y="340.0" text-anchor="middle" fill="#334155" font-size="8">Checklist + paquete PDF</text>
+<text x="745.0" y="354.0" text-anchor="middle" fill="#64748b" font-size="7">RB-12..14</text>
+<rect x="690" y="293" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="745.0" y="303.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-12..14</text>
+<rect x="802" y="356" width="18" height="10" rx="2" fill="#1e40af"/><text x="811" y="364" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P4</text>
+<rect x="860" y="300" width="170" height="70" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="945.0" y="322.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P5 Compartir</text>
+<text x="945.0" y="340.0" text-anchor="middle" fill="#334155" font-size="8">Enlace JWT 72h 1 uso</text>
+<text x="945.0" y="354.0" text-anchor="middle" fill="#64748b" font-size="7">RB-15..17</text>
+<rect x="890" y="293" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="945.0" y="303.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-15..17</text>
+<rect x="1002" y="356" width="18" height="10" rx="2" fill="#1e40af"/><text x="1011" y="364" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P5</text>
+<line x1="230" y1="335" x2="260" y2="335" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="430" y1="335" x2="460" y2="335" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="630" y1="335" x2="660" y2="335" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="830" y1="335" x2="860" y2="335" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="20" y="470" width="1060" height="230" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+<text x="36" y="492" fill="#14532d" font-size="10" font-weight="700" letter-spacing="1">CARRIL: SISTEMA (AUTOMATICO) — SOPORTE</text>
+<rect x="90" y="530" width="220" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="200.0" y="556.0" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">P6 Versiones</text>
+<text x="200.0" y="574.0" text-anchor="middle" fill="#334155" font-size="8">v1..vN inmutable + diff</text>
+<text x="200.0" y="588.0" text-anchor="middle" fill="#64748b" font-size="7">RB-18..20</text>
+<rect x="145" y="523" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="200.0" y="533.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-18..20</text>
+<rect x="292" y="596" width="18" height="10" rx="2" fill="#16a34a"/><text x="301" y="604" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P6</text>
+<rect x="440" y="530" width="220" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="550.0" y="552.0" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">Motor RAG</text>
+<text x="550.0" y="570.0" text-anchor="middle" fill="#334155" font-size="8">Chunk 500/100 + ES 768d</text>
+<text x="550.0" y="584.0" text-anchor="middle" fill="#334155" font-size="8">Vector HNSW + rerank + LLM</text>
+<rect x="495" y="523" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="550.0" y="533.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-08..11</text>
+<rect x="790" y="530" width="220" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="900.0" y="556.0" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">P7 Alertas</text>
+<text x="900.0" y="574.0" text-anchor="middle" fill="#334155" font-size="8">Cron 48h/7d + 48h/24h/2h</text>
+<text x="900.0" y="588.0" text-anchor="middle" fill="#64748b" font-size="7">RB-21..23</text>
+<rect x="845" y="523" width="110" height="14" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/><text x="900.0" y="533.0" text-anchor="middle" fill="#92400e" font-size="7" font-weight="700">C: RB-21..23</text>
+<rect x="992" y="596" width="18" height="10" rx="2" fill="#16a34a"/><text x="1001" y="604" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P7</text>
+<line x1="310" y1="570" x2="440" y2="570" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="5,4"/>
+<line x1="660" y1="570" x2="790" y2="570" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="5,4"/>
+<line x1="545" y1="372" x2="545" y2="528" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
+<line x1="300" y1="372" x2="215" y2="528" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
+<line x1="770" y1="372" x2="868" y2="528" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
+<line x1="880" y1="528" x2="782" y2="372" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
+<line x1="160" y1="372" x2="820" y2="528" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrowG)"/>
+<rect x="150.0" y="452.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="205.0" y="462.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">nueva version</text>
+<rect x="560.0" y="452.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="615.0" y="462.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">top-k / respuesta</text>
+<rect x="730.0" y="452.0" width="140" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="800.0" y="462.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">fecha y alerta 48h</text>
+<rect x="420.0" y="452.0" width="120" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="480.0" y="462.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">seguimiento 7 dias</text>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
 <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/></marker>
+<marker id="arrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/></marker>
 </defs>
-<text x="20" y="650" fill="#94a3b8" font-size="7">Mapa de procesos P1–P7 por carriles — linea solida: flujo principal del abogado — linea punteada: soporte del sistema — Fuente: Modelado_Procesos_BPWin.md RB-01..23</text>
+<text x="20" y="790" fill="#94a3b8" font-size="7">Banda ambar: controles IDEF0 (entran por arriba; pastilla C: en cada proceso) — linea solida: flujo del abogado — punteada: soporte del sistema — Fuente: Modelado_Procesos_BPWin.md RB-01..23</text>
 </svg>

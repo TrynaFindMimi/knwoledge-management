@@ -200,6 +200,12 @@ AllFusion Process Modeler BPWin es un producto de software de modelado de proces
 
 *Diagrama BPWin en SVG (IDEF0) — ver imagen superior.*
 
+### 3.1.1. Mapa de Procesos P1–P7 (vista global por carriles + controles)
+
+![Mapa de Procesos](../diagramas/procesos/Procesos_01.svg)
+
+*Carril Abogado: flujo principal P1→P2→P3→P4→P5. Carril Sistema: soporte P6, Motor RAG y P7. Banda ambar: controles IDEF0 — Normativa familiar, TDR y reglas RB-01..23 (pastilla `C:` en cada proceso). Fuente Mermaid: `../diagramas/procesos/Procesos_01.mmd`.*
+
 ### 3.2. Modelo de Datos BPWin
 
 | Entidad | Atributos | Relaciones |

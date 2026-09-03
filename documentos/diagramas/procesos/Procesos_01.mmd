@@ -3,28 +3,33 @@
 %% Buffet Asistencia Familiar — La Paz
 %% Carril ABOGADO: flujo principal P1→P2→P3→P4→P5
 %% Carril SISTEMA: soporte P6 (versiones), P7 (alertas) + Motor RAG
+%% CONTROLES (IDEF0, entran por arriba): Normativa familiar,
+%% TDR KM-RAG + reglas RB-01..RB-23 (una por proceso)
 %% Fuente: documentos/Modelado_Procesos_BPWin.md (RB-01..RB-23)
 %% ==========================================================
 flowchart TB
 
+    CTL["CONTROLES — gobiernan todos los procesos<br/>Normativa familiar + TDR KM-RAG + RB-01..RB-23<br/>Violencia: alerta critica y solo acceso presencial"]
+
     subgraph ABOGADO["CARRIL: ABOGADO"]
         direction LR
-        P1["P1 Registro de caso<br/>Caso ID + clasificacion auto (RB-01..03)"]
-        P2["P2 Ingesta de documentos<br/>PDF/JPG/PNG/DOCX 50 MB (RB-04..07)"]
-        P3["P3 Busqueda de informacion (RAG)<br/>Respuesta en menos de 3s con citas (RB-08..11)"]
-        P4["P4 Gestion de audiencias<br/>Checklist + paquete PDF (RB-12..14)"]
-        P5["P5 Comparticion segura<br/>Enlace JWT 72h single-use (RB-15..17)"]
+        P1["P1 Registro de caso<br/>Caso ID + clasificacion auto<br/>C: RB-01..03"]
+        P2["P2 Ingesta de documentos<br/>PDF/JPG/PNG/DOCX 50 MB<br/>C: RB-04..07"]
+        P3["P3 Busqueda de informacion (RAG)<br/>Respuesta en menos de 3s con citas<br/>C: RB-08..11"]
+        P4["P4 Gestion de audiencias<br/>Checklist + paquete PDF<br/>C: RB-12..14"]
+        P5["P5 Comparticion segura<br/>Enlace JWT 72h single-use<br/>C: RB-15..17"]
         P1 --> P2 --> P3 --> P4 --> P5
     end
 
     subgraph SISTEMA["CARRIL: SISTEMA (AUTOMATICO)"]
         direction LR
-        P6["P6 Control de versiones<br/>v1..vN inmutable + diff (RB-18..20)"]
-        RAG[("Motor RAG<br/>Chunk 500/100 + embeddings ES 768d<br/>Vector HNSW + rerank + LLM")]
-        P7["P7 Alertas proactivas<br/>Cron 48h/7d + 48h/24h/2h (RB-21..23)"]
+        P6["P6 Control de versiones<br/>v1..vN inmutable + diff<br/>C: RB-18..20"]
+        RAG[("Motor RAG<br/>Chunk 500/100 + embeddings ES 768d<br/>Vector HNSW + rerank + LLM<br/>C: RB-08..11")]
+        P7["P7 Alertas proactivas<br/>Cron 48h/7d + 48h/24h/2h<br/>C: RB-21..23"]
         P6 --- RAG --- P7
     end
 
+    CTL -.-> P1 & P2 & P3 & P4 & P5 & P6 & P7
     P2 -.->|"nueva version"| P6
     P3 <-.->|"top-k chunks / respuesta"| RAG
     P6 -.->|"version vigente"| P3
@@ -34,5 +39,7 @@ flowchart TB
 
     classDef proceso fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af
     classDef soporte fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#14532d
+    classDef control fill:#fffbeb,stroke:#f59e0b,stroke-width:2px,color:#92400e
     class P1,P2,P3,P4,P5 proceso
     class P6,P7 soporte
+    class CTL control

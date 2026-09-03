@@ -110,7 +110,7 @@ knwoledge-management/
 | Actividades | `diagramas/actividades/` (8 SVG) | P1-P7 + flujo global |
 | Componentes | `diagramas/componentes/` (9 SVG) | Componentes + secuencias + estados + despliegue |
 | BPWin IDEF0 | `diagramas/bpwin/` (9 SVG) | A0 Contexto, A0 Ciclo Vida, P1-P7 IDEF0 con entradas/controles/salidas/mecanismos |
-| Mapa de Procesos | `diagramas/procesos/` (SVG + MMD) | P1-P7 vista global por carriles (abogado/sistema) + Motor RAG |
+| Mapa de Procesos | `diagramas/procesos/` (SVG + MMD) | P1-P7 por carriles (abogado/sistema) + Motor RAG + controles IDEF0 (RB-01..23) |
 
 ### Analisis
 
