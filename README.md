@@ -67,7 +67,8 @@ knwoledge-management/
     ├── c4/                            ← Modelo C4 N1-N4 + Despliegue + 8 ADRs (6 SVG)
     ├── casos_de_uso/                  ← 30 CU en 10 epicas (8 SVG)
     ├── componentes/                   ← Componentes + Secuencia + Estados + Despliegue (9 SVG)
-    └── uml/                           ← Clases (13) + Secuencia (2 SVG)
+    ├── uml/                           ← Clases (13) + Secuencia (2 SVG)
+    └── procesos/                      ← Mapa de procesos P1-P7 por carriles (SVG + MMD)
 ```
 
 ---
@@ -109,6 +110,7 @@ knwoledge-management/
 | Actividades | `diagramas/actividades/` (8 SVG) | P1-P7 + flujo global |
 | Componentes | `diagramas/componentes/` (9 SVG) | Componentes + secuencias + estados + despliegue |
 | BPWin IDEF0 | `diagramas/bpwin/` (9 SVG) | A0 Contexto, A0 Ciclo Vida, P1-P7 IDEF0 con entradas/controles/salidas/mecanismos |
+| Mapa de Procesos | `diagramas/procesos/` (SVG + MMD) | P1-P7 vista global por carriles (abogado/sistema) + Motor RAG |
 
 ### Analisis
 

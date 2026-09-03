@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:Inter, Segoe UI, sans-serif">
-<rect x="0" y="0" width="1000" height="600" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
-<rect x="0" y="0" width="1000" height="52" rx="10" fill="#1e40af"/>
-<rect x="0" y="42" width="1000" height="10" fill="#1e40af"/>
+<svg viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:Inter, Segoe UI, sans-serif">
+<rect x="0" y="0" width="1100" height="600" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="0" y="0" width="1100" height="52" rx="10" fill="#1e40af"/>
+<rect x="0" y="42" width="1100" height="10" fill="#1e40af"/>
 <text x="20" y="22" fill="#fff" font-size="11" font-weight="700" letter-spacing="1">ALLFUSION PROCESS MODELER BPWIN — IDEF0</text>
-<text x="20" y="38" fill="#dbeafe" font-size="9">Vista BPWin — Flujo principal P1→P7</text>
-<text x="980" y="22" text-anchor="end" fill="#fff" font-size="8" opacity="0.8">KM-RAG / Buffet Asistencia Familiar — La Paz</text>
-<text x="980" y="38" text-anchor="end" fill="#dbeafe" font-size="8">30/08/2026 — v3.0</text>
-<text x="500" y="78" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="700">A0: CICLO DE VIDA DEL DOCUMENTO LEGAL</text>
-<rect x="60" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="125.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P1 Registro</text>
-<text x="125.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">Caso ID</text>
-<rect x="168" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="177" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P1</text>
-<rect x="210" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="275.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P2 Ingesta</text>
-<text x="275.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">50 MB / embed</text>
-<rect x="318" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="327" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P2</text>
-<rect x="360" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="425.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P6 Versiones</text>
-<text x="425.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">v1..vN diff</text>
-<rect x="468" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="477" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P6</text>
-<rect x="510" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="575.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P3 Busqueda</text>
-<text x="575.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8"><3s RAG</text>
-<rect x="618" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="627" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P3</text>
-<rect x="660" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="725.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P5 Compartir</text>
-<text x="725.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">JWT 72h</text>
-<rect x="768" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="777" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P5</text>
-<rect x="350" y="300" width="300" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="500.0" y="324.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P4 + P7 Transversal</text>
-<text x="500.0" y="342.0" text-anchor="middle" fill="#334155" font-size="8">Audiencias + Alertas 48h/7d</text>
-<rect x="628" y="346" width="18" height="10" rx="2" fill="#1e40af"/><text x="637" y="354" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P4/P7</text>
-<line x1="190" y1="180" x2="210" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="340" y1="180" x2="360" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="490" y1="180" x2="510" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="640" y1="180" x2="660" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<line x1="500" y1="210" x2="500" y2="300" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="445.0" y="239.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="500.0" y="249.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">Evento audiencia/vencimiento</text>
-<line x1="600" y1="330" x2="790" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="640.0" y="239.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="695.0" y="249.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">Paquete PDF</text>
-
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<text x="20" y="38" fill="#dbeafe" font-size="9">Vista BPWin — Flujo principal P1→P2→P3→P4→P5→P6→P7</text>
+<text x="1080" y="22" text-anchor="end" fill="#fff" font-size="8" opacity="0.8">KM-RAG / Buffet Asistencia Familiar — La Paz</text>
+<text x="1080" y="38" text-anchor="end" fill="#dbeafe" font-size="8">30/08/2026 — v3.0</text>
+<text x="550" y="78" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="700">A0: CICLO DE VIDA DEL DOCUMENTO LEGAL</text>
+<rect x="20" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="85.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P1 Registro</text>
+<text x="85.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">Caso ID</text>
+<rect x="128" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="137" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P1</text>
+<rect x="185" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="250.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P2 Ingesta</text>
+<text x="250.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">50 MB / embed</text>
+<rect x="298" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="307" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P2</text>
+<rect x="350" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="415.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P3 Busqueda</text>
+<text x="415.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">&lt;3s RAG</text>
+<rect x="458" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="467" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P3</text>
+<rect x="515" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="580.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P4 Audiencias</text>
+<text x="580.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">Checklist + PDF</text>
+<rect x="628" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="637" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P4</text>
+<rect x="680" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="745.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P5 Compartir</text>
+<text x="745.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">JWT 72h</text>
+<rect x="788" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="797" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P5</text>
+<rect x="845" y="150" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="910.0" y="174.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P6 Versiones</text>
+<text x="910.0" y="192.0" text-anchor="middle" fill="#334155" font-size="8">v1..vN diff</text>
+<rect x="958" y="196" width="18" height="10" rx="2" fill="#1e40af"/><text x="967" y="204" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P6</text>
+<rect x="915" y="270" width="130" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="980.0" y="294.0" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">P7 Alertas</text>
+<text x="980.0" y="312.0" text-anchor="middle" fill="#334155" font-size="8">48h/7d cron</text>
+<rect x="958" y="316" width="18" height="10" rx="2" fill="#1e40af"/><text x="967" y="324" text-anchor="middle" fill="#fff" font-size="6" font-weight="700">P7</text>
+<line x1="150" y1="180" x2="185" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="315" y1="180" x2="350" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="480" y1="180" x2="515" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="645" y1="180" x2="680" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="810" y1="180" x2="845" y2="180" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="980" y1="210" x2="980" y2="270" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="445.0" y="239.0" width="110" height="14" rx="3" fill="#fff" stroke="#e2e8f0"/><text x="500.0" y="249.0" text-anchor="middle" fill="#334155" font-size="7" font-weight="600">Paquete PDF</text>
+<line x1="150" y1="220" x2="980" y2="220" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5,5"/>
+<text x="550" y="242" text-anchor="middle" fill="#94a3b8" font-size="7">flujo principal</text>
 <text x="20" y="590" fill="#94a3b8" font-size="7">Notacion IDEF0 — Entrada (izq) / Control (arriba) / Salida (der) / Mecanismo (abajo) — BPWin</text>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
 </svg>
