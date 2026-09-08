@@ -1,0 +1,78 @@
+---
+title: Nivel 3 - Componentes del Pipeline RAG
+---
+flowchart TB
+    abogado(["Abogado / Asistente<br/>Sube documentos y hace consultas en lenguaje natural"])
+
+    subgraph API["API Backend  ·  FastAPI / Express  [Contenedor]"]
+        direction LR
+        apiDocs["Documentos Controller<br/>POST /casos/:id/documentos"]
+        apiBusqueda["Busqueda Controller<br/>GET /busqueda"]
+        apiChat["Chat Controller<br/>POST /chat  ·  WS /ws/chat"]
+    end
+
+    subgraph RAG["RAG Pipeline  ·  LangChain / LlamaIndex  [Contenedor]"]
+        direction TB
+        subgraph ING["Ingesta de documentos"]
+            direction LR
+            loader["Document Loader<br/>PDF/JPG/PNG/DOCX + OCR"]
+            chunker["Chunker<br/>500 tok · overlap 100"]
+            classifier["Document Classifier<br/>prompt LLM · 7 categorias"]
+            dedup["Dedup Service<br/>similitud coseno >85%"]
+        end
+        subgraph CON["Busqueda y Chat"]
+            direction LR
+            embedder["Embedding Service<br/>multilingual ES 768d"]
+            retriever["Retriever<br/>Top-K=20 · HNSW"]
+            reranker["Re-ranker<br/>cross-encoder Top-5"]
+            promptBuilder["Prompt Builder<br/>plantilla juridica ES"]
+            llmClient["LLM Client<br/>GPT-4o-mini / Mistral 7B"]
+            citationBuilder["Citation Builder<br/>post-proceso"]
+            chatMemory[("Chat Memory<br/>buffer 10 turnos")]
+        end
+    end
+
+    vectorDb[("Vector Store<br/>ChromaDB / pgvector HNSW")]
+    relDb[("PostgreSQL<br/>casos, documentos, auditoria")]
+    llmProvider["OpenAI / Mistral API<br/>[Sistema externo]"]
+
+    abogado -->|sube documento| apiDocs
+    abogado -->|escribe busqueda| apiBusqueda
+    abogado -->|pregunta en lenguaje natural| apiChat
+
+    apiDocs -->|envia archivo| loader
+    loader -->|texto crudo| chunker
+    loader -->|texto crudo| classifier
+    chunker -->|chunks| embedder
+    embedder -->|guarda vectores| vectorDb
+    classifier -->|guarda categoria sugerida| relDb
+    dedup -->|compara similitud| vectorDb
+    dedup -.->|alerta duplicado >85%| apiDocs
+
+    apiBusqueda -->|query| retriever
+    apiChat -->|pregunta| retriever
+    retriever -->|vectoriza consulta| embedder
+    retriever -->|top-20 HNSW| vectorDb
+    retriever -->|candidatos| reranker
+    reranker -->|top-5| promptBuilder
+    chatMemory -->|historial previo| promptBuilder
+    promptBuilder -->|prompt + contexto| llmClient
+    llmClient -->|llamada API externa| llmProvider
+    llmClient -->|respuesta generada| citationBuilder
+    citationBuilder -->|resuelve doc, caso, fecha| relDb
+    citationBuilder -->|respuesta con citas| apiChat
+    citationBuilder -->|guarda turno| chatMemory
+
+    classDef person fill:#08427b,stroke:#052e56,color:#ffffff,stroke-width:1px
+    classDef container fill:#1168bd,stroke:#0b4884,color:#ffffff,stroke-width:1px
+    classDef component fill:#63a9e0,stroke:#3a7cb8,color:#0a1a2e,stroke-width:1px
+    classDef db fill:#438dd5,stroke:#2e6295,color:#ffffff,stroke-width:1px
+    classDef external fill:#999999,stroke:#6b6b6b,color:#ffffff,stroke-width:1px
+    classDef boundary fill:#f5f5f5,stroke:#999999,stroke-dasharray: 4 3,color:#333333
+
+    class abogado person
+    class apiDocs,apiBusqueda,apiChat container
+    class loader,chunker,embedder,classifier,dedup,retriever,reranker,promptBuilder,llmClient,citationBuilder component
+    class chatMemory,vectorDb,relDb db
+    class llmProvider external
+    class API,RAG,ING,CON boundary
